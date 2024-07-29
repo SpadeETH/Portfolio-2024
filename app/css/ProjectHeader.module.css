@@ -1,0 +1,33 @@
+/* ProjectHeader.module.css */
+.hero {
+}
+
+.hero-title {
+}
+
+.hero-subtitle {
+}
+
+.hero-description {
+  font-weight: 400;
+}
+
+.team,
+.tools,
+.timeline,
+.disciplines {
+  margin-top: 20px;
+}
+
+.team ul,
+.tools ul,
+.disciplines ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.team li,
+.tools li,
+.disciplines li {
+  margin-bottom: 5px;
+}

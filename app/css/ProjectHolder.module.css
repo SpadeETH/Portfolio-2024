@@ -1,0 +1,144 @@
+.inter {
+  font-family: "Inter", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Styles par défaut pour les petits écrans */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* Les éléments passent les uns sous les autres */
+  column-gap: 20px;
+  row-gap: 48px;
+  max-width: 1080px;
+  width: 100%; /* ajoutée */
+  max-width: 500px; /* ajoutée */
+}
+
+/* Breakpoint pour les écrans moyens (1024px et plus) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1080px; /* Répartition en 2 colonnes responsives */
+  }
+}
+
+/* Breakpoint pour les écrans très larges (1440px et plus) */
+@media (min-width: 1440px) {
+  .gridContainer {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(504px, 1fr)
+    ); /* Largeur fixe des colonnes */
+    max-width: 1080px; /* Largeur fixe de la grille */
+  }
+}
+
+.projectImage {
+  object-fit: fill;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  outline: 1px solid #e5e5e5;
+  outline-offset: -1px;
+}
+
+.projectTitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: var(--darkgrey);
+}
+
+.projectDescription {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--light-grey);
+}
+.projectTitle {
+  display: flex;
+  flex-direction: row;
+  position: relative; /* Permet de positionner l'icône par rapport au titre */
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  /* Positionne l'icône à droite du titre */
+  transform-origin: center;
+  transition: transform 0.3s ease; /* Animation de rotation */
+}
+
+.projectTitle:hover .arrowIcon {
+  transform: rotate(00deg); /* Rotation de 90 degrés au survol */
+}
+.projectTitle .arrowIcon {
+  transform: rotate(-45deg); /* Rotation de 90 degrés au survol */
+}
+.projectTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 530/375;
+}
+/* Overlay sombre */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 530/375;
+  border-radius: 12px;
+  background-color: rgba(
+    165,
+    165,
+    165,
+    0.2
+  ); /* Couleur et opacité de l'overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlayTextWrapper {
+  border-radius: 999px;
+  padding: 8px 12px;
+  background-color: rgba(124, 124, 124, 0.63);
+}
+
+.overlayText {
+  font-weight: 300;
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff; /* Couleur du texte */
+}
+.overlay:hover {
+  cursor: pointer;
+}
+.projectImage:hover {
+  cursor: pointer;
+}
+/* Affichage de l'overlay au survol */
+.projectImage:hover .overlay {
+  opacity: 1;
+}
+.projectImage:hover .overlayTextWrapper {
+  transition: transform 2s ease;
+  transform: rotate(-45deg);
+}
+/* Styles pour le titre du projet */
+.projectTitle {
+  position: relative;
+  margin-top: 10px;
+  color: var(--darkgrey); /* Utilisation d'une variable CSS (--darkgrey) */
+  z-index: 1; /* Assure que le titre est au-dessus de l'image */
+}
+
+.projectTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
