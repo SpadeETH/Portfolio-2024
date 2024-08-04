@@ -78,8 +78,10 @@
 body {
   color: var(--black);
   background: var(--white);
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  overflow-y: scroll;
 }
 @layer utilities {
   .text-balance {
@@ -144,6 +146,12 @@ rect {
   color: #3b3d41;
   letter-spacing: -0.28px;
 }
+.lightheading {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--light-grey);
+  letter-spacing: -0.28px;
+}
 .pheading {
   font-size: 14px;
   line-height: 21px;
@@ -185,7 +193,10 @@ rect {
 .footersign {
   width: 418px;
 }
-
+ul li::marker {
+  font-size: 0.75em; /* Adjust size */
+  color: rgb(177, 177, 177); /* Adjust color */
+}
 /*Responsive*/
 
 @media (min-width: 1024px) and (max-width: 1439px) {
