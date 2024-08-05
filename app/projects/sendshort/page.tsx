@@ -62,22 +62,22 @@ const SendshortProject: React.FC = () => {
       type: "Info Crop ",
       content: (
         <>
-          <div className="infocrop flex flex-col gap-6 mx-auto mt-[64px]">
-            <div className="title-infocrop flex items-center space-x-4 justify-center">
-              <h1 className="font-regular aeonik text-3xl text-gray-700">
+          <div className=" w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]">
+            <div className="title-infocrop flex lg:items-center space-x-4 lg:justify-center">
+              <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 Crop videos
               </h1>
               <Image
                 src={cropicon}
                 alt="Icon"
-                className="h-[33px] w-[33px] mt-[1px]"
+                className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
               />
-              <h1 className="font-regular aeonik text-3xl text-gray-700">
+              <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 to vertical format
               </h1>
             </div>
-            <div className="sub-infocrop flex flex-col mx-auto">
-              <div className="text-l lightgrey w-[700px] justify-center text-center">
+            <div className="w-full sub-infocrop flex flex-col mx-auto">
+              <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
                 Tag your notes with customizable visual cues to help you take
                 notes and remember them. Tags are customizable by name, color,
                 shape to add more information to suit your needs as a student.
@@ -98,22 +98,22 @@ const SendshortProject: React.FC = () => {
       type: "Info sub ",
       content: (
         <>
-          <div className="infocrop flex flex-col gap-6 mx-auto my-[64px]">
-            <div className="title-infocrop flex items-center space-x-4 justify-center">
-              <h1 className="font-regular aeonik text-3xl text-gray-700">
+          <div className=" w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]">
+            <div className="title-infocrop flex lg:items-center space-x-4 lg:justify-center">
+              <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 Let IA Subtitle
               </h1>
               <Image
                 src={subicon}
                 alt="Icon"
-                className="h-[33px] w-[33px] mt-[1px]"
+                className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
               />
-              <h1 className="font-regular aeonik text-3xl text-gray-700">
+              <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 your videos
               </h1>
             </div>
-            <div className="sub-infocrop flex flex-col mx-auto">
-              <div className="text-l lightgrey w-[700px] justify-center text-center">
+            <div className="w-full sub-infocrop flex flex-col mx-auto">
+              <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
                 Tag your notes with customizable visual cues to help you take
                 notes and remember them. Tags are customizable by name, color,
                 shape to add more information to suit your needs as a student.
@@ -134,7 +134,7 @@ const SendshortProject: React.FC = () => {
       type: "shortline",
       content: (
         <>
-          <div className="title text-xl flex flex-row mx-auto text-center w-[400px] lightgrey">
+          <div className="title text-xl flex flex-row mx-auto lg:text-center w-[400px] my-[64px] lightgrey">
             MVP was good for it’s first utility <br /> but to scale we had to
             reimagine it and make it more attractive.
           </div>
@@ -144,8 +144,8 @@ const SendshortProject: React.FC = () => {
     {
       type: "Primary Objective",
       content: (
-        <div className="flex flex-row">
-          <div className="txt w-6/12 flex flex-col gap-y-4 justify-center">
+        <div className="flex flex-col lg:flex-row">
+          <div className="txt lg:w-6/12 flex flex-col gap-y-4 justify-center">
             <div className="subheading">Primary Objective</div>
             <div className="heading w-100">
               Understand how visual design improvements can enhance user
@@ -157,7 +157,7 @@ const SendshortProject: React.FC = () => {
               visual aesthetics.
             </div>
           </div>
-          <Image src={postit} alt="Icon" className="w-6/12" />
+          <Image src={postit} alt="Icon" className="lg:w-6/12 ml-[-50px]" />
         </div>
       ),
     },
@@ -174,8 +174,8 @@ const SendshortProject: React.FC = () => {
               <hr />
             </div>
 
-            <div className="flex flex-row justify-between gap-6 w-full">
-              <div className="flex flex-col items-start w-1/3 ">
+            <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full">
+              <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
                 <div className="flex items-center mb-4">
                   <PersonIcon style={{ marginRight: ".5rem" }} />
                   <h3 className="text-base text-gray-800 segoe font-medium">
@@ -198,7 +198,7 @@ const SendshortProject: React.FC = () => {
                   app intuitive, efficient, and nice to use.
                 </p>
               </div>
-              <div className="flex flex-col items-start w-1/3 px-4">
+              <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
                 <div className="flex items-center mb-4">
                   <AssignmentIcon style={{ marginRight: ".5rem" }} />
                   <h3 className="text-base text-gray-800 segoe font-medium">
@@ -222,7 +222,7 @@ const SendshortProject: React.FC = () => {
                   more appealing and easy to use.
                 </p>
               </div>
-              <div className="flex flex-col items-start w-1/3 px-4">
+              <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
                 <div className="flex items-center mb-4">
                   <CachedIcon style={{ marginRight: ".5rem" }} />
                   <h3 className="text-base text-gray-800 segoe font-medium">
@@ -268,19 +268,13 @@ const SendshortProject: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="imgs flex flex-row justify-between">
-            <Image
-              src={left}
-              alt=""
-              className=""
-              style={{ width: "45%", height: "45%", aspectRatio: "1.841" }}
-            />
-            <Image
-              src={right}
-              alt=""
-              className="w-45"
-              style={{ width: "45%", height: "45%", aspectRatio: "1.841" }}
-            />
+          <div className="imgs flex flex-col lg:flex-row justify-between gap-8">
+            <div className="w-45">
+              <Image src={left} alt="" className="w-45" />
+            </div>
+            <div className="w-45">
+              <Image src={right} alt="" className="w-45" />
+            </div>
           </div>
         </>
       ),
@@ -304,7 +298,7 @@ const SendshortProject: React.FC = () => {
             </div>
           </div>
           <div className="steps flex flex-col gap-8">
-            <div className="stepsrow1 flex flex-row gap-8">
+            <div className="stepsrow1 flex flex-col lg:flex-row gap-8">
               <div className="step1 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1	flex flex-col">
                 <Image
                   src={IconKeyInsightA}
@@ -330,7 +324,7 @@ const SendshortProject: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="stepsrow2 flex flex-row gap-8">
+            <div className="stepsrow2 flex flex-col lg:flex-row gap-8">
               <div className="step1 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1	flex flex-col">
                 <Image
                   src={IconKeyInsightC}
@@ -562,7 +556,7 @@ const SendshortProject: React.FC = () => {
   return (
     <main>
       <BigLines />
-      <div className="w-100 mt-124 px-180 mx-auto flex flex-col gap-y-[80px]">
+      <div className="w-full mt-124 px-180 mx-auto flex flex-col gap-y-[80px]">
         <ProjectHeader
           title={project.title}
           subtitle={project.subtitle}
@@ -573,9 +567,9 @@ const SendshortProject: React.FC = () => {
           disciplines={project.disciplines}
         />
 
-        <div className="w-100 flex flex-col gap-8 mx-auto">
+        <div className="w-full flex flex-col gap-8 mx-auto">
           <motion.div
-            className="title-infocrop flex items-center space-x-4 justify-center"
+            className="title-infocrop flex lg:items-center space-x-4 lg:justify-center"
             initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 1.15 }}
@@ -591,7 +585,7 @@ const SendshortProject: React.FC = () => {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 1.225 }}
           >
-            <div className="text-l lightgrey w-[700px] justify-center text-center">
+            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
               Tag your notes with customizable visual cues to help you take
               notes and remember them. Tags are customizable by name, color,
               shape to add more information to suit your needs as a student.
@@ -611,7 +605,7 @@ const SendshortProject: React.FC = () => {
             />
           </motion.div>
 
-          <div className="Main flex flex-col  mx-auto gap-y-5 w-[860px] mt-124">
+          <div className="Main flex flex-col  mx-auto gap-y-5 w-full lg:w-[860px] mt-124">
             {headerVisible &&
               elements.map((el, index) => (
                 <Element key={index}>{el.content}</Element>
