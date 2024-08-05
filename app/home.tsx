@@ -4,9 +4,9 @@ import Image from "next/image";
 import BottomTextContainer from "../app/components/BottomTextContainer";
 import ButtonHoverEffect from "../app/components/ButtonHoverEffect";
 import Footer from "../app/components/footer";
-import ProjectHolder from "./components/ProjectHolder";
 import logospade from "../public/images/logospade.png";
 import BigLines from "./biglines";
+import ProjectHolder from "./components/ProjectHolder";
 
 export default function Home() {
   return (
@@ -30,6 +30,7 @@ export default function Home() {
               className=" calisto  text-3xl text-black leading-10	 "
             >
               <span className="underline decoration-2">Arthur Bossuyt</span>,
+              <br />
               Product Designer
             </motion.h2>
 

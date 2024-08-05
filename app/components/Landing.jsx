@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 import styles from "../css/Landing.module.css";
 
@@ -72,26 +73,14 @@ const ProjectCard = ({ project }) => {
       }}
       transition={{ duration: 0.6, delay: 0.3 }}
     >
-      <div className="flex flex-col items-center w-full mx-auto ">
-        <div className="titlefeature w-full flex flex-col gap-2 mb-6">
-          <div className="subheading">{project.subheading}</div>
-          <Link href={project.link} target="_blank" rel="noopener noreferrer">
-            <h2 className="heading w-100 text-left ">{project.title}</h2>
-          </Link>
-          <hr />
-          <p className="font-regular segoe text-gray-800">
-            {project.description}
-          </p>
-        </div>
-      </div>
       <Link href={project.link} target="_blank" rel="noopener noreferrer">
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
             alt={project.title}
-            className={`${styles.projectImage} rounded-xl w-full`}
-            width={1920}
-            height={1080}
+            className={styles.projectImage}
+            width={530}
+            height={375}
           />
           <motion.div
             className={styles.overlay}
@@ -105,6 +94,13 @@ const ProjectCard = ({ project }) => {
           </motion.div>
         </div>
       </Link>
+      <Link href={project.link} target="_blank" rel="noopener noreferrer">
+        <h2 className={styles.projectTitle}>
+          {project.title}
+          <FiArrowRight className={styles.arrowIcon} />
+        </h2>
+      </Link>
+      <p className={styles.projectDescription}>{project.description}</p>
     </motion.div>
   );
 };

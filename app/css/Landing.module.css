@@ -29,7 +29,7 @@
 @media (min-width: 1440px) {
   .gridContainer {
     grid-template-columns: repeat(2, 1fr); /* Limite à 2 colonnes */
-    column-gap: 64px; /* Écart horizontal */
+    column-gap: 88px; /* Écart horizontal */
     max-width: 1080px;
   }
 }
