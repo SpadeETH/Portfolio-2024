@@ -85,10 +85,9 @@ const PageProject: React.FC = () => {
 
         <div className="w-full flex flex-col gap-8 mx-auto">
           <div className="Main flex flex-col  mx-auto gap-y-5 w-full lg:w-[1028px]">
-            {headerVisible &&
-              elements.map((el, index) => (
-                <Element key={index}>{el.content}</Element>
-              ))}
+            {elements.map((el, index) => (
+              <Element key={index}>{el.content}</Element>
+            ))}
           </div>
         </div>
       </div>
