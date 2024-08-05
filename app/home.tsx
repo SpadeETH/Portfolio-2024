@@ -1,16 +1,12 @@
 "use client";
-import BigLines from "./biglines";
-import AnimatedLines from "./animatedlines";
-import ButtonTextContainer from "../app/components/BottomTextContainer";
-import ButtonHoverEffect from "../app/components/ButtonHoverEffect";
-import ProjectHolder from "../app/components/ProjectHolder";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import logospade from "../public/images/logospade.png";
-import sign from "../public/images/Sign.png";
 import BottomTextContainer from "../app/components/BottomTextContainer";
+import ButtonHoverEffect from "../app/components/ButtonHoverEffect";
 import Footer from "../app/components/footer";
+import ProjectHolder from "./components/ProjectHolder";
+import logospade from "../public/images/logospade.png";
+import BigLines from "./biglines";
 
 export default function Home() {
   return (
@@ -33,6 +29,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.1 }}
               className=" calisto  text-3xl text-black leading-10	 "
             >
+              <span className="underline decoration-2">Arthur Bossuyt</span>,
               Product Designer
             </motion.h2>
 

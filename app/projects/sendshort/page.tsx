@@ -157,7 +157,11 @@ const SendshortProject: React.FC = () => {
               visual aesthetics.
             </div>
           </div>
-          <Image src={postit} alt="Icon" className="lg:w-6/12 ml-[-50px]" />
+          <Image
+            src={postit}
+            alt="Icon"
+            className="lg:w-6/12 lg ml-[0px] ml-[-50px]"
+          />
         </div>
       ),
     },

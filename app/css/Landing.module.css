@@ -1,0 +1,131 @@
+.inter {
+  font-family: "Inter", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Styles par défaut pour les petits écrans */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 96px;
+  max-width: 1080px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Breakpoint pour les écrans moyens (1024px et plus) */
+/* Breakpoint pour les écrans moyens (1024px et plus) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px; /* Augmente l'écart horizontal */
+    max-width: 1080px;
+  }
+}
+
+/* Breakpoint pour les écrans très larges (1440px et plus) */
+/* Breakpoint pour les écrans très larges (1440px et plus) */
+@media (min-width: 1440px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* Limite à 2 colonnes */
+    column-gap: 64px; /* Écart horizontal */
+    max-width: 1080px;
+  }
+}
+
+.projectImage {
+  object-fit: fill;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  outline: 1px solid #e5e5e5;
+  outline-offset: -1px;
+  position: relative;
+}
+
+.projectTitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: var(--darkgrey);
+  position: relative;
+}
+
+.projectDescription {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--light-grey);
+}
+
+.projectTitle {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.projectTitle:hover .arrowIcon {
+  transform: rotate(00deg);
+}
+
+.projectTitle .arrowIcon {
+  transform: rotate(-45deg);
+}
+
+.projectTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1080/596;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: rgba(165, 165, 165, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlayTextWrapper {
+  border-radius: 999px;
+  padding: 8px 12px;
+  background-color: rgba(124, 124, 124, 0.63);
+}
+
+.overlayText {
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.overlay:hover {
+  cursor: pointer;
+}
+
+.projectImage:hover .overlay {
+  opacity: 1;
+}
+
+.projectImage:hover .overlayTextWrapper {
+  transition: transform 0.3s ease;
+  transform: rotate(-45deg);
+}

@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "../css/ProjectHolder.module.css";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
 import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
+import { useInView } from "react-intersection-observer";
+import styles from "../css/ProjectHolder.module.css";
 
 const projects = [
   {
@@ -23,7 +22,7 @@ const projects = [
     title: "Create a CRM 0 → 1 (Personal Project)",
     description: "NexusAI — Website & App Design",
     image: "/images/Projets/miniatures/nexus.png",
-    link: "/projects/nexusai",
+    link: "/projects/landing",
   },
   {
     title: "Gallery",
