@@ -1,9 +1,7 @@
-import styles from "../app/css/BigLines.module.css";
-
 const BigLines: React.FC = () => {
   return (
-    <div className="lineholder mx-auto">
-      <svg className="svgline" xmlns="http://www.w3.org/2000/svg">
+    <div className="lineholder mx-auto max-w-full">
+      <svg className="svgline max-w-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="greyGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="rgb(var(--greyline))" />
