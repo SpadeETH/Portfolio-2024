@@ -480,7 +480,7 @@ const SendshortProject: React.FC = () => {
           <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
             <div className="titlefeature w-full flex flex-col gap-2 mb-6">
               <div className="subheading">UX DESIGN</div>
-              <h2 className="heading w-100 text-left ">Solution Designing </h2>
+              <h2 className="heading w-100 text-left ">Before / After</h2>
               <hr />
               <p className="font-regular segoe text-gray-800">
                 Tags consist of three main interface experiences: tags visual
@@ -500,18 +500,21 @@ const SendshortProject: React.FC = () => {
               <TabsContent value="home">
                 {" "}
                 <ReactCompareSlider
+                  className="rounded-lg"
                   itemOne={<Image src={before} alt="" className="w-full" />}
                   itemTwo={<Image src={after} alt="" className="w-full" />}
                 />
               </TabsContent>
               <TabsContent value="login">
                 <ReactCompareSlider
+                  className="rounded-lg"
                   itemOne={<Image src={lbefore} alt="" className="w-full" />}
                   itemTwo={<Image src={lafter} alt="" className="w-full" />}
                 />
               </TabsContent>
               <TabsContent value="edit">
                 <ReactCompareSlider
+                  className="rounded-lg"
                   itemOne={<Image src={ebefore} alt="" className="w-full" />}
                   itemTwo={<Image src={eafter} alt="" className="w-full" />}
                 />
