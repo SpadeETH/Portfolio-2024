@@ -527,8 +527,10 @@ const SendshortProject: React.FC = () => {
 
     // Ajoutez d'autres éléments ici
   ];
-
-  const Element = ({ children }) => {
+  interface ElementProps {
+    children: React.ReactNode;
+  }
+  const Element: React.FC<ElementProps> = ({ children }) => {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0.2,

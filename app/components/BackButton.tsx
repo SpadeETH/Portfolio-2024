@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
 import Link from "next/link";
+import React, { useRef, useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import styles from "../css/BackButton.module.css";
 
@@ -12,26 +12,33 @@ const BackButton = () => {
     opacity: 0,
   });
 
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<number | NodeJS.Timeout | null>(null);
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
 
-    const rect = e.target.getBoundingClientRect();
-    const containerRect = e.target.parentElement.getBoundingClientRect();
-    const left = rect.left - containerRect.left;
-    const top = rect.top - containerRect.top;
+    const target = e.target as HTMLElement;
+    const rect = target.getBoundingClientRect();
+    const containerRect = target.parentElement?.getBoundingClientRect();
 
-    setHoverPosition({
-      width: rect.width,
-      height: rect.height,
-      left,
-      top,
-      opacity: 1,
-    });
+    if (containerRect) {
+      // Ensure containerRect is not undefined
+      const left = rect.left - containerRect.left;
+      const top = rect.top - containerRect.top;
+
+      setHoverPosition({
+        width: rect.width,
+        height: rect.height,
+        left,
+        top,
+        opacity: 1,
+      });
+    }
   };
 
   const handleMouseLeave = () => {
