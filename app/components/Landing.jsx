@@ -58,8 +58,14 @@ const projects = [
   // Ajoute les autres projets ici...
 ];
 
-const ProjectCard = ({ project }) => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+const ProjectCard = ({ project, animationDelay, forceVisible }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  // Si forceVisible est vrai ou si l'élément est en vue, il est visible
+  const isVisible = forceVisible || inView;
 
   return (
     <motion.div
@@ -67,11 +73,11 @@ const ProjectCard = ({ project }) => {
       className={styles.projectCard}
       initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
       animate={{
-        opacity: inView ? 1 : 0,
-        y: inView ? 0 : 20,
-        filter: inView ? "blur(0px)" : "blur(8px)",
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : 20,
+        filter: isVisible ? "blur(0px)" : "blur(8px)",
       }}
-      transition={{ duration: 0.6, delay: 0.3 }}
+      transition={{ duration: 0.4, delay: animationDelay }}
     >
       <Link href={project.link} target="_blank" rel="noopener noreferrer">
         <div className={styles.imageContainer}>
@@ -109,7 +115,12 @@ const Landing = () => {
   return (
     <div className={styles.gridContainer}>
       {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
+        <ProjectCard
+          key={index}
+          project={project}
+          animationDelay={index < 2 ? 0.1 : 0.3} // Valeur différente pour les deux premiers projets
+          forceVisible={index < 2} // Force visibilité pour les deux premiers projets
+        />
       ))}
     </div>
   );

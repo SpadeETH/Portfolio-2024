@@ -6,12 +6,12 @@
 /* Styles par défaut pour les petits écrans */
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   column-gap: 20px;
-  row-gap: 96px;
-  max-width: 1080px;
+  row-gap: 48px;
   width: 100%;
-  max-width: 500px;
+  /* Assurez-vous que le conteneur ne limite pas la visibilité */
+  min-height: 100vh; /* Exemple pour forcer la hauteur du conteneur */
 }
 
 /* Breakpoint pour les écrans moyens (1024px et plus) */
