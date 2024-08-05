@@ -28,11 +28,7 @@ const PageProject: React.FC = () => {
   const elements = [
     {
       type: "text",
-      content: (
-        <>
-          <Landing />
-        </>
-      ),
+      content: <></>,
     },
 
     // Ajoutez d'autres éléments ici
@@ -84,6 +80,16 @@ const PageProject: React.FC = () => {
         />
 
         <div className="w-full flex flex-col gap-8 mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="projects"
+          >
+            <Landing />
+          </motion.div>
+
           <div className="Main flex flex-col  mx-auto gap-y-5 w-full lg:w-[1028px]">
             {elements.map((el, index) => (
               <Element key={index}>{el.content}</Element>
