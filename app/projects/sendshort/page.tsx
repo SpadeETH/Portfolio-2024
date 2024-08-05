@@ -63,7 +63,7 @@ const SendshortProject: React.FC = () => {
       content: (
         <>
           <div className=" w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]">
-            <div className="title-infocrop flex lg:items-center space-x-4 lg:justify-center">
+            <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 Crop videos
               </h1>
@@ -99,7 +99,7 @@ const SendshortProject: React.FC = () => {
       content: (
         <>
           <div className=" w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]">
-            <div className="title-infocrop flex lg:items-center space-x-4 lg:justify-center">
+            <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 Let IA Subtitle
               </h1>
@@ -134,7 +134,7 @@ const SendshortProject: React.FC = () => {
       type: "shortline",
       content: (
         <>
-          <div className="title text-xl flex flex-row mx-auto lg:text-center w-[400px] my-[64px] lightgrey">
+          <div className="title text-xl flex flex-row mx-auto lg:text-center lg:w-[400px] my-[64px] lightgrey">
             MVP was good for it’s first utility <br /> but to scale we had to
             reimagine it and make it more attractive.
           </div>
@@ -366,7 +366,7 @@ const SendshortProject: React.FC = () => {
                 The main goal of this redesign was to create a place where
                 videomaker can feel confortable.
                 <span className="p-2 heading w-100 text-left font-regular">
-                  Features should be clear, explained & easy to use for
+                  Every features should be clear, explained & easy to use for
                   everyone.
                 </span>
               </h2>
