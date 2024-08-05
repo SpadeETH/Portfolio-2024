@@ -59,6 +59,29 @@ const AnimatedProjectCard = ({ project, animationDelay }) => {
 
 const Landing = () => {
   const [projectsVisible, setProjectsVisible] = useState(false);
+  const [animationDelays, setAnimationDelays] = useState({
+    firstTwo: 1,
+    others: 0.4,
+  });
+
+  useEffect(() => {
+    // Adjust delays based on screen width
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        // Mobile screen width
+        setAnimationDelays({ firstTwo: 0.2, others: 0.2 });
+      } else {
+        setAnimationDelays({ firstTwo: 1, others: 0.4 });
+      }
+    };
+
+    // Set delays on initial load and on resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     // Simuler un délai pour que les projets apparaissent après le header
@@ -125,7 +148,7 @@ const Landing = () => {
         <AnimatedProjectCard
           key={index}
           project={project}
-          animationDelay={1 + index * 0.2} // Délai fixe pour les deux premiers projets
+          animationDelay={animationDelays.firstTwo} // Utiliser le délai ajusté
         />
       ))}
       {/* Projets animés */}
@@ -134,7 +157,7 @@ const Landing = () => {
           <AnimatedProjectCard
             key={index + 2} // Assurez-vous que les clés sont uniques
             project={project}
-            animationDelay={0.4 + index * 0.2} // Augmente le délai pour chaque projet suivant
+            animationDelay={animationDelays.others + index * 0.2} // Utiliser le délai ajusté
           />
         ))}
     </div>
