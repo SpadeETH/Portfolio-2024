@@ -37,3 +37,17 @@
   pointer-events: none;
   border-radius: 8px; /* Just for better visual */
 }
+
+@media (max-width: 1024px) {
+  .button {
+    padding: 2px 4px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    color: #a5a5a5;
+  }
+}

@@ -1,7 +1,7 @@
-import ButtonHoverEffect from "../../app/components/ButtonHoverEffect";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import ButtonHoverEffect from "../../app/components/ButtonHoverEffect";
 import sign from "../../public/images/Sign.png";
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
       className="footer flex flex-col-reverse lg:flex-row"
     >
       <ButtonHoverEffect />
-      <div className="footersign">
+      <div className="footersign max-w-full">
         <Image src={sign} alt="Logo Spade" width={205} height={49} />
         <hr />
         <p className="lightgrey">Name And Signature</p>
