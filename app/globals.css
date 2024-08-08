@@ -201,6 +201,30 @@ ul li::marker {
   font-size: 0.75em; /* Adjust size */
   color: rgb(177, 177, 177); /* Adjust color */
 }
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  /* Positionne l'icône à droite du titre */
+  transform-origin: center;
+  transition: transform 0.3s ease; /* Animation de rotation */
+}
+
+.Arthur {
+  align-items: center;
+}
+.Arthur:hover .arrowIcon {
+  transform: rotate(00deg); /* Rotation de 90 degrés au survol */
+}
+.Arthur .arrowIcon {
+  margin-top: 5px;
+  transform: rotate(-45deg); /* Rotation de 90 degrés au survol */
+}
+.Arthur:hover {
+  cursor: pointer;
+  color: #505257;
+}
+
 /*Responsive*/
 
 @media (min-width: 1024px) and (max-width: 1439px) {

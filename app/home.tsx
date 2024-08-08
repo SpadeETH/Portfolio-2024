@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FiArrowRight } from "react-icons/fi";
 import BottomTextContainer from "../app/components/BottomTextContainer";
 import ButtonHoverEffect from "../app/components/ButtonHoverEffect";
 import Footer from "../app/components/footer";
@@ -29,8 +30,10 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.1 }}
               className=" calisto  text-3xl text-black leading-10	 "
             >
-              <span className="underline decoration-2">Arthur Bossuyt</span>,
-              <br />
+              <span className="flex flex-row Arthur">
+                <span>Arthur Bossuyt</span>{" "}
+                <FiArrowRight className="arrowIcon" />
+              </span>
               Product Designer
             </motion.h2>
 

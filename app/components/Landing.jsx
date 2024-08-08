@@ -78,8 +78,8 @@ const ProjectCard = ({ project }) => {
             src={project.image}
             alt={project.title}
             className={styles.projectImage}
-            width={530}
-            height={375}
+            width={1080}
+            height={596}
           />
           <motion.div
             className={styles.overlay}
