@@ -54,17 +54,21 @@ const ButtonHoverEffect = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <a href="https://example.com" className={styles.link}>
+        <a href="mailto:abossuyt69@gmail.com" className={styles.link}>
           Email
         </a>
       </button>
+
       <button
         className={styles.button}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <a href="https://example.com" className={styles.link}>
-          X (Twitter)
+        <a
+          href="https://www.linkedin.com/in/arthurbsst/"
+          className={styles.link}
+        >
+          LinkedIn
         </a>
       </button>
       <button
@@ -72,8 +76,8 @@ const ButtonHoverEffect = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <a href="https://example.com" className={styles.link}>
-          LinkedIn
+        <a href="https://twitter.com/SpadeFX" className={styles.link}>
+          X
         </a>
       </button>
       <button

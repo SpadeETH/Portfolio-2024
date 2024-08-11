@@ -8,13 +8,12 @@ import { useInView } from "react-intersection-observer";
 import BigLines from "../../biglines";
 import ProjectHeader from "../../components/ProjectHeader";
 
-import cropicon from "../../../public/images/Icons/crop.png";
-import subicon from "../../../public/images/Icons/subtile.png";
-import cropimg from "../../../public/images/sendshort/cropimg.png";
-import headerimage from "../../../public/images/sendshort/header.png";
-import subimg from "../../../public/images/sendshort/subimg.png";
-
-import postit from "../../../public/images/sendshort/postit.png";
+import Opti from "../../../public/images/bitloom/Opti.png";
+import headerimage from "../../../public/images/bitloom/header.png";
+import Track from "../../../public/images/bitloom/Track.png";
+import Coins from "../../../public/images/Bitloom/coins.png";
+import Competitor from "../../../public/images/Bitloom/competitor.png";
+import Niche from "../../../public/images/Bitloom/niche.png";
 
 import Actual from "../../../public/images/sendshort/ActualDesign.png";
 import after from "../../../public/images/sendshort/after.png";
@@ -38,23 +37,23 @@ import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
 import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
 import IconKeyInsightD from "../../../public/images/Icons/KI4.png";
 
-const SendshortProject: React.FC = () => {
+const BitloomProject: React.FC = () => {
   const [headerVisible, setHeaderVisible] = useState(false);
 
   const project = {
-    title: "SendShort Product Design",
-    subtitle: "The tool that enhance content creator workflow",
+    title: "Bitloom Crypto Tracking App",
+    subtitle: "A landing page collection from 2022",
     description:
-      "J’ai eu l’occasion de participer avec Sendshort à la refonte totale de leur Produit / Site Internet. L’objectif étant de faciliter au maximum la création de vidéo au format vertical via l’intelligence artificielle.",
+      "Avec deux amis nous nous sommes lancé dans la réalisation d’une application mobile de portfolio répondant à des problématiques bien spécifiques. Cette application est aujourd’hui en cours de développement, le produit n’est pas arrivé a son terme mais je le trouve interessant à partager.",
     team: [
-      { name: "Dylan Williams", role: "(PM)" },
-      { name: "Logan Victorien", role: "(Branding)" },
-      { name: "Thomas Le Borgne", role: "(UX)" },
+      { name: "Theo Villano", role: "(PM)" },
+      { name: "Guillaume Chalons", role: "(Branding)" },
+      { name: "Thomas Le Borgne", role: "(Developer)" },
       { name: "Arthur Bossuyt", role: "(UX/UI)" },
     ],
-    tools: [{ name: "Figma" }, { name: "Webflow" }],
-    timeline: "Q1 2023 - Q2 2023",
-    disciplines: [{ name: "User Research" }, { name: "Visual Design" }],
+    tools: [{ name: "Figma" }, { name: "FigJam" }],
+    timeline: "Q2 2024 - En Cours",
+    disciplines: [{ name: "Mobile App" }, { name: "UI/UX Design" }],
   };
 
   const elements = [
@@ -65,15 +64,7 @@ const SendshortProject: React.FC = () => {
           <div className=" w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]">
             <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
-                Crop videos
-              </h1>
-              <Image
-                src={cropicon}
-                alt="Icon"
-                className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
-              />
-              <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
-                to vertical format
+                Track all your wallet in same place
               </h1>
             </div>
             <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
@@ -84,11 +75,7 @@ const SendshortProject: React.FC = () => {
               </div>
             </div>
             <div className="img-infocrop">
-              <Image
-                src={cropimg}
-                alt=""
-                className="shadow-lg rounded-xl	w-[860px]"
-              />
+              <Image src={Track} alt="" className=" rounded-[3rem]	w-[860px]" />
             </div>
           </div>
         </>
@@ -101,15 +88,7 @@ const SendshortProject: React.FC = () => {
           <div className=" w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]">
             <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
-                Let IA Subtitle
-              </h1>
-              <Image
-                src={subicon}
-                alt="Icon"
-                className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
-              />
-              <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
-                your videos
+                Optimized for Decentralized Finance tracking
               </h1>
             </div>
             <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
@@ -120,11 +99,7 @@ const SendshortProject: React.FC = () => {
               </div>
             </div>
             <div className="img-infocrop">
-              <Image
-                src={subimg}
-                alt=""
-                className="shadow-lg rounded-xl	w-[860px]"
-              />
+              <Image src={Opti} alt="" className=" rounded-[3rem]	w-[860px]" />
             </div>
           </div>
         </>
@@ -145,19 +120,34 @@ const SendshortProject: React.FC = () => {
       type: "Primary Objective",
       content: (
         <div className="flex flex-col lg:flex-row">
-          <div className="txt lg:w-6/12 flex flex-col gap-y-4 justify-center">
-            <div className="subheading">Primary Objective</div>
+          <div className="txt lg:w-7/12 flex flex-col gap-y-4 justify-center">
+            <div className="subheading">INTRODUCTION</div>
             <div className="heading w-100">
-              Understand how visual design improvements can enhance user
-              engagement and satisfaction.
+              Where does Bitloom idea came from ?
             </div>
             <div className="pheading w-100 segoe font-normal lightgrey">
-              We tried to Identify specific pain points in the current app’s
-              design that hinder usability and discover user preferences for
-              visual aesthetics.
+              As a Web 3 Enjoyer we’ve used a lot of different Crypto Tracker to
+              keep an eye and monitoring our wallets.
+            </div>
+            <div className="pheading w-100 segoe font-normal lightgrey">
+              But each one have their own problem with our usage of the tools
+              which led us to the creation of a product that fit our niche
+              needs.{" "}
+            </div>
+            <hr />
+            <div className="w-100 text-base font-medium lightgrey">
+              According to SkyQuest, the global Decentralized Finance Market
+              size was valued at $22 billion in 2022{" "}
+              <span className="darkgrey">
+                {" "}
+                and is projected to grow $48.02 billion by 2031
+              </span>
+            </div>
+            <div className="pheading w-100 segoe font-normal lightgrey">
+              It makes it the good timing to build product arround it
             </div>
           </div>
-          <Image src={postit} alt="Icon" className="lg:w-6/12 lg ml-[0px] " />
+          <Image src={Coins} alt="Icon" className="lg:w-5/12 lg ml-[0px] " />
         </div>
       ),
     },
@@ -182,20 +172,10 @@ const SendshortProject: React.FC = () => {
                     Global User Experience
                   </h3>
                 </div>
-                <ul className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
-                  <li>
-                    How can we simplify the user journey and reduce friction
-                    points?
-                  </li>
-                  <li>
-                    What are the common pain points users face while using the
-                    app?
-                  </li>
-                  <li>How can we improve user satisfaction and engagement?</li>
-                </ul>
-                <p className="font-medium segoe text-gray-800">
-                  Objective: Enhance the overall user experience by making the
-                  app intuitive, efficient, and nice to use.
+                <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  We need to have a Multi-Wallet analysis because most of the
+                  people use several wallet for different usage whether it is
+                  for security or just for efficviency
                 </p>
               </div>
               <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
@@ -205,21 +185,10 @@ const SendshortProject: React.FC = () => {
                     Global User Experience
                   </h3>
                 </div>
-                <ul className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
-                  <li>
-                    What elements can enhance the visual appeal of the app?
-                  </li>
-                  <li>
-                    How can we create a consistent and intuitive interface?
-                  </li>
-                  <li>
-                    What are the best practices for designing our app’s
-                    features?
-                  </li>
-                </ul>
-                <p className="font-medium segoe text-gray-800">
-                  Objective: Improve the visual design of the app to make it
-                  more appealing and easy to use.
+                <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  Most of the tracker do not take in consideration Centralized
+                  Exchange, we do think that it’s important to take it in
+                  consideration for a better service
                 </p>
               </div>
               <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
@@ -229,19 +198,51 @@ const SendshortProject: React.FC = () => {
                     Global User Experience
                   </h3>
                 </div>
-                <ul className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
-                  <li>
-                    Are all the features easy to understand and easy to use?
-                  </li>
-                  <li>What features can be missing on actual product?</li>
-                  <li>
-                    What are the common problem / issue you faced using
-                    SendShort?
-                  </li>
-                </ul>
-                <p className="font-medium segoe text-gray-800">
-                  Objective: Ensure the app’s features are robust, intuitive,
-                  and meet user needs effectively.
+                <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  Most of the tracker do not take in consideration Centralized
+                  Exchange, we do think that it’s important to take it in
+                  consideration for a better service
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full">
+              <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:pr-4">
+                <div className="flex items-center mb-4">
+                  <PersonIcon style={{ marginRight: ".5rem" }} />
+                  <h3 className="text-base text-gray-800 segoe font-medium">
+                    Global User Experience
+                  </h3>
+                </div>
+                <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  We need to have a Multi-Wallet analysis because most of the
+                  people use several wallet for different usage whether it is
+                  for security or just for efficviency
+                </p>
+              </div>
+              <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
+                <div className="flex items-center mb-4">
+                  <AssignmentIcon style={{ marginRight: ".5rem" }} />
+                  <h3 className="text-base text-gray-800 segoe font-medium">
+                    Global User Experience
+                  </h3>
+                </div>
+                <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  Most of the tracker do not take in consideration Centralized
+                  Exchange, we do think that it’s important to take it in
+                  consideration for a better service
+                </p>
+              </div>
+              <div className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4">
+                <div className="flex items-center mb-4">
+                  <CachedIcon style={{ marginRight: ".5rem" }} />
+                  <h3 className="text-base text-gray-800 segoe font-medium">
+                    Global User Experience
+                  </h3>
+                </div>
+                <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  Most of the tracker do not take in consideration Centralized
+                  Exchange, we do think that it’s important to take it in
+                  consideration for a better service
                 </p>
               </div>
             </div>
@@ -249,7 +250,31 @@ const SendshortProject: React.FC = () => {
         </>
       ),
     },
-
+    {
+      type: "text",
+      content: (
+        <>
+          <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
+            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+              <div className="subheading">UX RESEARCH</div>
+              <h2 className="heading w-100 text-left ">
+                Analyze all competitors
+              </h2>
+              <hr />
+              <p className="font-regular segoe text-gray-800">
+                Considering our goals we tried to compare ourselves to
+                competitors, we want some advanced functionnality while keep
+                everything user friendly, it may looks hard voir impossible but
+                we can achieve this by focusing on what really important.
+              </p>
+            </div>
+          </div>
+          <div className="img-infocrop">
+            <Image src={Competitor} alt="" className="w-full" />
+          </div>
+        </>
+      ),
+    },
     {
       type: "text",
       content: (
@@ -257,24 +282,32 @@ const SendshortProject: React.FC = () => {
           <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
             <div className="titlefeature w-full flex flex-col gap-2 mb-6">
               <div className="subheading">RESEARCH METHODOLOGY</div>
-              <h2 className="heading w-100 text-left">
-                Qualitative over quantitative
+              <h2 className="heading w-100 text-left ">
+                Interview Niche users{" "}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
-                We had a lot of data from analytics and a/b testing that were
-                here since the MVP, we chosen to complete it with a short user
-                interview to make sure that we had enough information to go.
-              </p>
+
+              <div className="flex flex-col gap-y-2">
+                <p className="font-regular segoe text-gray-800">
+                  We interviewed nearly 30 people from web3 sphere asking them a
+                  few question such as :
+                </p>
+
+                <ul className="font-regular segoe text-gray-800 list-disc ml-[12px]">
+                  <li>Name 3 weekness of your actual tracker ?</li>
+                  <li>
+                    What Game changer features could make you leave your actual
+                    tracker ?
+                  </li>
+                </ul>
+                <p className="font-regular segoe text-gray-800">
+                  Here are summerized results :
+                </p>
+              </div>
             </div>
           </div>
-          <div className="imgs flex flex-col lg:flex-row justify-between gap-8">
-            <div className="w-45">
-              <Image src={left} alt="" className="w-45" />
-            </div>
-            <div className="w-45">
-              <Image src={right} alt="" className="w-45" />
-            </div>
+          <div className="img-infocrop">
+            <Image src={Niche} alt="" className="w-full" />
           </div>
         </>
       ),
@@ -423,102 +456,6 @@ const SendshortProject: React.FC = () => {
         </>
       ),
     },
-    {
-      type: "text",
-      content: (
-        <>
-          <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
-            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
-              <div className="subheading">UX DESIGN</div>
-              <h2 className="heading w-100 text-left ">Draft Sessions </h2>
-              <hr />
-              <p className="font-regular segoe text-gray-800">
-                Tags consist of three main interface experiences: tags visual
-                design on the notebook, popup to add a tag, and writing within
-                an expandable tag/resolving tags.
-              </p>
-            </div>
-          </div>
-          <div className="img-infocrop">
-            <Image src={Draft} alt="" className="w-full" />
-          </div>
-        </>
-      ),
-    },
-    {
-      type: "text",
-      content: (
-        <>
-          <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
-            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
-              <div className="subheading">UX DESIGN</div>
-              <h2 className="heading w-100 text-left ">Solution Designing </h2>
-              <hr />
-              <p className="font-regular segoe text-gray-800">
-                Tags consist of three main interface experiences: tags visual
-                design on the notebook, popup to add a tag, and writing within
-                an expandable tag/resolving tags.
-              </p>
-            </div>
-          </div>
-          <div className="img-infocrop">
-            <Image src={Design} alt="" className="w-full" />
-          </div>
-        </>
-      ),
-    },
-    {
-      type: "text",
-      content: (
-        <>
-          <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
-            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
-              <div className="subheading">UX DESIGN</div>
-              <h2 className="heading w-100 text-left ">Before / After</h2>
-              <hr />
-              <p className="font-regular segoe text-gray-800">
-                Tags consist of three main interface experiences: tags visual
-                design on the notebook, popup to add a tag, and writing within
-                an expandable tag/resolving tags.
-              </p>
-            </div>
-          </div>
-          <div className="img-infocrop">
-            <Tabs defaultValue="home" className="w-full">
-              <TabsList>
-                <TabsTrigger value="home">Home</TabsTrigger>
-                <TabsTrigger value="login">Login</TabsTrigger>
-                <TabsTrigger value="edit">Edit</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="home">
-                {" "}
-                <ReactCompareSlider
-                  className="rounded-lg"
-                  itemOne={<Image src={before} alt="" className="w-full" />}
-                  itemTwo={<Image src={after} alt="" className="w-full" />}
-                />
-              </TabsContent>
-              <TabsContent value="login">
-                <ReactCompareSlider
-                  className="rounded-lg"
-                  itemOne={<Image src={lbefore} alt="" className="w-full" />}
-                  itemTwo={<Image src={lafter} alt="" className="w-full" />}
-                />
-              </TabsContent>
-              <TabsContent value="edit">
-                <ReactCompareSlider
-                  className="rounded-lg"
-                  itemOne={<Image src={ebefore} alt="" className="w-full" />}
-                  itemTwo={<Image src={eafter} alt="" className="w-full" />}
-                />
-              </TabsContent>
-            </Tabs>
-          </div>
-        </>
-      ),
-    },
-
     // Ajoutez d'autres éléments ici
   ];
   interface ElementProps {
@@ -617,4 +554,4 @@ const SendshortProject: React.FC = () => {
   );
 };
 
-export default SendshortProject;
+export default BitloomProject;

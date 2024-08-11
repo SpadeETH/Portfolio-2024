@@ -208,6 +208,7 @@ ul li::marker {
   /* Positionne l'icône à droite du titre */
   transform-origin: center;
   transition: transform 0.3s ease; /* Animation de rotation */
+  color: #3b3d41;
 }
 
 .Arthur {
@@ -215,14 +216,35 @@ ul li::marker {
 }
 .Arthur:hover .arrowIcon {
   transform: rotate(00deg); /* Rotation de 90 degrés au survol */
+  color: #5d5f63;
 }
 .Arthur .arrowIcon {
+  color: black;
   margin-top: 5px;
   transform: rotate(-45deg); /* Rotation de 90 degrés au survol */
 }
 .Arthur:hover {
   cursor: pointer;
-  color: #505257;
+  color: #5d5f63;
+}
+
+.Arthur:hover .body {
+  opacity: 20%;
+}
+
+/* Add this to your CSS file or within a <style> block */
+
+.main-content {
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.blur {
+  filter: blur(3px);
+  opacity: 0.6;
+}
+/* Make sure .arthur-container has relative positioning to avoid affecting layout */
+.arthur-container {
+  position: relative;
 }
 
 /*Responsive*/

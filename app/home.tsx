@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
@@ -10,9 +11,11 @@ import BigLines from "./biglines";
 import ProjectHolder from "./components/ProjectHolder";
 
 export default function Home() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <main>
-      <BigLines></BigLines>
+      <BigLines />
       <div className="w-100 mt-124 px-180">
         <div className="hero flex flex-col gap-y-5">
           <motion.div
@@ -23,75 +26,87 @@ export default function Home() {
           >
             <Image src={logospade} alt="Logo Spade" width={32} height={29} />
           </motion.div>
-          <div className="title">
+
+          <div className="title-container">
             <motion.h2
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1, delay: 0.1 }}
-              className=" calisto  text-3xl text-black leading-10	 "
+              className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
-              <span className="flex flex-row Arthur">
-                <span>Arthur Bossuyt</span>{" "}
-                <FiArrowRight className="arrowIcon" />
-              </span>
-              Product Designer
+              <span>Arthur Bossuyt</span> <FiArrowRight className="arrowIcon" />
             </motion.h2>
+            <div className={`main-content ${isHovered ? "blur" : ""}`}>
+              <motion.h2
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 1, delay: 0.1 }}
+                className="calisto text-3xl text-black leading-10"
+              >
+                Product Designer
+              </motion.h2>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="calisto text-3xl greytitle leading-10	"
-            >
-              Redefining solutions with passion.
-            </motion.h2>
-            <motion.h2
-              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="calisto text-3xl greytitle leading-10	"
-            >
-              From Vision to Excellence.
-            </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="feur calisto text-3xl greytitle leading-10"
+              >
+                Redefining solutions with passion.
+              </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="feur calisto text-3xl greytitle leading-10"
+              >
+                From Vision to Excellence.
+              </motion.h2>
+            </div>
           </div>
-          <div className="social-intro flex flex-col gap-y-16">
+
+          <div className={`main-content ${isHovered ? "blur" : ""}`}>
+            <div className="social-intro flex flex-col gap-y-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 1, delay: 0.4 }}
+                className="links"
+              >
+                <ButtonHoverEffect />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="intro flex flex-col gap-y-3"
+              >
+                <motion.h3 className="title text-base lightgrey">
+                  Welcome to my portfolio
+                </motion.h3>
+                <motion.p className="paragraph text-base albra darkgrey">
+                  As a passionate product designer with 2 years of experience, I
+                  specialize in creating intuitive digital experiences. Through
+                  my journey from self-learning and university to freelancing, I
+                  have honed my skills in designing impactful solutions for
+                  various projects.
+                </motion.p>
+              </motion.div>
+            </div>
             <motion.div
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="links"
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="projects"
             >
-              <ButtonHoverEffect />
+              <ProjectHolder />
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="intro flex flex-col gap-y-3"
-            >
-              <motion.h3 className="title text-base lightgrey">
-                Welcome to my portfolio
-              </motion.h3>
-              <motion.p className="paragraph text-base albra darkgrey">
-                As a passionate product designer with 2 years of experience, I
-                specialize in creating intuitive digital experiences. Through my
-                journey from self-learning and university to freelancing, I have
-                honed my skills in designing impactful solutions for various
-                projects.
-              </motion.p>
-            </motion.div>
+            <BottomTextContainer />
+            <Footer />
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="projects"
-          >
-            <ProjectHolder />
-          </motion.div>
-          <BottomTextContainer />
-          <Footer />
         </div>
       </div>
     </main>
