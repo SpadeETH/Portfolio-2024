@@ -247,7 +247,7 @@ ul li::marker {
   position: relative;
 }
 
-/*Responsive*/
+/*Responsiveness*/
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .px-180 {
