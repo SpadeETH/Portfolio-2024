@@ -8,9 +8,9 @@ import { useInView } from "react-intersection-observer";
 import BigLines from "../../biglines";
 import ProjectHeader from "../../components/ProjectHeader";
 
-import Opti from "../../../public/images/bitloom/opti.png";
-import headerimage from "../../../public/images/bitloom/header.png";
-import Track from "../../../public/images/bitloom/track.png";
+import Opti from "../../../public/images/Bitloom/opti.png";
+import headerimage from "../../../public/images/Bitloom/header.png";
+import Track from "../../../public/images/Bitloom/track.png";
 import Coins from "../../../public/images/Bitloom/coins.png";
 import Competitor from "../../../public/images/Bitloom/competitor.png";
 import Niche from "../../../public/images/Bitloom/niche.png";
