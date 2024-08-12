@@ -38,6 +38,8 @@ import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
 import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
 import IconKeyInsightD from "../../../public/images/Icons/KI4.png";
 
+import BackToTop from "../../components/Backtotop";
+
 const SendshortProject: React.FC = () => {
   const [headerVisible, setHeaderVisible] = useState(false);
 
@@ -613,6 +615,7 @@ const SendshortProject: React.FC = () => {
           </div>
         </div>
       </div>
+      <BackToTop />
     </main>
   );
 };

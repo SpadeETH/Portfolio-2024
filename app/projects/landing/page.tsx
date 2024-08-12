@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import BigLines from "../../biglines";
 import Landing from "../../components/Landing";
+
+import BackToTop from "../../components/Backtotop";
 import ProjectHeader from "../../components/ProjectHeader";
 
 const PageProject: React.FC = () => {
@@ -97,6 +99,7 @@ const PageProject: React.FC = () => {
           </div>
         </div>
       </div>
+      <BackToTop />
     </main>
   );
 };

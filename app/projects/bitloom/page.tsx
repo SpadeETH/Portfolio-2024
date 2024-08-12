@@ -1,32 +1,20 @@
 "use client";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { ReactCompareSlider } from "react-compare-slider";
 import { useInView } from "react-intersection-observer";
 import BigLines from "../../biglines";
 import ProjectHeader from "../../components/ProjectHeader";
 
-import Opti from "../../../public/images/Bitloom/opti.png";
-import headerimage from "../../../public/images/Bitloom/header.png";
-import Track from "../../../public/images/Bitloom/track.png";
 import Coins from "../../../public/images/Bitloom/coins.png";
 import Competitor from "../../../public/images/Bitloom/competitor.png";
+import headerimage from "../../../public/images/Bitloom/header.png";
 import Niche from "../../../public/images/Bitloom/niche.png";
+import Opti from "../../../public/images/Bitloom/opti.png";
+import Track from "../../../public/images/Bitloom/track.png";
 
 import Actual from "../../../public/images/sendshort/ActualDesign.png";
-import after from "../../../public/images/sendshort/after.png";
-import before from "../../../public/images/sendshort/before.png";
 import Concu from "../../../public/images/sendshort/Concu.png";
-import Design from "../../../public/images/sendshort/Design.png";
-import Draft from "../../../public/images/sendshort/Draft.png";
-import eafter from "../../../public/images/sendshort/Edit After.png";
-import ebefore from "../../../public/images/sendshort/Edit Before.png";
-import left from "../../../public/images/sendshort/leftResearch.png";
-import lafter from "../../../public/images/sendshort/Login After.png";
-import lbefore from "../../../public/images/sendshort/Login Before.png";
-import right from "../../../public/images/sendshort/rightResearch.png";
 
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import CachedIcon from "@mui/icons-material/Cached";
@@ -36,6 +24,8 @@ import IconKeyInsightA from "../../../public/images/Icons/KI1.png";
 import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
 import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
 import IconKeyInsightD from "../../../public/images/Icons/KI4.png";
+
+import BackToTop from "../../components/Backtotop";
 
 const BitloomProject: React.FC = () => {
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -550,6 +540,7 @@ const BitloomProject: React.FC = () => {
           </div>
         </div>
       </div>
+      <BackToTop />
     </main>
   );
 };
