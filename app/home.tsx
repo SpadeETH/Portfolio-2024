@@ -32,11 +32,28 @@ export default function Home() {
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1, delay: 0.1 }}
-              className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center"
+              className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center relative" // keeping relative here
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
+              style={{ width: "200px" }} // keeping the hitbox width
             >
-              <span>Arthur Bossuyt</span> <FiArrowRight className="arrowIcon" />
+              <span>Arthur Bossuyt</span>
+              <FiArrowRight className="arrowIcon" />
+              {isHovered && (
+                <motion.span
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="hover-text absolute left-[210px] ml-2 text-base text-gray-600"
+                  style={{
+                    whiteSpace: "nowrap", // Prevent text from wrapping
+                    display: "block", // Ensures span behaves correctly
+                    width: "auto", // Prevents width compression
+                  }}
+                >
+                  Click to view more.{" "}
+                </motion.span>
+              )}
             </motion.h2>
             <div className={`main-content ${isHovered ? "blur" : ""}`}>
               <motion.h2
