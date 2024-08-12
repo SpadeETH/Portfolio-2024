@@ -1,17 +1,20 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useContext, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import BottomTextContainer from "../app/components/BottomTextContainer";
 import ButtonHoverEffect from "../app/components/ButtonHoverEffect";
+import LanguageContext from "../app/components/context/LanguageContext";
 import Footer from "../app/components/footer";
+import translations from "../lib/translations";
 import logospade from "../public/images/logospade.png";
 import BigLines from "./biglines";
 import ProjectHolder from "./components/ProjectHolder";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
+  const { language, toggleLanguage } = useContext(LanguageContext);
 
   return (
     <main>
@@ -26,7 +29,17 @@ export default function Home() {
           >
             <Image src={logospade} alt="Logo Spade" width={32} height={29} />
           </motion.div>
-
+          <div>
+            <h1>
+              {
+                translations[language as keyof typeof translations]
+                  .welcomeMessage
+              }
+            </h1>
+            <button onClick={toggleLanguage}>
+              {language === "en" ? "Switch to French" : "Passer à l'anglais"}
+            </button>
+          </div>
           <div className="title-container">
             <motion.h2
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
