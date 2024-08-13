@@ -10,17 +10,15 @@ import { useInView } from "react-intersection-observer";
 import BigLines from "../../biglines";
 import ProjectHeader from "../../components/ProjectHeader";
 
+import PersonIcon from "@mui/icons-material/Person";
 import Coins from "../../../public/images/Bitloom/coins.png";
 import Competitor from "../../../public/images/Bitloom/competitor.png";
+import Design from "../../../public/images/Bitloom/design.png";
+import Draft from "../../../public/images/Bitloom/draft.png";
 import headerimage from "../../../public/images/Bitloom/header.png";
 import Niche from "../../../public/images/Bitloom/niche.png";
 import Opti from "../../../public/images/Bitloom/opti.png";
 import Track from "../../../public/images/Bitloom/track.png";
-
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import CachedIcon from "@mui/icons-material/Cached";
-import PersonIcon from "@mui/icons-material/Person";
-
 import IconKeyInsightA from "../../../public/images/Icons/KI1.png";
 import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
 import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
@@ -178,48 +176,94 @@ const BitloomProject: React.FC = () => {
     {
       type: "UXR",
       content: (
+        <>
+          <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
+            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+              <div className="subheading">
+                {pageTranslations.sections.uxr.title}
+              </div>
+              <h2 className="heading w-100 text-left">
+                {pageTranslations.sections.uxr.titre}
+              </h2>
+              <hr />
+            </div>
+
+            {/* Première rangée de trois colonnes */}
+            <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full">
+              {pageTranslations.sections.uxr.pillars
+                .slice(0, 3)
+                .map((pillar, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-start w-full lg:w-1/3 lg:px-4 mb-8 lg:mb-0"
+                  >
+                    <div className="flex items-center mb-4">
+                      <PersonIcon style={{ marginRight: ".5rem" }} />
+                      <h3 className="text-base text-gray-800 segoe font-medium">
+                        {pillar.title}
+                      </h3>
+                    </div>
+                    <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                      {pillar.description}
+                    </p>
+                    <p className="font-medium segoe text-gray-800">
+                      {pillar.objective}
+                    </p>
+                  </div>
+                ))}
+            </div>
+
+            {/* Deuxième rangée de trois colonnes */}
+            <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full mt-8">
+              {pageTranslations.sections.uxr.pillars
+                .slice(3, 6)
+                .map((pillar, index) => (
+                  <div
+                    key={index + 3}
+                    className="flex flex-col items-start w-full lg:w-1/3 lg:px-4 mb-8 lg:mb-0"
+                  >
+                    <div className="flex items-center mb-4">
+                      <PersonIcon style={{ marginRight: ".5rem" }} />
+                      <h3 className="text-base text-gray-800 segoe font-medium">
+                        {pillar.title}
+                      </h3>
+                    </div>
+                    <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                      {pillar.description}
+                    </p>
+                    <p className="font-medium segoe text-gray-800">
+                      {pillar.objective}
+                    </p>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </>
+      ),
+    },
+    {
+      type: "UXResearch",
+      content: (
         <div
-          key={`${language}-uxr`}
+          key={`${language}-UXResearch`}
           className="flex flex-col items-center w-full mx-auto mt-[96px]"
         >
           <div className="titlefeature w-full flex flex-col gap-2 mb-6">
             <div className="subheading">
-              {pageTranslations.sections.uxr.title}
+              {pageTranslations.sections.uxresearch.title}
             </div>
             <h2 className="heading w-100 text-left">
-              {pageTranslations.sections.uxr.titre}
+              {pageTranslations.sections.uxresearch.heading}
             </h2>
             <hr />
+            <p className="font-regular segoe text-gray-800">
+              {pageTranslations.sections.uxresearch.description}
+            </p>
           </div>
-
-          <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full">
-            {pageTranslations.sections.uxr.pillars.map((pillar, index) => (
-              <div
-                key={`${language}-pillar-${index}`}
-                className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4"
-              >
-                <div className="flex items-center mb-4">
-                  {index === 0 && (
-                    <PersonIcon style={{ marginRight: ".5rem" }} />
-                  )}
-                  {index === 1 && (
-                    <AssignmentIcon style={{ marginRight: ".5rem" }} />
-                  )}
-                  {index === 2 && (
-                    <CachedIcon style={{ marginRight: ".5rem" }} />
-                  )}
-                  <h3 className="text-base text-gray-800 segoe font-medium">
-                    {pillar.title}
-                  </h3>
-                </div>
-                <ul className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
-                  {pillar.description}
-                </ul>
-                <p className="font-medium segoe text-gray-800">
-                  {pillar.objective}
-                </p>
-              </div>
-            ))}
+          <div className="imgs flex flex-col lg:flex-row justify-between gap-8">
+            <div className="w-45">
+              <Image src={Competitor} alt="" className="w-100" />
+            </div>
           </div>
         </div>
       ),
@@ -239,16 +283,27 @@ const BitloomProject: React.FC = () => {
               {pageTranslations.sections.researchMethodology.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
-              {pageTranslations.sections.researchMethodology.description}
-            </p>
+            <div className="flex flex-col gap-y-2">
+              <p className="font-regular segoe text-gray-800">
+                {pageTranslations.sections.researchMethodology.description1}
+              </p>
+
+              <ul className="font-regular segoe text-gray-800 list-disc ml-[12px]">
+                <li>
+                  {pageTranslations.sections.researchMethodology.description2}
+                </li>
+                <li>
+                  {pageTranslations.sections.researchMethodology.description3}
+                </li>
+              </ul>
+              <p className="font-regular segoe text-gray-800">
+                {pageTranslations.sections.researchMethodology.description4}
+              </p>
+            </div>
           </div>
           <div className="imgs flex flex-col lg:flex-row justify-between gap-8">
             <div className="w-45">
-              <Image src={Niche} alt="" className="w-45" />
-            </div>
-            <div className="w-45">
-              <Image src={Competitor} alt="" className="w-45" />
+              <Image src={Niche} alt="" className="w-100" />
             </div>
           </div>
         </div>
@@ -332,6 +387,86 @@ const BitloomProject: React.FC = () => {
             </div>
           </div>
         </div>
+      ),
+    },
+    {
+      type: "keyInsights2",
+      content: (
+        <>
+          <div
+            key={`${language}-keyInsights2`}
+            className="flex flex-col items-center w-full mx-auto mt-[96px]"
+          >
+            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+              <div className="subheading">
+                {pageTranslations.sections.keyInsights2.title}
+              </div>
+              <h2 className="lightheading w-100 text-left lightgrey font-normal">
+                {pageTranslations.sections.keyInsights2.heading}
+                <span className="p-2 heading w-100 text-left font-regular">
+                  {pageTranslations.sections.keyInsights2.subheading}
+                </span>
+              </h2>
+            </div>
+          </div>
+        </>
+      ),
+    },
+    {
+      type: "uxDesign-draftSessions",
+      content: (
+        <>
+          <div
+            key={`${language}-uxDesign-draftSessions`}
+            className="flex flex-col items-center w-full mx-auto mt-[96px]"
+          >
+            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+              <div className="subheading">
+                {pageTranslations.sections.uxDesign.draftSessions.title}
+              </div>
+              <h2 className="heading w-100 text-left ">
+                {pageTranslations.sections.uxDesign.draftSessions.heading}
+              </h2>
+              <hr />
+              <p className="font-regular segoe text-gray-800">
+                {pageTranslations.sections.uxDesign.draftSessions.description}
+              </p>
+            </div>
+          </div>
+          <div className="img-infocrop">
+            <Image src={Draft} alt="" className="w-full" />
+          </div>
+        </>
+      ),
+    },
+    {
+      type: "uxDesign-solutionDesigning",
+      content: (
+        <>
+          <div
+            key={`${language}-uxDesign-solutionDesigning`}
+            className="flex flex-col items-center w-full mx-auto mt-[96px]"
+          >
+            <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+              <div className="subheading">
+                {pageTranslations.sections.uxDesign.solutionDesigning.title}
+              </div>
+              <h2 className="heading w-100 text-left ">
+                {pageTranslations.sections.uxDesign.solutionDesigning.heading}
+              </h2>
+              <hr />
+              <p className="font-regular segoe text-gray-800">
+                {
+                  pageTranslations.sections.uxDesign.solutionDesigning
+                    .description
+                }
+              </p>
+            </div>
+          </div>
+          <div className="img-infocrop">
+            <Image src={Design} alt="" className="w-full" />
+          </div>
+        </>
       ),
     },
   ];

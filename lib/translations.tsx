@@ -140,7 +140,7 @@ const translations = {
         keyInsights2: {
           title: "KEY INSIGHTS",
           heading:
-            "The main goal of this redesign was to create a place where videomakers can feel comfortable.",
+            "The main goal of this redesign was to create a place where videomaker can feel confortable.",
           subheading:
             "Every feature should be clear, explained & easy to use for everyone.",
         },
@@ -229,35 +229,65 @@ const translations = {
               icon: "PersonIcon",
               title: "Global User Experience",
               description:
-                "We need to have a Multi-Wallet analysis because most people use several wallets for different purposes, whether for security or efficiency.",
-              objective: "Ensure users can easily manage multiple wallets.",
+                "We need to have a multi-wallet analysis because most people use several wallets for different purposes, whether for security or efficiency.",
+              objective: "Allow users to easily manage multiple wallets.",
             },
             {
-              icon: "AssignmentIcon",
+              icon: "PersonIcon",
               title: "Global User Experience",
               description:
-                "Most trackers do not consider Centralized Exchanges, but we believe it’s essential to include them for better service.",
-              objective: "Include centralized exchanges for a better overview.",
-            },
-            {
-              icon: "CachedIcon",
-              title: "Global User Experience",
-              description:
-                "Most trackers do not consider Centralized Exchanges, but we believe it’s essential to include them for better service.",
+                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
               objective:
-                "Improve service by considering centralized exchanges.",
+                "Include centralized exchanges for a better overall view.",
+            },
+            {
+              icon: "PersonIcon",
+              title: "Global User Experience",
+              description:
+                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+              objective:
+                "Improve the service by taking centralized exchanges into account.",
+            },
+            {
+              icon: "PersonIcon",
+              title: "Global User Experience",
+              description:
+                "We need to have a multi-wallet analysis because most people use several wallets for different purposes, whether for security or efficiency.",
+              objective: "Allow users to easily manage multiple wallets.",
+            },
+            {
+              icon: "PersonIcon",
+              title: "Global User Experience",
+              description:
+                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+              objective:
+                "Include centralized exchanges for a better overall view.",
+            },
+            {
+              icon: "PersonIcon",
+              title: "Global User Experience",
+              description:
+                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+              objective:
+                "Improve the service by taking centralized exchanges into account.",
             },
           ],
+        },
+        uxresearch: {
+          title: "UX RESEARCH",
+          heading: "Analyze all competitors",
+          description:
+            "Considering our goals we tried to compare ourselves to competitors, we want some advanced functionnality while keep everything user friendly, it may looks hard voir impossible but we can achieve this by focusing on what really important.",
         },
         researchMethodology: {
           title: "RESEARCH METHODOLOGY",
           heading: "Interview Niche users",
-          description: [
-            "We interviewed nearly 30 people from the Web3 sphere, asking them questions such as:",
-            "Name 3 weaknesses of your current tracker?",
+          description1:
+            "We interviewed nearly 30 people from web3 sphere asking them a few question such as :",
+          description2: "Name 3 weaknesses of your current tracker?",
+          description3:
             "What game-changing features would make you leave your current tracker?",
-            "Here are the summarized results:",
-          ],
+          description4: "Here are the summarized results:",
         },
         keyInsights: {
           title: "INFORMATIONS CLÉS",
@@ -266,27 +296,126 @@ const translations = {
             "L'un des principaux problèmes que nous avons rencontrés était une interface utilisateur médiocre qui compliquait certaines étapes pour les utilisateurs. De plus, nous avons constaté que certaines étapes inutiles pouvaient être supprimées.",
           pillars: [
             {
-              title: "Interface Utilisateur Médiocre",
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
               description:
-                "L'ancienne interface a été faite par des développeurs, elle était correcte, mais il manquait quelque chose pour atteindre le niveau supérieur et devenir plus premium.",
+                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
+              objective:
+                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
             },
             {
-              title: "Étapes Inutiles",
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
               description:
-                "Certaines personnes avaient du mal avec le nombre d'étapes nécessaires pour accomplir des tâches simples, comme lors de l'importation de vidéos.",
+                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+              objective:
+                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
             },
             {
-              title: "Fonctionnalités Non Expliquées",
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
               description:
-                "Lors des entretiens, nous avons demandé aux utilisateurs de trouver et d'expliquer toutes les fonctionnalités de SendShort. Certains ont eu du mal à toutes les trouver.",
+                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+              objective:
+                "Améliorer le service en prenant en compte les échanges centralisés.",
             },
             {
-              title: "Gestion des Fichiers Désorganisée",
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
               description:
-                "Nous avons rencontré un autre problème avec deux personnes interviewées qui ont réalisé plus de courts métrages que les autres (+50 shorts). Il n'y a pas de système d'organisation des fichiers.",
+                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
+              objective:
+                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
+            },
+            {
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
+              description:
+                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+              objective:
+                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
+            },
+            {
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
+              description:
+                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+              objective:
+                "Améliorer le service en prenant en compte les échanges centralisés.",
             },
           ],
         },
+        keyInsights2: {
+          title: "KEY INSIGHTS",
+          heading:
+            "The main goal of this redesign was to create a place where videomakers can feel comfortable.",
+          subheading:
+            "Every feature should be clear, explained & easy to use for everyone.",
+        },
+        uxDesign: {
+          draftSessions: {
+            title: "UX DESIGN",
+            heading: "Draft Sessions",
+            description:
+              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+          },
+          solutionDesigning: {
+            title: "UX DESIGN",
+            heading: "Solution Designing",
+            description:
+              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+          },
+        },
+      },
+    },
+    landing: {
+      sendshort: {
+        title: "SendshortAI — Landing Page",
+        subheading: "SENDSHORT",
+        description:
+          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+        link: "https://sendshort.ai/",
+        image: "/images/Landings/sendshort.png",
+      },
+      osmoz: {
+        title: "Ösmoz — Landing Page",
+        subheading: "ÖSMOZ",
+        description:
+          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+        link: "https://www.agence-osmoz.com/",
+        image: "/images/Landings/osmoz.png",
+      },
+      spybox: {
+        title: "SpyBox — Landing Page",
+        subheading: "SPYBOX",
+        description:
+          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+        link: "https://www.spybox.io/",
+        image: "/images/Landings/spybox.png",
+      },
+      jonathanecom: {
+        title: "Jonathan Ecom — Landing Page",
+        subheading: "JONATHAN ECOM",
+        description:
+          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+        link: "https://www.jo-ecom.io/",
+        image: "/images/Landings/joecom.png",
+      },
+      cawatoes: {
+        title: "Cawatoès — Landing Page",
+        subheading: "CAWATOES",
+        description:
+          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+        link: "https://pro.cawatoes.fr/",
+        image: "/images/Landings/cawatoes.png",
+      },
+      fusion: {
+        title: "Fusion Groupe — Landing Page",
+        subheading: "FUSION",
+        description:
+          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+        link: "https://www.fusion-groupe.com/",
+        image: "/images/Landings/fusion.png",
       },
     },
   },
@@ -545,18 +674,50 @@ const translations = {
               objective:
                 "Améliorer le service en prenant en compte les échanges centralisés.",
             },
+            {
+              icon: "PersonIcon",
+              title: "Expérience Utilisateur Globale",
+              description:
+                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
+              objective:
+                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
+            },
+            {
+              icon: "AssignmentIcon",
+              title: "Expérience Utilisateur Globale",
+              description:
+                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+              objective:
+                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
+            },
+            {
+              icon: "CachedIcon",
+              title: "Expérience Utilisateur Globale",
+              description:
+                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+              objective:
+                "Améliorer le service en prenant en compte les échanges centralisés.",
+            },
           ],
+        },
+
+        uxresearch: {
+          title: "RECHERCHE UX",
+          heading: "Analyser tous les concurrents",
+          description:
+            "Compte tenu de nos objectifs, nous avons essayé de nous comparer aux concurrents. Nous voulons des fonctionnalités avancées tout en gardant tout convivial. Cela peut sembler difficile voire impossible, mais nous pouvons y parvenir en nous concentrant sur ce qui est vraiment important.",
         },
         researchMethodology: {
           title: "MÉTHODOLOGIE DE RECHERCHE",
           heading: "Interview des utilisateurs de niche",
-          description: [
-            "Nous avons interviewé près de 30 personnes de la sphère Web3, leur posant des questions telles que :",
-            "Citez 3 faiblesses de votre tracker actuel ?",
-            "Quelles fonctionnalités révolutionnaires pourraient vous faire abandonner votre tracker actuel ?",
-            "Voici les résultats résumés :",
-          ],
+          description1:
+            "Nous avons interviewé près de 30 personnes de la sphère Web3 en leur posant quelques questions telles que :",
+          description2: "Citez 3 faiblesses de votre tracker actuel ?",
+          description3:
+            "Quelles fonctionnalités révolutionnaires vous feraient abandonner votre tracker actuel ?",
+          description4: "Voici les résultats résumés :",
         },
+
         keyInsights: {
           title: "INFORMATIONS CLÉS",
           heading: "Trop d'étapes inutiles et une expérience visuelle médiocre",
@@ -585,6 +746,77 @@ const translations = {
             },
           ],
         },
+        keyInsights2: {
+          title: "KEY INSIGHTS",
+          heading:
+            "The main goal of this redesign was to create a place where videomakers can feel comfortable.",
+          subheading:
+            "Every feature should be clear, explained & easy to use for everyone.",
+        },
+        uxDesign: {
+          draftSessions: {
+            title: "DESIGN UX",
+            heading: "Sessions de brouillon",
+            description:
+              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+          },
+          solutionDesigning: {
+            title: "DESIGN UX",
+            heading: "Conception de solutions",
+            description:
+              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+          },
+        },
+      },
+    },
+    landing: {
+      sendshort: {
+        title: "SendshortAI — Page d'accueil",
+        subheading: "SENDSHORT",
+        description:
+          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+        link: "https://sendshort.ai/",
+        image: "/images/Landings/sendshort.png",
+      },
+      osmoz: {
+        title: "Ösmoz — Page d'accueil",
+        subheading: "ÖSMOZ",
+        description:
+          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+        link: "https://www.agence-osmoz.com/",
+        image: "/images/Landings/osmoz.png",
+      },
+      spybox: {
+        title: "SpyBox — Page d'accueil",
+        subheading: "SPYBOX",
+        description:
+          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+        link: "https://www.spybox.io/",
+        image: "/images/Landings/spybox.png",
+      },
+      jonathanecom: {
+        title: "Jonathan Ecom — Page d'accueil",
+        subheading: "JONATHAN ECOM",
+        description:
+          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+        link: "https://www.jo-ecom.io/",
+        image: "/images/Landings/joecom.png",
+      },
+      cawatoes: {
+        title: "Cawatoès — Page d'accueil",
+        subheading: "CAWATOES",
+        description:
+          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+        link: "https://pro.cawatoes.fr/",
+        image: "/images/Landings/cawatoes.png",
+      },
+      fusion: {
+        title: "Fusion Groupe — Page d'accueil",
+        subheading: "FUSION",
+        description:
+          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+        link: "https://www.fusion-groupe.com/",
+        image: "/images/Landings/fusion.png",
       },
     },
   },
