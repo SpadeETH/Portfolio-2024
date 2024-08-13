@@ -94,11 +94,7 @@ const BitloomProject: React.FC = () => {
             </div>
           </div>
           <div className="img-infocrop">
-            <Image
-              src={Track}
-              alt=""
-              className="shadow-lg rounded-xl	w-[860px]"
-            />
+            <Image src={Track} alt="" className="rounded-[3rem]	w-[860px]" />
           </div>
         </div>
       ),
@@ -121,11 +117,7 @@ const BitloomProject: React.FC = () => {
             </div>
           </div>
           <div className="img-infocrop">
-            <Image
-              src={Opti}
-              alt=""
-              className="shadow-lg rounded-xl	w-[860px]"
-            />
+            <Image src={Opti} alt="" className="rounded-[3rem]	w-[860px]" />
           </div>
         </div>
       ),
@@ -434,7 +426,7 @@ const BitloomProject: React.FC = () => {
             </div>
           </div>
           <div className="img-infocrop">
-            <Image src={Draft} alt="" className="w-full" />
+            <Image src={Draft} alt="" className=" w-full" />
           </div>
         </>
       ),

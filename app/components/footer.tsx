@@ -19,10 +19,8 @@ const Footer = () => {
       className="footer flex flex-col-reverse lg:flex-row"
     >
       <ButtonHoverEffect />
-      <div className="footersign max-w-full">
+      <div className="footersign max-w-full flex flex-row justify-end">
         <Image src={sign} alt="Logo Spade" width={205} height={49} />
-        <hr />
-        <p className="lightgrey">Name And Signature</p>
       </div>
     </motion.div>
   );

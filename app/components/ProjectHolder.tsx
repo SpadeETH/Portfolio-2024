@@ -1,38 +1,48 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
+import translations from "../../lib/translations";
 import styles from "../css/ProjectHolder.module.css";
+import LanguageContext from "./context/LanguageContext";
 
-const projects = [
-  {
-    title: "From MVP to French Market Leader",
-    description: "SendshortAI — Website & App Design",
-    image: "/images/Projets/miniatures/sendshort.png",
-    link: "/projects/sendshort",
-  },
-  {
-    title: "Developing a Crypto Portfolio Tracking Application",
-    description: "Bitloom — App Design & Branding",
-    image: "/images/Projets/miniatures/bitloom.png",
-    link: "/projects/bitloom",
-  },
-  {
-    title: "Create a CRM 0 → 1 (Personal Project)",
-    description: "NexusAI — Website & App Design",
-    image: "/images/Projets/miniatures/nexus.png",
-    link: "/projects/landing",
-  },
-  {
-    title: "Gallery",
-    description: "Collection of UI shots",
-    image: "/images/Projets/miniatures/other.png",
-    link: "/projects/gallery",
-  },
-];
+// Define the Project interface
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
 
-const ProjectCard = ({ project }) => {
+const ProjectHolder: React.FC = () => {
+  const { language } = useContext(LanguageContext);
+  const buttonText =
+    translations[language as keyof typeof translations].projectHolder.button;
+
+  const projectTranslations: Project[] =
+    translations[language as keyof typeof translations].projectHolder.projects;
+
+  return (
+    <div className={styles.gridContainer}>
+      {projectTranslations.map((project, index) => (
+        <ProjectCard
+          key={`${language}-${index}`}
+          project={project}
+          buttonText={buttonText}
+        />
+      ))}
+    </div>
+  );
+};
+
+// Update ProjectCard to accept buttonText as a prop
+const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
+  project,
+  buttonText,
+}) => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
@@ -63,7 +73,7 @@ const ProjectCard = ({ project }) => {
             transition={{ duration: 0.3 }}
           >
             <div className={styles.overlayTextWrapper}>
-              <p className={styles.overlayText}>View Project</p>
+              <p className={styles.overlayText}>{buttonText}</p>
             </div>
           </motion.div>
         </div>
@@ -76,16 +86,6 @@ const ProjectCard = ({ project }) => {
       </Link>
       <p className={styles.projectDescription}>{project.description}</p>
     </motion.div>
-  );
-};
-
-const ProjectHolder = () => {
-  return (
-    <div className={styles.gridContainer}>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
-    </div>
   );
 };
 

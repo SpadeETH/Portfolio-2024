@@ -1,44 +1,34 @@
 "use client";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import translations from "../../../lib/translations";
 import BigLines from "../../biglines";
-import Landing from "../../components/Landing";
-
 import BackToTop from "../../components/Backtotop";
+import Landing from "../../components/Landing";
 import ProjectHeader from "../../components/ProjectHeader";
+import LanguageContext from "../../components/context/LanguageContext";
 
 const PageProject: React.FC = () => {
   const [headerVisible, setHeaderVisible] = useState(false);
-
-  const project = {
-    title: "Landing Page Collection",
-    subtitle: "A landing page collection from 2022",
-    description:
-      "J’ai eu l’occasion de participer avec Sendshort à la refonte totale de leur Produit / Site Internet. L’objectif étant de faciliter au maximum la création de vidéo au format vertical via l’intelligence artificielle.",
-    team: [
-      { name: "Dylan Williams", role: "(Web Developper)" },
-      { name: "Logan Victorien", role: "(Motion Designer)" },
-      { name: "Oriane Benatan", role: "(Web Developper)" },
-      { name: "Arthur Bossuyt", role: "(Web Designer)" },
-    ],
-    tools: [{ name: "Figma" }, { name: "Webflow" }],
-    timeline: "Q2 2022 - Q4 2023",
-    disciplines: [{ name: "Web Design" }, { name: "Web Developement" }],
-  };
+  const { language } = useContext(LanguageContext);
+  const pageTranslations =
+    translations[language as keyof typeof translations].Landingheader;
 
   const elements = [
     {
       type: "text",
       content: <></>,
     },
-
-    // Ajoutez d'autres éléments ici
+    // Add other elements here
   ];
+
   interface ElementProps {
     children: React.ReactNode;
+    index: number;
   }
-  const Element: React.FC<ElementProps> = ({ children }) => {
+
+  const Element: React.FC<ElementProps> = ({ children, index }) => {
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0.2,
@@ -55,6 +45,7 @@ const PageProject: React.FC = () => {
         }}
         transition={{ duration: 0.6, delay: 0.1 }}
         className="bloctext env"
+        key={`${language}-${index}`} // Use language and index for a stable key
       >
         {children}
       </motion.div>
@@ -62,40 +53,45 @@ const PageProject: React.FC = () => {
   };
 
   useEffect(() => {
-    // Simulate the delay for header animation completion
     const timer = setTimeout(() => setHeaderVisible(true), 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [language]);
 
   return (
-    <main>
+    <main key={language}>
+      {/* Adding key to the main container to trigger re-render on language change */}
       <BigLines />
       <div className="w-full mt-124 px-180 mx-auto flex flex-col gap-y-[80px]">
         <ProjectHeader
-          title={project.title}
-          subtitle={project.subtitle}
-          description={project.description}
-          team={project.team}
-          tools={project.tools}
-          timeline={project.timeline}
-          disciplines={project.disciplines}
+          key={`${language}-header`}
+          title={pageTranslations.title}
+          subtitle={pageTranslations.subtitle}
+          description={pageTranslations.description}
+          team={pageTranslations.team}
+          tools={pageTranslations.tools}
+          timeline={pageTranslations.timeline}
+          disciplines={pageTranslations.disciplines}
         />
 
         <div className="w-full flex flex-col gap-8 mx-auto">
           <motion.div
+            key={`${language}-landing`}
             initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 1, delay: 1 }}
             className="projects"
           >
             <Landing />
           </motion.div>
 
-          <div className="Main flex flex-col  mx-auto gap-y-5 w-full lg:w-[1028px]">
-            {elements.map((el, index) => (
-              <Element key={index}>{el.content}</Element>
-            ))}
+          <div className="Main flex flex-col mx-auto gap-y-5 w-full lg:w-[1028px]">
+            {headerVisible &&
+              elements.map((el, index) => (
+                <Element key={index} index={index}>
+                  {el.content}
+                </Element>
+              ))}
           </div>
         </div>
       </div>

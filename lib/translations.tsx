@@ -418,6 +418,50 @@ const translations = {
         image: "/images/Landings/fusion.png",
       },
     },
+    Landingheader: {
+      title: "Landing Page Collection",
+      subtitle: "A landing page collection from 2022",
+      description:
+        "I had the opportunity to work with Sendshort on the complete redesign of their Product/Website. The goal was to make vertical video creation as easy as possible using artificial intelligence.",
+      team: [
+        { name: "Dylan Williams", role: "(Web Developer)" },
+        { name: "Logan Victorien", role: "(Motion Designer)" },
+        { name: "Oriane Benatan", role: "(Web Developer)" },
+        { name: "Arthur Bossuyt", role: "(Web Designer)" },
+      ],
+      tools: [{ name: "Figma" }, { name: "Webflow" }],
+      timeline: "Q2 2022 - Q4 2023",
+      disciplines: [{ name: "Web Design" }, { name: "Web Development" }],
+    },
+    projectHolder: {
+      projects: [
+        {
+          title: "From MVP to French Market Leader",
+          description: "SendshortAI — Website & App Design",
+          image: "/images/Projets/miniatures/sendshort.png",
+          link: "/projects/sendshort",
+        },
+        {
+          title: "Developing a Crypto Portfolio Tracking Application",
+          description: "Bitloom — App Design & Branding",
+          image: "/images/Projets/miniatures/bitloom.png",
+          link: "/projects/bitloom",
+        },
+        {
+          title: "Create a CRM 0 → 1 (Personal Project)",
+          description: "NexusAI — Website & App Design",
+          image: "/images/Projets/miniatures/nexus.png",
+          link: "/projects/landing",
+        },
+        {
+          title: "Gallery",
+          description: "Collection of UI shots",
+          image: "/images/Projets/miniatures/other.png",
+          link: "/projects/gallery",
+        },
+      ],
+      button: "view project",
+    },
   },
 
   fr: {
@@ -818,6 +862,51 @@ const translations = {
         link: "https://www.fusion-groupe.com/",
         image: "/images/Landings/fusion.png",
       },
+    },
+    Landingheader: {
+      title: "Collection de pages de destination",
+      subtitle: "Une collection de pages de destination de 2022",
+      description:
+        "J'ai eu l'opportunité de travailler avec Sendshort sur la refonte complète de leur Produit/Site Web. L'objectif était de faciliter au maximum la création de vidéos verticales en utilisant l'intelligence artificielle.",
+      team: [
+        { name: "Dylan Williams", role: "(Développeur Web)" },
+        { name: "Logan Victorien", role: "(Designer Motion)" },
+        { name: "Oriane Benatan", role: "(Développeur Web)" },
+        { name: "Arthur Bossuyt", role: "(Designer Web)" },
+      ],
+      tools: [{ name: "Figma" }, { name: "Webflow" }],
+      timeline: "T2 2022 - T4 2023",
+      disciplines: [{ name: "Design Web" }, { name: "Développement Web" }],
+    },
+    projectHolder: {
+      projects: [
+        {
+          title: "De MVP à leader du marché français",
+          description: "SendshortAI — Conception de site Web et d'application",
+          image: "/images/Projets/miniatures/sendshort.png",
+          link: "/projects/sendshort",
+        },
+        {
+          title:
+            "Développement d'une application de suivi de portefeuille crypto",
+          description: "Bitloom — Conception d'application et branding",
+          image: "/images/Projets/miniatures/bitloom.png",
+          link: "/projects/bitloom",
+        },
+        {
+          title: "Créer un CRM 0 → 1 (projet personnel)",
+          description: "NexusAI — Conception de site Web et d'application",
+          image: "/images/Projets/miniatures/nexus.png",
+          link: "/projects/landing",
+        },
+        {
+          title: "Galerie",
+          description: "Collection de captures d'écran d'UI",
+          image: "/images/Projets/miniatures/other.png",
+          link: "/projects/gallery",
+        },
+      ],
+      button: "voir le projet",
     },
   },
 };
