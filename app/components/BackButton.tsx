@@ -1,9 +1,16 @@
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
+import LanguageContext from "../../app/components/context/LanguageContext";
+import translations from "../../lib/translations";
 import styles from "../css/BackButton.module.css";
 
 const BackButton = () => {
+  const [isClient, setIsClient] = useState(false);
+  const { language, toggleLanguage } = useContext(LanguageContext);
+
+  const pageTranslations =
+    translations[language as keyof typeof translations].buttonspecial;
   const [hoverPosition, setHoverPosition] = useState({
     width: 0,
     height: 0,
@@ -65,7 +72,7 @@ const BackButton = () => {
           onMouseLeave={handleMouseLeave}
         >
           <FiArrowLeft className={styles.icon} />
-          <span>Back</span>
+          <span>{pageTranslations.back}</span>
         </div>
       </Link>
     </div>

@@ -1,8 +1,16 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import LanguageContext from "../../app/components/context/LanguageContext";
+import translations from "../../lib/translations";
 
 const BottomTextContainer = () => {
+  const [isClient, setIsClient] = useState(false);
+  const { language, toggleLanguage } = useContext(LanguageContext);
+
+  const pageTranslations =
+    translations[language as keyof typeof translations].home;
+
   // Utilisation de useInView pour détecter la visibilité des éléments
   const { ref: envRef, inView: envInView } = useInView({
     triggerOnce: true, // Détecte une seule fois
@@ -41,15 +49,10 @@ const BottomTextContainer = () => {
         className="bloctext env"
       >
         <div className="title text-base lightgrey">
-          Thriving in Collaborative Environments
+          {pageTranslations.pbottom.p1.title}
         </div>
         <p className="paragraph text-base darkgrey">
-          I thrive in collaborative environments where designers, developers,
-          and stakeholders unite to innovate and solve challenges. With a
-          background spanning design & development, I bridge gaps and ensure
-          seamless communication across teams. I embrace teamwork for its role
-          in continuous learning and personal growth, aiming to deliver
-          transformative solutions by embracing diverse perspectives.
+          {pageTranslations.pbottom.p1.paragraph}
         </p>
       </motion.div>
       <motion.div
@@ -64,15 +67,10 @@ const BottomTextContainer = () => {
         className="bloctext env"
       >
         <div className="title text-base lightgrey">
-          Unveiling Beauty and Solving Challenges{" "}
+          {pageTranslations.pbottom.p2.title}
         </div>
         <div className="paragraph text-base darkgrey">
-          I believe design is a tool that reveals and enhances the inherent
-          beauty in our world. Beyond aesthetics, it crafts intuitive solutions
-          for digital interfaces and physical products, addressing complex
-          challenges with clarity and empathy. Design plays a crucial role in
-          creating a brighter future by innovating thoughtfully and ensuring our
-          solutions resonate deeply with users.
+          {pageTranslations.pbottom.p2.paragraph}
         </div>
       </motion.div>
     </div>

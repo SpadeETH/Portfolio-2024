@@ -1,7 +1,11 @@
-import React, { useState, useRef } from "react";
+import { useContext, useRef, useState } from "react";
+import translations from "../../lib/translations";
+import LanguageContext from "../components/context/LanguageContext";
 import styles from "../css/ButtonHoverEffect.module.css";
 
 const ButtonHoverEffect = () => {
+  const { language } = useContext(LanguageContext);
+  const pageTranslations = translations[language].buttonspecial;
   const [hoverPosition, setHoverPosition] = useState({
     width: 0,
     height: 0,
@@ -86,7 +90,7 @@ const ButtonHoverEffect = () => {
         onMouseLeave={handleMouseLeave}
       >
         <a href="../../public/files/cv.pdf" download className={styles.link}>
-          Download CV
+          {pageTranslations.download}
         </a>
       </button>
     </div>

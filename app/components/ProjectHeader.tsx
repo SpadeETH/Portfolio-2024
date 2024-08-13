@@ -1,9 +1,10 @@
 "use client"; // ProjectHeader.tsx
 // ProjectHeader.tsx
-import React from "react";
-import BackButton from "./BackButton";
-import styles from "../css/ProjectHeader.module.css";
 import { motion } from "framer-motion";
+import React from "react";
+import styles from "../css/ProjectHeader.module.css";
+import BackButton from "./BackButton";
+import LanguageSwitchButton from "./LanguageSwitchButton";
 
 interface TeamMember {
   name: string;
@@ -46,7 +47,11 @@ const ProjectHeader: React.FC<HeaderProps> = ({
     >
       <div className="HeroWrapper flex flex-col gap-y-8">
         <div className="LogoSpacer flex flex-col gap-y-5">
-          <BackButton />
+          <div className="flex flex-row img w-full justify-between">
+            <BackButton />
+            <LanguageSwitchButton />
+          </div>
+
           <div className="flex flex-col gap-y-1">
             <motion.h1
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}

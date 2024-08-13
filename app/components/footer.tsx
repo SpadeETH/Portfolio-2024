@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import ButtonHoverEffect from "../../app/components/ButtonHoverEffect";
 import sign from "../../public/images/Sign.png";
+import ButtonHoverEffect from "./ButtonHoverEffect";
 
 const Footer = () => {
   const { ref, inView } = useInView({
