@@ -584,7 +584,7 @@ const SendshortProject: React.FC = () => {
         <div className="w-full flex flex-col gap-8 mx-auto">
           <motion.div
             key={`${language}-title`}
-            className="title-infocrop flex lg:items-center space-x-4 lg:justify-center"
+            className="title-infocrop flex lg:items-center space-x-4 lg:justify-center apanyan"
             initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 1.15 }}
