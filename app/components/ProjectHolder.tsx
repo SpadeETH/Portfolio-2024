@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 import translations from "../../lib/translations";
@@ -38,12 +38,27 @@ const ProjectHolder: React.FC = () => {
   );
 };
 
-// Update ProjectCard to accept buttonText as a prop
 const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
   project,
   buttonText,
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(hover: none) and (pointer: coarse)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleResize = () => {
+      setIsMobile(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -66,16 +81,18 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
             width={530}
             height={375}
           />
-          <motion.div
-            className={styles.overlay}
-            whileHover={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className={styles.overlayTextWrapper}>
-              <p className={styles.overlayText}>{buttonText}</p>
-            </div>
-          </motion.div>
+          {!isMobile && (
+            <motion.div
+              className={styles.overlay}
+              whileHover={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className={styles.overlayTextWrapper}>
+                <p className={styles.overlayText}>{buttonText}</p>
+              </div>
+            </motion.div>
+          )}
         </div>
       </Link>
       <Link href={project.link} passHref>
