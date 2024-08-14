@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import BottomTextContainer from "../app/components/BottomTextContainer";
@@ -45,34 +46,36 @@ export default function Home() {
           </motion.div>
 
           <div className="title-container" key={`title-container-${language}`}>
-            <motion.h2
-              key={`name-${language}`}
-              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1, delay: 0.1 }}
-              className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center relative"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              style={{ width: "200px" }}
-            >
-              <span>Arthur Bossuyt</span>
-              <FiArrowRight className="arrowIcon" />
-              {isHovered && (
-                <motion.span
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="hover-text absolute left-[210px] ml-2 text-base text-gray-600"
-                  style={{
-                    whiteSpace: "nowrap",
-                    display: "block",
-                    width: "auto",
-                  }}
-                >
-                  {pageTranslations.header.hover}
-                </motion.span>
-              )}
-            </motion.h2>
+            <Link href="/about" passHref>
+              <motion.h2
+                key={`name-${language}`}
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 1, delay: 0.1 }}
+                className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center relative"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                style={{ width: "200px" }}
+              >
+                <span>Arthur Bossuyt</span>
+                <FiArrowRight className="arrowIcon" />
+                {isHovered && (
+                  <motion.span
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="hover-text absolute left-[210px] ml-2 text-base text-gray-600"
+                    style={{
+                      whiteSpace: "nowrap",
+                      display: "block",
+                      width: "auto",
+                    }}
+                  >
+                    {pageTranslations.header.hover}
+                  </motion.span>
+                )}
+              </motion.h2>
+            </Link>
 
             <div className={`main-content ${isHovered ? "blur" : ""}`}>
               <motion.h2

@@ -462,6 +462,107 @@ const translations = {
       ],
       button: "view project",
     },
+    about: {
+      header: {
+        main: "About me",
+        title1: "Redefining solutions with passion.",
+        title2: "From Vision to Excellence",
+      },
+      introduction: {
+        paragraph1:
+          "Hey, I’m Arthur, a 21-year-old Product Designer from France. I have honed my skills through a blend of self-teaching and formal education, gaining experience both as a freelancer and within various companies. My background spans traditional industries, startups, and even the innovative world of Web3, which has given me a well-rounded understanding of the design field.",
+        paragraph2:
+          "I'm currently seeking a Product Designer position within a company where I can continue to grow. I am eager to deepen my technical expertise and develop my skills in a collaborative, team-oriented environment.",
+      },
+      journey: {
+        title: "Journey ..So far",
+        timeline: [
+          {
+            year: "2017-2019",
+            event1: "Independently Learnt",
+            grey1: "Design & Dev",
+            event2: "Launched an Esport Team:",
+            grey2: "Failed but full of learnings", // Separated grey text
+          },
+          {
+            year: "2020",
+            event1: "Moved to",
+            grey1: "Vichy, France",
+            event2: "Studied",
+            grey2: "@UCA",
+            event3: "UI/UX Internship",
+            grey3: "@W3+, Vichy",
+          },
+          {
+            year: "2021",
+            event1: "Discovered",
+            grey1: "Web3",
+            event2: "Tried to launch projects",
+            grey2: "- Failed",
+          },
+          {
+            year: "2022",
+            event1: "Moved to",
+            grey1: "Saguenay, Canada",
+            event2: "Started Freelance",
+            grey2: "", // Empty grey text for this year
+          },
+          {
+            year: "2023",
+            event1: "Joined",
+            grey1: "@SeedStudio",
+            event2: "Traveled to:",
+            travels: [
+              {
+                place: "New York,",
+                country: "USA",
+              },
+              {
+                place: "Dubai,",
+                country: "UAE",
+              },
+              {
+                place: "Ottawa, Toronto, Montreal,",
+                country: "Canada",
+              },
+              {
+                place: "Kuala Lumpur,",
+                country: "Malaysia",
+              },
+            ],
+          },
+          {
+            year: "2024",
+            event1: "Back in",
+            grey1: "France",
+            event2: "Left",
+            grey2: "@SeedStudio",
+            event3: "Client Exit 1M$",
+            grey3: "(sendshort)",
+            event4: "Looking for my next Challenge !",
+          },
+        ],
+      },
+      future: {
+        title: "What about... Future?",
+        paragraph:
+          "I've enjoyed working independently as a freelancer—it's been a real school of life. However, some aspects of freelancing, like finding clients and managing the business side, didn't quite resonate with me. I genuinely enjoy creating and doing the work itself, and I believe that's where my strengths lie.",
+        paragraph2:
+          "Looking ahead, I see several roles that could be a good fit for me:",
+        roles: [
+          {
+            role: "Product Design",
+            description:
+              "I'm passionate about product thinking and how the things we create can positively impact people's lives and activities. This role aligns with my interests and skills.",
+          },
+          {
+            role: "Design Engineering",
+            description:
+              "This is another area I could see myself thriving in. As a product designer, deep coding knowledge isn't always essential—except perhaps for working on design systems or some light coding tasks. However, since I enjoy coding in my free time, a Design Engineering role could be something I'd consider pursuing in the future.",
+          },
+        ],
+      },
+    },
   },
 
   fr: {
@@ -907,6 +1008,107 @@ const translations = {
         },
       ],
       button: "voir le projet",
+    },
+    about: {
+      header: {
+        main: "À propos de moi",
+        title1: "Redéfinir les solutions avec passion.",
+        title2: "De la vision à l'excellence",
+      },
+      introduction: {
+        paragraph1:
+          "Bonjour ! Je m'appelle Arthur, j'ai 21 ans et je suis designer produit en France. J'ai développé mes compétences grâce à un parcours mêlant apprentissage autodidacte et études universitaires. J'ai eu l'occasion de travailler en tant que freelance et au sein d'entreprises variées, que ce soit dans des secteurs traditionnels, des startups, ou encore dans le domaine du Web3. Cette diversité d'expériences m'a permis d'acquérir une solide compréhension de mon métier.",
+        paragraph2:
+          "Je suis actuellement à la recherche d'un poste de designer produit au sein d'une entreprise, où je pourrais continuer à apprendre, tant sur le plan technique qu'humain, et m'épanouir dans un cadre collaboratif.",
+      },
+      journey: {
+        title: "Parcours ...Jusqu'à présent",
+        timeline: [
+          {
+            year: "2017-2019",
+            event1: "Apprentissage autonome",
+            grey1: "Design & Développement",
+            event2: "Lancé une équipe Esport:",
+            grey2: "Échec mais plein d'enseignements", // Texte en gris séparé
+          },
+          {
+            year: "2020",
+            event1: "Déménagé à",
+            grey1: "Vichy, France",
+            event2: "Étudié",
+            grey2: "à l'UCA",
+            event3: "Stage en UI/UX",
+            grey3: "à W3+, Vichy",
+          },
+          {
+            year: "2021",
+            event1: "Découverte de",
+            grey1: "Web3",
+            event2: "Tenté de lancer des projets",
+            grey2: "- Échec",
+          },
+          {
+            year: "2022",
+            event1: "Déménagé à",
+            grey1: "Saguenay, Canada",
+            event2: "Commencé le freelance",
+            grey2: "", // Texte gris vide pour cette année
+          },
+          {
+            year: "2023",
+            event1: "Rejoint",
+            grey1: "@SeedStudio",
+            event2: "Voyagé à :",
+            travels: [
+              {
+                place: "New York,",
+                country: "USA",
+              },
+              {
+                place: "Dubaï,",
+                country: "Émirats arabes unis",
+              },
+              {
+                place: "Ottawa, Toronto, Montréal,",
+                country: "Canada",
+              },
+              {
+                place: "Kuala Lumpur,",
+                country: "Malaisie",
+              },
+            ],
+          },
+          {
+            year: "2024",
+            event1: "Retour en",
+            grey1: "France",
+            event2: "Quitter",
+            grey2: "@SeedStudio",
+            event3: "Sortie client à 1M$",
+            grey3: "(Sendshort)",
+            event4: "À la recherche de mon prochain défi !",
+          },
+        ],
+      },
+      future: {
+        title: "Et à propos du... Futur ?",
+        paragraph:
+          "J'ai apprécié travailler de manière indépendante en tant que freelance—cela a été une véritable école de la vie. Cependant, certains aspects du freelancing, comme trouver des clients et gérer le côté business, ne m'ont pas vraiment plu. J'aime vraiment créer et faire le travail lui-même, et je crois que c'est là que résident mes forces.",
+        paragraph2:
+          "À l'avenir, je vois plusieurs rôles qui pourraient bien me convenir.",
+        roles: [
+          {
+            role: "Conception de Produits",
+            description:
+              "Je suis passionné par la réflexion sur les produits et la manière dont ce que nous créons peut avoir un impact positif sur la vie et les activités des gens. Ce rôle correspond à mes intérêts et compétences.",
+          },
+          {
+            role: "Ingénierie du Design",
+            description:
+              "C'est un autre domaine dans lequel je pourrais m'épanouir. En tant que designer de produits, une connaissance approfondie du codage n'est pas toujours essentielle—sauf peut-être pour travailler sur des systèmes de design ou effectuer quelques tâches de codage léger. Cependant, comme j'aime coder pendant mon temps libre, un rôle d'ingénieur en design pourrait être quelque chose que je considérerais pour l'avenir.",
+          },
+        ],
+      },
     },
   },
 };

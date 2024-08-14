@@ -29,6 +29,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Albra2";
+  src: url("../public/fonts/Albrrr.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Aeonik";
   src: url("../public/fonts/Aeonik.otf") format("truetype");
   font-weight: normal;
@@ -59,7 +65,11 @@ body {
   font-style: italic;
 }
 .albra {
-  font-family: "Albra", sans-serif;
+  font-family: "AlbraLight", sans-serif;
+  font-style: normal;
+}
+.albra2 {
+  font-family: "Albra2", sans-serif;
   font-style: normal;
 }
 .aeonik {
