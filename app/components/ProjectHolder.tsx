@@ -49,16 +49,15 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
     <motion.div
       ref={ref}
       className={styles.projectCard}
-      // Désactiver les animations pour le test
-      // initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-      // animate={{
-      //   opacity: inView ? 1 : 0,
-      //   y: inView ? 0 : 20,
-      //   filter: inView ? "blur(0px)" : "blur(8px)",
-      // }}
-      // transition={{ duration: 0.6, delay: 0.3 }}
+      initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+      animate={{
+        opacity: inView ? 1 : 0,
+        y: inView ? 0 : 20,
+        filter: inView ? "blur(0px)" : "blur(8px)",
+      }}
+      transition={{ duration: 0.6, delay: 0.3 }}
     >
-      <Link href={project.link}>
+      <Link href={project.link} scroll={false}>
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
@@ -67,20 +66,19 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
             width={530}
             height={375}
           />
-          {/* Animation overlay désactivée pour tester */}
-          {/* <motion.div
+          <motion.div
             className={styles.overlay}
             whileHover={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-          > */}
-          <div className={styles.overlayTextWrapper}>
-            <p className={styles.overlayText}>{buttonText}</p>
-          </div>
-          {/* </motion.div> */}
+          >
+            <div className={styles.overlayTextWrapper}>
+              <p className={styles.overlayText}>{buttonText}</p>
+            </div>
+          </motion.div>
         </div>
       </Link>
-      <Link href={project.link}>
+      <Link href={project.link} scroll={false}>
         <h2 className={styles.projectTitle}>
           {project.title}
           <FiArrowRight className={styles.arrowIcon} />

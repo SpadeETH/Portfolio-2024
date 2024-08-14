@@ -12,7 +12,7 @@ import logospade from "../public/images/logospade.png";
 import BigLines from "./biglines";
 import ButtonHoverEffect from "./components/ButtonHoverEffect";
 import LanguageSwitchButton from "./components/LanguageSwitchButton";
-import ProjectHolder from "./components/ProjectHolder";
+import SimpleHolder from "./components/simpleholder";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -155,7 +155,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.6 }}
               className="projects"
             >
-              <ProjectHolder />
+              <SimpleHolder />
             </motion.div>
 
             <BottomTextContainer />
