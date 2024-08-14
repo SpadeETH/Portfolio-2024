@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 import { LanguageProvider } from "./components/context/LanguageContext";
+import ScrollToTop from "./components/ScrollToTop"; // Assurez-vous que le chemin est correct
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,27 +16,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      window.scrollTo(0, 0); // Forcer le scroll en haut après chaque changement de route
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router]);
-
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={inter.className}>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <ScrollToTop /> {/* Ajout de ScrollToTop ici */}
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
