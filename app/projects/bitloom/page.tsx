@@ -60,7 +60,9 @@ const BitloomProject: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   const pageTranslations =
     translations[language as keyof typeof translations].bitloom;
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensure the page starts at the top
+  }, []);
   useEffect(() => {
     setIsClient(true);
   }, []);

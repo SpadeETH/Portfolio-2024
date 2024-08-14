@@ -14,7 +14,9 @@ const PageProject: React.FC = () => {
   const { language } = useContext(LanguageContext);
   const pageTranslations =
     translations[language as keyof typeof translations].Landingheader;
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensure the page starts at the top
+  }, []);
   const elements = [
     {
       type: "text",

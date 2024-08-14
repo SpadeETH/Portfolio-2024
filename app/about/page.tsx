@@ -16,7 +16,9 @@ export default function About() {
   const [isClient, setIsClient] = useState(false);
   const pageTranslations =
     translations[language as keyof typeof translations].about;
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensure the page starts at the top
+  }, []);
   useEffect(() => {
     setIsClient(true);
   }, []);

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 import translations from "../../lib/translations";
@@ -38,26 +38,28 @@ const ProjectHolder: React.FC = () => {
   );
 };
 
-// Update ProjectCard to accept buttonText as a prop
 const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
   project,
   buttonText,
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
       ref={ref}
       className={styles.projectCard}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
       animate={{
         opacity: inView ? 1 : 0,
         y: inView ? 0 : 20,
+        filter: inView ? "blur(0px)" : "blur(8px)",
       }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      style={{ willChange: "opacity, transform" }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={project.link} passHref>
+      <Link href={project.link}>
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
@@ -65,14 +67,11 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
             className={styles.projectImage}
             width={530}
             height={375}
-            style={{ transform: "translateZ(0)" }} // Enable GPU acceleration
           />
           <motion.div
             className={styles.overlay}
-            whileHover={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
             transition={{ duration: 0.3 }}
-            style={{ willChange: "opacity" }}
           >
             <div className={styles.overlayTextWrapper}>
               <p className={styles.overlayText}>{buttonText}</p>
@@ -80,7 +79,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
           </motion.div>
         </div>
       </Link>
-      <Link href={project.link} passHref>
+      <Link href={project.link}>
         <h2 className={styles.projectTitle}>
           {project.title}
           <FiArrowRight className={styles.arrowIcon} />
