@@ -57,7 +57,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
       }}
       transition={{ duration: 0.6, delay: 0.3 }}
     >
-      <Link href={project.link} passHref scroll={false}>
+      <Link href={project.link} passHref>
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
@@ -78,7 +78,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
           </motion.div>
         </div>
       </Link>
-      <Link href={project.link} passHref scroll={false}>
+      <Link href={project.link} passHref>
         <h2 className={styles.projectTitle}>
           {project.title}
           <FiArrowRight className={styles.arrowIcon} />
