@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import BottomTextContainer from "../app/components/BottomTextContainer";
@@ -17,20 +18,15 @@ import SimpleHolder from "./components/simpleholder";
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const { language } = useContext(LanguageContext);
-  const [isClient, setIsClient] = useState(false);
+  const pathname = usePathname();
+
   const pageTranslations =
     translations[language as keyof typeof translations].home;
-  useEffect(() => {
-    // Revenir à la position précédente du scroll lors de la navigation
-    window.scrollTo(0, 0);
-  }, []);
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
-  if (!isClient) {
-    return null; // Ou retournez un loader, spinner, etc.
-  }
+  useEffect(() => {
+    // Forcer le scroll en haut à chaque changement de route
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <main>
