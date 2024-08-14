@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 import translations from "../../lib/translations";
@@ -38,12 +38,12 @@ const ProjectHolder: React.FC = () => {
   );
 };
 
+// Update ProjectCard to accept buttonText as a prop
 const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
   project,
   buttonText,
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
@@ -56,10 +56,8 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
         filter: inView ? "blur(0px)" : "blur(8px)",
       }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={project.link}>
+      <Link href={project.link} passHref>
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
@@ -70,7 +68,8 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
           />
           <motion.div
             className={styles.overlay}
-            animate={{ opacity: isHovered ? 1 : 0 }}
+            whileHover={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
             <div className={styles.overlayTextWrapper}>
@@ -79,7 +78,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
           </motion.div>
         </div>
       </Link>
-      <Link href={project.link}>
+      <Link href={project.link} passHref>
         <h2 className={styles.projectTitle}>
           {project.title}
           <FiArrowRight className={styles.arrowIcon} />
