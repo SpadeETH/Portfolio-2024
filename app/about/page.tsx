@@ -63,7 +63,7 @@ export default function About() {
             <LanguageSwitchButton />
           </motion.div>
         </div>
-        <div className="w-[500px] hero flex flex-col gap-y-5 mx-auto">
+        <div className="w-full lg:w-[500px] hero flex flex-col gap-y-5 lg:mx-auto">
           <Element>
             <div
               className="title-container"
@@ -158,19 +158,18 @@ export default function About() {
                     {pageTranslations.journey.title}
                   </motion.h2>
 
-                  <div className="flex flex-col gap-8">
+                  <div className="flex flex-col gap-8 align-start">
                     {pageTranslations.journey.timeline.map((item, index) => (
                       <motion.div
                         key={`timeline-${language}-${index}`}
                         initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
                         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 1, delay: 0.7 + index * 0.1 }}
-                        className="flex flex-row albra justify-between"
-                        style={{ width: "450px" }} // Set the total width
+                        className="flex flex-col lg:flex-row albra justify-between w-full lg:w-[450px]"
                       >
                         <h3
-                          className="text-right lightgrey"
-                          style={{ width: "86px", marginRight: "64px" }} // Adjust width and spacing
+                          className="lg:text-right lightgrey lg:w-[86px] lg:mr-[64px]"
+                          // Adjust width and spacing
                         >
                           {item.year}
                         </h3>
