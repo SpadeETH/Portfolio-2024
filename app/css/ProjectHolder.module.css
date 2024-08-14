@@ -80,8 +80,11 @@
   text-decoration: underline;
 }
 .imageContainer {
+  position: relative;
   width: 100%;
-  aspect-ratio: 530/375;
+  padding-bottom: 70.75%; /* Aspect ratio hack: (375/530) * 100% */
+  height: 0;
+  overflow: hidden;
 }
 /* Overlay sombre */
 .overlay {
@@ -89,14 +92,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  aspect-ratio: 530/375;
+  height: 100%; /* Ensure the overlay stays within the bounds of the container */
   border-radius: 12px;
-  background-color: rgba(
-    165,
-    165,
-    165,
-    0.2
-  ); /* Couleur et opacité de l'overlay */
+  background-color: rgba(165, 165, 165, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,4 +139,12 @@
 .projectTitle:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+.projectImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
