@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import LanguageContext from "../../app/components/context/LanguageContext";
 import Footer from "../../app/components/footer";
 import translations from "../../lib/translations";
@@ -22,26 +21,21 @@ export default function About() {
     setIsClient(true);
   }, []);
 
-  const Element = ({ children }: { children: React.ReactNode }) => {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0.2,
-    });
+  // Le composant Element avec une prop pour désactiver les animations
+  const Element = ({
+    children,
+    immediate = false, // Par défaut, les éléments ne s'affichent pas immédiatement
+  }: {
+    children: React.ReactNode;
+    immediate?: boolean;
+  }) => {
+    const animationProps = {
+      initial: { opacity: 0, y: 20, filter: "blur(8px)" },
+      animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+      transition: { duration: 0.6, delay: immediate ? 0 : 0.1 },
+    };
 
-    return (
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-        animate={{
-          opacity: inView ? 1 : 0,
-          y: inView ? 0 : 20,
-          filter: inView ? "blur(0px)" : "blur(8px)",
-        }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-      >
-        {children}
-      </motion.div>
-    );
+    return <motion.div {...animationProps}>{children}</motion.div>;
   };
 
   if (!isClient) {
@@ -64,7 +58,7 @@ export default function About() {
           </motion.div>
         </div>
         <div className="w-full lg:w-[500px] hero flex flex-col gap-y-5 lg:mx-auto">
-          <Element>
+          <Element immediate>
             <div
               className="title-container"
               key={`title-container-${language}`}
@@ -78,39 +72,43 @@ export default function About() {
               >
                 {pageTranslations.header.main}
               </motion.h2>
-
-              <motion.h3
-                key={`title1-${language}`}
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 1, delay: 0.2 }}
-                className="feur calisto text-3xl  leading-10 text-neutral-600 text-center"
-              >
-                {pageTranslations.header.title1}
-              </motion.h3>
-
-              <motion.h3
-                key={`title2-${language}`}
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="feur calisto text-3xl  leading-10 text-neutral-600 text-center"
-              >
-                {pageTranslations.header.title2}
-              </motion.h3>
-              <motion.div
-                key={`image-${language}`}
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="flex flex-row justify-center"
-              >
-                <Image
-                  src={Me}
-                  alt=""
-                  className="rounded-[full] mt-6	w-[124px]"
-                />
-              </motion.div>
+              <Element immediate>
+                <motion.h3
+                  key={`title1-${language}`}
+                  initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  className="feur calisto text-3xl  leading-10 text-neutral-600 text-center"
+                >
+                  {pageTranslations.header.title1}
+                </motion.h3>
+              </Element>
+              <Element immediate>
+                <motion.h3
+                  key={`title2-${language}`}
+                  initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="feur calisto text-3xl  leading-10 text-neutral-600 text-center"
+                >
+                  {pageTranslations.header.title2}
+                </motion.h3>
+              </Element>
+              <Element immediate>
+                <motion.div
+                  key={`image-${language}`}
+                  initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="flex flex-row justify-center"
+                >
+                  <Image
+                    src={Me}
+                    alt=""
+                    className="rounded-[full] mt-6	w-[124px]"
+                  />
+                </motion.div>
+              </Element>
             </div>
           </Element>
 
@@ -137,9 +135,11 @@ export default function About() {
                   transition={{ duration: 1, delay: 0.5 }}
                   className="intro flex flex-col gap-y-3"
                 >
-                  <motion.p className=" text-base albra text-neutral-600">
-                    {pageTranslations.introduction.paragraph1}
-                  </motion.p>
+                  <Element immediate>
+                    <motion.p className=" text-base albra text-neutral-600">
+                      {pageTranslations.introduction.paragraph1}
+                    </motion.p>
+                  </Element>
                   <motion.p className="text-base albra text-neutral-600">
                     {pageTranslations.introduction.paragraph2}
                   </motion.p>
