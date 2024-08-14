@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { LanguageProvider } from "./components/context/LanguageContext"; // Assurez-vous que le chemin est correct
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { LanguageProvider } from "./components/context/LanguageContext";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,6 +17,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0); // Forcer le scroll en haut après chaque changement de route
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router]);
+
   return (
     <html lang="en">
       <head>
