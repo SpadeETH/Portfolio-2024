@@ -41,6 +41,9 @@
   box-sizing: border-box;
   outline: 1px solid #e5e5e5;
   outline-offset: -1px;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .projectTitle {
@@ -100,6 +103,7 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  will-change: opacity;
 }
 .overlayTextWrapper {
   border-radius: 999px;
