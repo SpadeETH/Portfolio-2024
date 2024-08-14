@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 import translations from "../../lib/translations";
@@ -25,6 +25,23 @@ const ProjectHolder: React.FC = () => {
   const projectTranslations: Project[] =
     translations[language as keyof typeof translations].projectHolder.projects;
 
+  useEffect(() => {
+    // Restore scroll position on page load
+    const scrollPos = sessionStorage.getItem("scrollPos");
+    if (scrollPos) {
+      const { x, y } = JSON.parse(scrollPos);
+      window.scrollTo(x, y);
+    }
+
+    return () => {
+      // Save scroll position before navigating away
+      sessionStorage.setItem(
+        "scrollPos",
+        JSON.stringify({ x: window.scrollX, y: window.scrollY })
+      );
+    };
+  }, []);
+
   return (
     <div className={styles.gridContainer}>
       {projectTranslations.map((project, index) => (
@@ -43,22 +60,6 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
   buttonText,
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(hover: none) and (pointer: coarse)");
-    setIsMobile(mediaQuery.matches);
-
-    const handleResize = () => {
-      setIsMobile(mediaQuery.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleResize);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleResize);
-    };
-  }, []);
 
   return (
     <motion.div
@@ -72,7 +73,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
       }}
       transition={{ duration: 0.6, delay: 0.3 }}
     >
-      <Link href={project.link} passHref>
+      <Link href={project.link} passHref scroll={false}>
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
@@ -81,21 +82,19 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
             width={530}
             height={375}
           />
-          {!isMobile && (
-            <motion.div
-              className={styles.overlay}
-              whileHover={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className={styles.overlayTextWrapper}>
-                <p className={styles.overlayText}>{buttonText}</p>
-              </div>
-            </motion.div>
-          )}
+          <motion.div
+            className={styles.overlay}
+            whileHover={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className={styles.overlayTextWrapper}>
+              <p className={styles.overlayText}>{buttonText}</p>
+            </div>
+          </motion.div>
         </div>
       </Link>
-      <Link href={project.link} passHref>
+      <Link href={project.link} passHref scroll={false}>
         <h2 className={styles.projectTitle}>
           {project.title}
           <FiArrowRight className={styles.arrowIcon} />
