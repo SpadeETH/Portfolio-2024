@@ -29,7 +29,7 @@ const ProjectHolder: React.FC = () => {
     <div className={styles.gridContainer}>
       {projectTranslations.map((project, index) => (
         <ProjectCard
-          key={`${language}-${index}`}
+          key={`${project.title}-${index}`}
           project={project}
           buttonText={buttonText}
         />
@@ -57,7 +57,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
       }}
       transition={{ duration: 0.6, delay: 0.3 }}
     >
-      <Link href={project.link}>
+      <Link href={project.link} scroll={false}>
         <div className={styles.imageContainer}>
           <Image
             src={project.image}
@@ -78,7 +78,7 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
           </motion.div>
         </div>
       </Link>
-      <Link href={project.link}>
+      <Link href={project.link} scroll={false}>
         <h2 className={styles.projectTitle}>
           {project.title}
           <FiArrowRight className={styles.arrowIcon} />

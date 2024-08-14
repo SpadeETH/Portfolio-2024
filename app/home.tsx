@@ -20,7 +20,10 @@ export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const pageTranslations =
     translations[language as keyof typeof translations].home;
-
+  useEffect(() => {
+    // Revenir à la position précédente du scroll lors de la navigation
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     setIsClient(true);
   }, []);
