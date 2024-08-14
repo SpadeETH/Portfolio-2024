@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 import translations from "../../lib/translations";
@@ -25,23 +25,6 @@ const ProjectHolder: React.FC = () => {
   const projectTranslations: Project[] =
     translations[language as keyof typeof translations].projectHolder.projects;
 
-  useEffect(() => {
-    // Restore scroll position on page load
-    const scrollPos = sessionStorage.getItem("scrollPos");
-    if (scrollPos) {
-      const { x, y } = JSON.parse(scrollPos);
-      window.scrollTo(x, y);
-    }
-
-    return () => {
-      // Save scroll position before navigating away
-      sessionStorage.setItem(
-        "scrollPos",
-        JSON.stringify({ x: window.scrollX, y: window.scrollY })
-      );
-    };
-  }, []);
-
   return (
     <div className={styles.gridContainer}>
       {projectTranslations.map((project, index) => (
@@ -55,6 +38,7 @@ const ProjectHolder: React.FC = () => {
   );
 };
 
+// Update ProjectCard to accept buttonText as a prop
 const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
   project,
   buttonText,
