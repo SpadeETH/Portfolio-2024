@@ -8,6 +8,7 @@ import { FiArrowRight } from "react-icons/fi";
 import BottomTextContainer from "../app/components/BottomTextContainer";
 import LanguageContext from "../app/components/context/LanguageContext";
 import Footer from "../app/components/footer";
+import AnimatedShinyText from "../components/magicui/animated-shiny-text";
 import translations from "../lib/translations";
 import logospade from "../public/images/logospade.png";
 import BigLines from "./biglines";
@@ -56,7 +57,7 @@ export default function Home() {
                 onMouseLeave={() => setIsHovered(false)}
                 style={{ width: "200px" }}
               >
-                <span>Arthur Bossuyt</span>
+                <AnimatedShinyText>Arthur Bossuyt</AnimatedShinyText>
                 <FiArrowRight className="arrowIcon" />
                 {isHovered && (
                   <motion.span
