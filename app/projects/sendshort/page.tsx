@@ -29,8 +29,8 @@ import ebefore from "../../../public/images/sendshort/Edit Before.png";
 import left from "../../../public/images/sendshort/leftResearch.png";
 import lafter from "../../../public/images/sendshort/Login After.png";
 import lbefore from "../../../public/images/sendshort/Login Before.png";
-import milestone from "../../../public/images/sendshort/milestone.png";
 import right from "../../../public/images/sendshort/rightResearch.png";
+import milestone from "../../../public/images/sendshort/stone.png";
 
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import CachedIcon from "@mui/icons-material/Cached";
