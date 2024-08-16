@@ -58,13 +58,13 @@ export default function Home() {
                 style={{ width: "200px" }}
               >
                 <AnimatedShinyText>Arthur Bossuyt</AnimatedShinyText>
-                <FiArrowRight className="arrowIcon" />
+                <FiArrowRight className="arrowIcon vibrant-orange" />
                 {isHovered && (
                   <motion.span
                     initial={{ opacity: 0, x: 10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="hover-text absolute left-[210px] ml-2 text-base text-gray-600"
+                    className="hover-text absolute left-[210px] ml-2 text-base text-gray-600 top-[11px]"
                     style={{
                       whiteSpace: "nowrap",
                       display: "block",

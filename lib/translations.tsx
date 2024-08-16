@@ -63,6 +63,7 @@ const translations = {
             "Understand how visual design improvements can enhance user engagement and satisfaction.",
           description:
             "We tried to identify specific pain points in the current app’s design that hinder usability and discover user preferences for visual aesthetics.",
+          image: "/images/sendshort/postit.png",
         },
         uxr: {
           title: "Three main discovery pillars for our approach",
@@ -177,6 +178,74 @@ const translations = {
             description:
               "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
           },
+        },
+        nouveauDepart: {
+          title: "Conclusion",
+          heading: "A New Beginning for SendShort",
+          description:
+            "Thanks to a complete overhaul of the product and user experience, SendShort has not only improved user satisfaction but also achieved significant business results.",
+          image: "/images/sendshort/avis.png", // Example image path
+        },
+        resultatsCle: {
+          title: "Key Results",
+          heading: "Key Results of the SendShort Project",
+          description:
+            "The SendShort project has generated significant improvements in several key areas, increasing conversion, reducing churn rate, and boosting Monthly Recurring Revenue (MRR).",
+          stats: [
+            {
+              title: "Conversion from free to paid plan",
+              old: "3.5%",
+              new: "9%",
+              description:
+                "Conversion increased from 3.5% to 9%, proving the effectiveness of the improved interface in encouraging users to switch to a paid version.",
+            },
+            {
+              title: "Churn rate reduction",
+              old: "30%",
+              new: "21%",
+              description:
+                "Churn was reduced from 30% to 21%, demonstrating a significant improvement in user retention following the enhanced user experience.",
+            },
+            {
+              title: "Monthly Revenue Growth",
+              new: "+30%",
+              description:
+                "MRR increased by 30% in three months, indicating that the improvements had a direct impact on profitability.",
+            },
+          ],
+        },
+        succes: {
+          title: "Success",
+          heading: "Update July 2024: Financial Success",
+          description:
+            "Sendshort was launched in June 2023, and a year later... The success of the redesign directly contributed to the sale of SendShort in July 2024, valued at approximately 1M USD, confirming the relevance of our UX/UI approach.",
+          image: "/images/sendshort/milestone.png", // Example image path
+        },
+        leconsPerspectives: {
+          title: "LESSONS & PERSPECTIVES",
+          heading: "Lessons Learned and Future Perspectives",
+          description: "lorem ipsum dolor sit amet",
+          insights: [
+            {
+              title: "Iteration and Feedback",
+              description:
+                "The importance of iteration in design allowed me to constantly refine the product based on user feedback.",
+              icon: "/images/icons/insightA.png", // Example icon path
+            },
+            {
+              title: "Interdisciplinary Collaboration",
+              description:
+                "I learned to navigate effectively between branding, development, and product management teams for a harmonious result.",
+              icon: "/images/icons/insightB.png", // Example icon path
+            },
+          ],
+        },
+        designGoals: {
+          title: "DESIGN GOALS",
+          heading:
+            "This project confirmed my commitment to creating products that are not only aesthetically pleasing but also intuitive and performant.",
+          subheading:
+            "As a Product Designer, my goal is always to combine aesthetics, function, and simplicity to offer an optimal user experience.",
         },
       },
     },
@@ -633,6 +702,7 @@ const translations = {
             "Comprendre comment les améliorations du design visuel peuvent accroître l'engagement et la satisfaction des utilisateurs.",
           description:
             "Nous avons essayé d'identifier les points de douleur spécifiques dans le design actuel de l'application qui nuisent à l'utilisabilité et de découvrir les préférences des utilisateurs en matière d'esthétique visuelle.",
+          image: "/images/sendshort/postitfr.png",
         },
         uxr: {
           title: "Trois principaux axes de découverte pour notre approche",
@@ -746,6 +816,74 @@ const translations = {
             description:
               "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
           },
+        },
+        nouveauDepart: {
+          title: "Conclusion",
+          heading: "Un Nouveau Départ pour SendShort",
+          description:
+            "Grâce à une refonte complète du produit et de l'expérience utilisateur, SendShort a non seulement amélioré la satisfaction des utilisateurs, mais a aussi atteint des résultats commerciaux significatifs.",
+          image: "/images/sendshort/avis.png", // Example image path
+        },
+        resultatsCle: {
+          title: "Résultats Clés",
+          heading: "Résultats Clés du Projet SendShort",
+          description:
+            "Le projet SendShort a généré des améliorations significatives dans plusieurs domaines clés, augmentant la conversion, réduisant le taux de churn, et stimulant la croissance du revenu mensuel récurrent (MRR).",
+          stats: [
+            {
+              title: "Conversion de plan gratuit à payant",
+              old: "3.5%",
+              new: "9%",
+              description:
+                "La conversion a augmenté de 3,5% à 9%, prouvant l'efficacité de l'interface améliorée pour inciter les utilisateurs à passer à une version payante.",
+            },
+            {
+              title: "Réduction du taux de désabonnement",
+              old: "30%",
+              new: "21%",
+              description:
+                "Le churn a été réduit de 30% à 21%, ce qui démontre une amélioration significative de la fidélité des utilisateurs suite à l'amélioration de l'expérience utilisateur.",
+            },
+            {
+              title: "Croissance du CA mensuel",
+              new: "+30%",
+              description:
+                "Le MRR a augmenté de 30% en trois mois, signe que les améliorations ont eu un impact direct sur la rentabilité.",
+            },
+          ],
+        },
+        succes: {
+          title: "SUCCèS",
+          heading: "Update Juillet 2024 : Succès financier",
+          description:
+            "Sendshort a vu le jour en juin 2023 il y a un an... Le succès de la refonte a directement contribué à la vente de SendShort en juillet 2024, valorisée à ±1M USD, confirmant la pertinence de notre approche UX/UI.",
+          image: "/images/sendshort/milestone.png", // Example image path
+        },
+        leconsPerspectives: {
+          title: "LEÇONS PERSPECTIVES",
+          heading: "Leçons apprises et perspective d’avenir",
+          description: "lorem ipsum dolor sit amet",
+          insights: [
+            {
+              title: "Itération et Feedback",
+              description:
+                "L'importance de l'itération dans le design m'a permis de constamment affiner le produit en fonction des retours utilisateurs.",
+              icon: "/images/icons/insightA.png", // Example icon path
+            },
+            {
+              title: "Collaboration Interdisciplinaire",
+              description:
+                "J'ai appris à naviguer efficacement entre les équipes de branding, développement, et gestion de produit pour un résultat harmonieux.",
+              icon: "/images/icons/insightB.png", // Example icon path
+            },
+          ],
+        },
+        designGoals: {
+          title: "GOALS DU DESIGN",
+          heading:
+            "Ce projet a confirmé mon engagement à créer des produits non seulement esthétiquement plaisants, mais aussi intuitifs et performants.",
+          subheading:
+            "En tant que Product Designer, mon objectif est toujours de combiner esthétique, fonction et simplicité pour offrir une expérience utilisateur optimale.",
         },
       },
     },

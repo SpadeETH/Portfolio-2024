@@ -226,16 +226,15 @@ ul li::marker {
 }
 .Arthur:hover .arrowIcon {
   transform: rotate(00deg); /* Rotation de 90 degrés au survol */
-  color: #5d5f63;
+  color: rgb(255, 123, 0);
 }
 .Arthur .arrowIcon {
-  color: black;
+  color: #ff4500;
   margin-top: 5px;
   transform: rotate(-45deg); /* Rotation de 90 degrés au survol */
 }
 .Arthur:hover {
   cursor: pointer;
-  color: #5d5f63;
 }
 
 .Arthur:hover .body {
@@ -281,8 +280,8 @@ ul li::marker {
   }
   .footer {
     align-items: center;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 96px;
+    margin-bottom: 96px;
     justify-content: space-between;
   }
 }

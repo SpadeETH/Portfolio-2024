@@ -18,8 +18,6 @@ import cropimg from "../../../public/images/sendshort/cropimg.png";
 import headerimage from "../../../public/images/sendshort/header.png";
 import subimg from "../../../public/images/sendshort/subimg.png";
 
-import postit from "../../../public/images/sendshort/postit.png";
-
 import Actual from "../../../public/images/sendshort/ActualDesign.png";
 import after from "../../../public/images/sendshort/after.png";
 import before from "../../../public/images/sendshort/before.png";
@@ -31,6 +29,7 @@ import ebefore from "../../../public/images/sendshort/Edit Before.png";
 import left from "../../../public/images/sendshort/leftResearch.png";
 import lafter from "../../../public/images/sendshort/Login After.png";
 import lbefore from "../../../public/images/sendshort/Login Before.png";
+import milestone from "../../../public/images/sendshort/milestone.png";
 import right from "../../../public/images/sendshort/rightResearch.png";
 
 import AssignmentIcon from "@mui/icons-material/Assignment";
@@ -42,6 +41,7 @@ import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
 import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
 import IconKeyInsightD from "../../../public/images/Icons/KI4.png";
 
+import Footer from "@/app/components/footer";
 import BackToTop from "../../components/Backtotop";
 
 // Correctly defining the Element component
@@ -195,7 +195,13 @@ const SendshortProject: React.FC = () => {
               {pageTranslations.sections.primaryObjective.description}
             </div>
           </div>
-          <Image src={postit} alt="Icon" className="lg:w-6/12 lg ml-[0px] " />
+          <Image
+            src={pageTranslations.sections.primaryObjective.image}
+            width={1100} // Replace with the original width of your image
+            height={1100} // Replace with the original height of your image
+            alt="Icon"
+            className="lg:w-6/12 lg ml-[0px] "
+          />
         </div>
       ),
     },
@@ -307,7 +313,7 @@ const SendshortProject: React.FC = () => {
           </div>
           <div className="steps flex flex-col gap-8">
             <div className="stepsrow1 flex flex-col lg:flex-row gap-8">
-              <div className="step1 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
+              <div className="step1 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
                 <Image
                   src={IconKeyInsightA}
                   alt="Icon"
@@ -320,7 +326,7 @@ const SendshortProject: React.FC = () => {
                   {pageTranslations.sections.keyInsights.pillars[0].description}
                 </p>
               </div>
-              <div className="step2 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
+              <div className="step2 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
                 <Image
                   src={IconKeyInsightB}
                   alt="Icon"
@@ -335,7 +341,7 @@ const SendshortProject: React.FC = () => {
               </div>
             </div>
             <div className="stepsrow2 flex flex-col lg:flex-row gap-8">
-              <div className="step1 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
+              <div className="step1 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
                 <Image
                   src={IconKeyInsightC}
                   alt="Icon"
@@ -348,7 +354,7 @@ const SendshortProject: React.FC = () => {
                   {pageTranslations.sections.keyInsights.pillars[2].description}
                 </p>
               </div>
-              <div className="step2 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
+              <div className="step2 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
                 <Image
                   src={IconKeyInsightD}
                   alt="Icon"
@@ -561,6 +567,180 @@ const SendshortProject: React.FC = () => {
               </TabsContent>
             </Tabs>
           </div>
+        </>
+      ),
+    },
+    {
+      type: "nouveauDepart",
+      content: (
+        <div
+          key={`${language}-nouveauDepart`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.nouveauDepart.title}
+            </div>
+            <h2 className="heading w-100 text-left ">
+              {pageTranslations.sections.nouveauDepart.heading}
+            </h2>
+            <hr />
+            <p className="font-regular segoe text-gray-800">
+              {pageTranslations.sections.nouveauDepart.description}
+            </p>
+          </div>
+          <div className="img-infocrop">
+            <Image
+              src={pageTranslations.sections.nouveauDepart.image}
+              width={0} // Replace with the original width of your image
+              height={0} // Replace with the original height of your image
+              layout="responsive"
+              alt=""
+              className="w-full"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      type: "resultatsCle",
+      content: (
+        <div
+          key={`${language}-RésultatsCle`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.resultatsCle.title}
+            </div>
+            <h2 className="heading w-100 text-left ">
+              {pageTranslations.sections.resultatsCle.heading}
+            </h2>
+            <hr />
+            <p className="font-regular segoe text-gray-800">
+              {pageTranslations.sections.resultatsCle.description}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pageTranslations.sections.resultatsCle.stats.map((stat, index) => (
+              <div
+                key={`${language}-stat-${index}`}
+                className="bg-white  rounded-lg shadow-sm text-center bg-zinc-50"
+              >
+                <div className="highcard outline-gray-200 outline rounded-lg outline-1 p-6">
+                  <h3 className="text-lg font-medium">{stat.title}</h3>
+                  <div className="flex flex-row justify-center items-center gap-x-2 mt-4">
+                    <p className="text-gray-400 aeonik text-xl line-through mb-2">
+                      {stat.old}
+                    </p>
+                    <p className="text-black text-4xl aeonik font-bold mb-4">
+                      {stat.new}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-sm text-gray-700 p-6 text-left">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+    },
+    {
+      type: "succes",
+      content: (
+        <div
+          key={`${language}-Success`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.succes.title}
+            </div>
+            <h2 className="heading w-100 text-left ">
+              {pageTranslations.sections.succes.heading}
+            </h2>
+            <hr />
+            <p className="font-regular segoe text-gray-800">
+              {pageTranslations.sections.succes.description}
+            </p>
+          </div>
+          <div className="img-infocrop w-full">
+            <Image src={milestone} alt="" className="w-full" />
+          </div>
+        </div>
+      ),
+    },
+    {
+      type: "leconsPerspectives",
+      content: (
+        <div
+          key={`${language}-LeconsPerspectives`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.leconsPerspectives.title}
+            </div>
+            <h2 className="heading w-100 text-left ">
+              {pageTranslations.sections.leconsPerspectives.heading}
+            </h2>
+            <hr />
+            <p className="font-regular segoe text-gray-800">
+              {pageTranslations.sections.leconsPerspectives.description}
+            </p>
+          </div>
+          <div className="steps flex flex-col gap-8">
+            <div className="stepsrow1 flex flex-col lg:flex-row gap-8">
+              {pageTranslations.sections.leconsPerspectives.insights.map(
+                (insight, index) => (
+                  <div
+                    key={`${language}-insight-${index}`}
+                    className="step1 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col"
+                  >
+                    <Image
+                      src={IconKeyInsightA}
+                      alt="Icon"
+                      className="h-[24px] w-[24px] mt-[1px]"
+                    />
+                    <h1 className="text-lg">{insight.title}</h1>
+                    <p className="text-sm">{insight.description}</p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      type: "designGoals",
+      content: (
+        <div
+          key={`${language}-designGoals`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.designGoals.title}
+            </div>
+            <h2 className="lightheading w-100 text-left lightgrey font-normal">
+              {pageTranslations.sections.designGoals.heading}
+              <span className="p-2 heading w-100 text-left font-regular">
+                {pageTranslations.sections.designGoals.subheading}
+              </span>
+            </h2>
+          </div>
+        </div>
+      ),
+    },
+    {
+      type: "Footer",
+      content: (
+        <>
+          <Footer key={`${language}-Footer`} />
         </>
       ),
     },
