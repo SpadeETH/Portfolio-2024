@@ -36,12 +36,13 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import CachedIcon from "@mui/icons-material/Cached";
 import PersonIcon from "@mui/icons-material/Person";
 
+import Footer from "@/app/components/footer";
+
 import IconKeyInsightA from "../../../public/images/Icons/KI1.png";
 import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
 import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
 import IconKeyInsightD from "../../../public/images/Icons/KI4.png";
 
-import Footer from "@/app/components/footer";
 import BackToTop from "../../components/Backtotop";
 
 // Correctly defining the Element component
