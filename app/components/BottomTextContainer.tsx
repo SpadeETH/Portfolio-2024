@@ -14,12 +14,12 @@ const BottomTextContainer = () => {
   // Utilisation de useInView pour détecter la visibilité des éléments
   const { ref: envRef, inView: envInView } = useInView({
     triggerOnce: true, // Détecte une seule fois
-    threshold: 0.5, // Déclenche quand l'élément est à 50% visible
+    threshold: 0.1, // Déclenche quand l'élément est à 50% visible
   });
 
   const { ref: unvRef, inView: unvInView } = useInView({
     triggerOnce: true, // Détecte une seule fois
-    threshold: 0.5, // Déclenche quand l'élément est à 50% visible
+    threshold: 0.1, // Déclenche quand l'élément est à 50% visible
   });
 
   // Animation des éléments quand ils deviennent visibles

@@ -139,7 +139,7 @@ const SendshortProject: React.FC = () => {
             key={`${language}-sub`}
             className="w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]"
           >
-            <div className="title-infocrop flex flex-col-reverse lg:flex-row-reverse lg:items-center gap-4 lg:justify-center">
+            <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 {pageTranslations.sections.infoSub.title}
               </h1>
@@ -626,10 +626,12 @@ const SendshortProject: React.FC = () => {
             {pageTranslations.sections.resultatsCle.stats.map((stat, index) => (
               <div
                 key={`${language}-stat-${index}`}
-                className="bg-white  rounded-lg shadow-sm text-center bg-zinc-50"
+                className="bg-white rounded-lg shadow-sm text-center bg-zinc-50 flex flex-col h-full"
               >
-                <div className="highcard outline-gray-200 outline rounded-lg outline-1 p-6">
-                  <h3 className="text-lg font-medium">{stat.title}</h3>
+                <div className="highcard outline-gray-200 outline rounded-lg outline-1 p-6 flex-grow">
+                  <h3 className="text-lg font-medium min-h-[48px] lg:min-h-[60px]">
+                    {stat.title}
+                  </h3>
                   <div className="flex flex-row justify-center items-center gap-x-2 mt-4">
                     <p className="text-gray-400 aeonik text-xl line-through mb-2">
                       {stat.old}
@@ -640,7 +642,7 @@ const SendshortProject: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-700 p-6 text-left">
+                <p className="text-sm text-gray-700 p-6 text-left flex-grow  lg:min-h-[168px]">
                   {stat.description}
                 </p>
               </div>
