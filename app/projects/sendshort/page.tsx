@@ -105,7 +105,7 @@ const SendshortProject: React.FC = () => {
             key={`${language}-crop`}
             className="w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]"
           >
-            <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
+            <div className="title-infocrop flex flex-col-reverse lg:flex-row-reverse lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 {pageTranslations.sections.infoCrop.title}
               </h1>
@@ -115,7 +115,7 @@ const SendshortProject: React.FC = () => {
                 className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
               />
             </div>
-            <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
+            <div className="w-full sub-infocrop flex flex-col-reverse mx-auto items-center">
               <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
                 {pageTranslations.sections.infoCrop.description}
               </div>
@@ -139,7 +139,7 @@ const SendshortProject: React.FC = () => {
             key={`${language}-sub`}
             className="w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]"
           >
-            <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
+            <div className="title-infocrop flex flex-col-reverse lg:flex-row-reverse lg:items-center gap-4 lg:justify-center">
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 {pageTranslations.sections.infoSub.title}
               </h1>
