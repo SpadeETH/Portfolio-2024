@@ -56,9 +56,7 @@ export default function Home() {
                 onMouseLeave={() => setIsHovered(false)}
                 style={{ width: "200px" }}
               >
-                <AnimatedShinyText>
-                  V2 EN MODE BIEN APANYAN BIEN QUOICOUBEHHH QUOICOUBAKAAAAA
-                </AnimatedShinyText>
+                <AnimatedShinyText>Arthur Bossuyt</AnimatedShinyText>
                 <FiArrowRight className="arrowIcon transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200" />
                 {isHovered && (
                   <motion.span

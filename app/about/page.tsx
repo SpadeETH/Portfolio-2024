@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import LanguageContext from "../../app/components/context/LanguageContext";
 import Footer from "../../app/components/footer";
 import translations from "../../lib/translations";
-import Me from "../../public/images/head.png";
+import Me from "../../public/images/head.jpg";
 import BackButton from "./../components/BackButton";
 import ButtonHoverEffect from "./../components/ButtonHoverEffect";
 import LanguageSwitchButton from "./../components/LanguageSwitchButton";
@@ -107,7 +107,7 @@ export default function About() {
                   <Image
                     src={Me}
                     alt=""
-                    className="rounded-[full] mt-6	w-[124px]"
+                    className="rounded-[200px] mt-6	w-[124px]"
                   />
                 </motion.div>
               </Element>
