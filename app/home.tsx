@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
@@ -10,10 +9,10 @@ import LanguageContext from "../app/components/context/LanguageContext";
 import Footer from "../app/components/footer";
 import AnimatedShinyText from "../components/magicui/animated-shiny-text";
 import translations from "../lib/translations";
-import logospade from "../public/images/logospade.png";
 import BigLines from "./biglines";
 import ButtonHoverEffect from "./components/ButtonHoverEffect";
 import LanguageSwitchButton from "./components/LanguageSwitchButton";
+import ProfileButton from "./components/ProfileButton";
 import ProjectHolder from "./components/ProjectHolder";
 
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="flex flex-row img w-full justify-between"
           >
-            <Image src={logospade} alt="Logo Spade" width={39} height={35} />
+            <ProfileButton />
             <LanguageSwitchButton />
           </motion.div>
 
@@ -58,7 +57,7 @@ export default function Home() {
                 style={{ width: "200px" }}
               >
                 <AnimatedShinyText>Arthur Bossuyt</AnimatedShinyText>
-                <FiArrowRight className="arrowIcon vibrant-orange" />
+                <FiArrowRight className="arrowIcon transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200" />
                 {isHovered && (
                   <motion.span
                     initial={{ opacity: 0, x: 10 }}

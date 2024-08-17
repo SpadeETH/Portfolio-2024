@@ -28,6 +28,7 @@ const translations = {
     buttonspecial: {
       back: "Back",
       download: "Download CV",
+      profile: "About me",
     },
     sendshort: {
       title: "SendShort Product Design",
@@ -663,6 +664,7 @@ const translations = {
     buttonspecial: {
       back: "Retour",
       download: "Télecharger CV",
+      profile: "À Propos de moi",
     },
     sendshort: {
       title: "Design du produit SendShort",
