@@ -153,6 +153,7 @@ export default function Home() {
             >
               <ProjectHolder />
             </motion.div>
+
             <BottomTextContainer />
             <Footer />
           </div>
