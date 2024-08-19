@@ -581,39 +581,43 @@ const translations = {
         timeline: [
           {
             year: "2017-2019",
-            event1: "Independently Learnt",
-            grey1: "Design & Dev",
-            event2: "Launched an Esport Team:",
-            grey2: "Failed but full of learnings", // Separated grey text
+            event1: "Self-Taught Learning",
+            grey1:
+              "Dove into design and development, mastering the basics through self-guided study and experimentation.", // Separated grey text
           },
           {
             year: "2020",
-            event1: "Moved to",
-            grey1: "Vichy, France",
-            event2: "Studied",
-            grey2: "@UCA",
-            event3: "UI/UX Internship",
-            grey3: "@W3+, Vichy",
+            event1: "Studied UI/UX @UCA",
+            grey1:
+              "Pursued studies in UI/UX at UCA, honing my skills and understanding of user-centered design.",
+            event2: "Internship @W3Plus",
+            grey2:
+              "Completed an internship in UI/UX, working on real-world projects and gaining practical experience.",
           },
           {
             year: "2021",
-            event1: "Discovered",
-            grey1: "Web3",
-            event2: "Tried to launch projects",
-            grey2: "- Failed",
+            event1: "Discovered Web3",
+            grey1:
+              "Explored the world of decentralized technologies and began integrating them into my design approach.",
+            event2: "Tried to launch web3 projects",
+            grey2:
+              "Attempted to launch several projects in the Web3 space, gaining critical insights from the setbacks.",
           },
           {
             year: "2022",
-            event1: "Moved to",
-            grey1: "Saguenay, Canada",
+            event1: "Moved to Saguenay, Canada",
+            grey1:
+              "Relocated to Canada, starting my journey as a freelance Product Designer.",
             event2: "Started Freelance",
-            grey2: "", // Empty grey text for this year
+            grey2:
+              "Took on various freelance projects, focusing on UI/UX design, which helped build a diverse portfolio.", // Empty grey text for this year
           },
           {
             year: "2023",
-            event1: "Joined",
-            grey1: "@SeedStudio",
-            event2: "Traveled to:",
+            event1: "Joined @SeedStudio",
+            grey1:
+              "Became a part of Seed Studio, where I collaborated with team to deliver innovative design solutions.",
+            event2: "Traveled Extensively",
             travels: [
               {
                 place: "New York,",
@@ -635,12 +639,15 @@ const translations = {
           },
           {
             year: "2024",
-            event1: "Back in",
-            grey1: "France",
-            event2: "Left",
-            grey2: "@SeedStudio",
-            event3: "Client Exit 1M$",
-            grey3: "(sendshort)",
+            event1: "Return to france",
+            grey1:
+              "Decided to return to France to explore new opportunities after significant growth abroad.",
+            event2: "Left @SeedStudio",
+            grey2:
+              "Completed my tenure at SeedStudio, contributing to key projects and gaining invaluable experience.",
+            event3: "Client Exit 1M$ (sendshort)",
+            grey3:
+              "Successfully launched a client project that generated over $1 million in revenue.",
             event4: "Looking for my next Challenge !",
           },
         ],
@@ -1284,51 +1291,55 @@ const translations = {
           "Je suis actuellement à la recherche d'un poste de designer produit au sein d'une entreprise, où je pourrais continuer à apprendre, tant sur le plan technique qu'humain, et m'épanouir dans un cadre collaboratif.",
       },
       journey: {
-        title: "Parcours ...Jusqu'à présent",
+        title: "Parcours ... Jusqu'à présent",
         timeline: [
           {
-            year: "2017-2019",
-            event1: "Apprentissage autonome",
-            grey1: "Design & Développement",
-            event2: "Lancé une équipe Esport:",
-            grey2: "Échec mais plein d'enseignements", // Texte en gris séparé
+            year: "2017",
+            event1: "Apprentissage Autodidacte",
+            grey1:
+              "Plongé dans le design et le développement, maîtrisant les bases à travers l'apprentissage autodidacte et l'expérimentation.", // Texte gris séparé
           },
           {
             year: "2020",
-            event1: "Déménagé à",
-            grey1: "Vichy, France",
-            event2: "Étudié",
-            grey2: "à l'UCA",
-            event3: "Stage en UI/UX",
-            grey3: "à W3+, Vichy",
+            event1: "Études UI/UX @UCA",
+            grey1:
+              "Poursuivi des études en UI/UX à l'UCA, affinant mes compétences et ma compréhension du design centré sur l'utilisateur.",
+            event2: "Stage @W3Plus",
+            grey2:
+              "Réalisé un stage en UI/UX, travaillant sur des projets concrets et acquérant une expérience pratique.",
           },
           {
             year: "2021",
-            event1: "Découverte de",
-            grey1: "Web3",
-            event2: "Tenté de lancer des projets",
-            grey2: "- Échec",
+            event1: "Découverte du Web3",
+            grey1:
+              "Exploré le monde des technologies décentralisées et commencé à les intégrer dans mon approche du design.",
+            event2: "Tentatives de lancement de projets Web3",
+            grey2:
+              "Essayé de lancer plusieurs projets dans le domaine du Web3, tirant des enseignements critiques des échecs.",
           },
           {
             year: "2022",
-            event1: "Déménagé à",
-            grey1: "Saguenay, Canada",
-            event2: "Commencé le freelance",
-            grey2: "", // Texte gris vide pour cette année
+            event1: "Déménagement à Saguenay, Canada",
+            grey1:
+              "Déménagé au Canada, pour suivre une année d'étude et démarrer mon parcours en tant que designer produit freelance.",
+            event2: "Début du Freelance",
+            grey2:
+              "Engagé sur divers projets freelance, principalement axés sur le design UI/UX, ce qui m'a permis de constituer un portfolio diversifié.", // Texte gris vide pour cette année
           },
           {
             year: "2023",
-            event1: "Rejoint",
-            grey1: "@SeedStudio",
-            event2: "Voyagé à :",
+            event1: "Rejoint @SeedStudio",
+            grey1:
+              "Intégré à Seed Studio, où j'ai collaboré avec une équipe pour fournir des solutions de design innovantes.",
+            event2: "Voyages",
             travels: [
               {
                 place: "New York,",
-                country: "USA",
+                country: "États-Unis",
               },
               {
                 place: "Dubaï,",
-                country: "Émirats arabes unis",
+                country: "Émirats Arabes Unis",
               },
               {
                 place: "Ottawa, Toronto, Montréal,",
@@ -1342,12 +1353,15 @@ const translations = {
           },
           {
             year: "2024",
-            event1: "Retour en",
-            grey1: "France",
-            event2: "Quitter",
-            grey2: "@SeedStudio",
-            event3: "Sortie client à 1M$",
-            grey3: "(Sendshort)",
+            event1: "Retour en France",
+            grey1:
+              "Décidé de revenir en France pour explorer de nouvelles opportunités après une croissance significative à l'étranger.",
+            event2: "Départ de @SeedStudio",
+            grey2:
+              "Terminé mon aventure chez SeedStudio, contribuant à des projets clés et acquérant une expérience inestimable.",
+            event3: "Lancement Client à 1M$ (Sendshort)",
+            grey3:
+              "Lancé avec succès un projet client vendu près d'un million de dollars.",
             event4: "À la recherche de mon prochain défi !",
           },
         ],
@@ -1355,7 +1369,7 @@ const translations = {
       future: {
         title: "Et à propos du... Futur ?",
         paragraph:
-          "J'ai apprécié travailler de manière indépendante en tant que freelance—cela a été une véritable école de la vie. Cependant, certains aspects du freelancing, comme trouver des clients et gérer le côté business, ne m'ont pas vraiment plu. J'aime vraiment créer et faire le travail lui-même, et je crois que c'est là que résident mes forces.",
+          "J'ai apprécié travailler de manière indépendante en tant que freelance cela a été une véritable école de la vie. Cependant, certains aspects du freelancing, comme trouver des clients et gérer le côté business, ne m'ont pas vraiment plu. J'aime vraiment créer et faire le travail lui-même, et je crois que c'est là que résident mes forces.",
         paragraph2:
           "À l'avenir, je vois plusieurs rôles qui pourraient bien me convenir.",
         roles: [

@@ -13,7 +13,7 @@ const ButtonHoverEffect = () => {
     top: 0,
     opacity: 0,
   });
-
+  const cvFile = `/files/cv_${language}.pdf`;
   const timeoutRef = useRef(null);
 
   const handleMouseEnter = (e) => {
@@ -89,7 +89,7 @@ const ButtonHoverEffect = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <a href="../../public/files/cv.pdf" download className={styles.link}>
+        <a href={cvFile} download className={styles.link}>
           {pageTranslations.download}
         </a>
       </button>

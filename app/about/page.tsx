@@ -138,11 +138,11 @@ export default function About() {
                   className="intro flex flex-col gap-y-3"
                 >
                   <Element immediate>
-                    <motion.p className=" text-base albra text-neutral-600">
+                    <motion.p className=" text-base albra text-neutral-600 text-justify">
                       {pageTranslations.introduction.paragraph1}
                     </motion.p>
                   </Element>
-                  <motion.p className="text-base albra text-neutral-600">
+                  <motion.p className="text-base albra text-neutral-600 text-justify">
                     {pageTranslations.introduction.paragraph2}
                   </motion.p>
                 </motion.div>
@@ -161,84 +161,74 @@ export default function About() {
                   </motion.h2>
 
                   <div className="flex flex-col gap-8 align-start">
-                    {pageTranslations.journey.timeline.map((item, index) => (
-                      <motion.div
-                        key={`timeline-${language}-${index}`}
-                        initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 1, delay: 0.7 + index * 0.1 }}
-                        className="flex flex-col lg:flex-row albra justify-between w-full lg:w-[450px]"
-                      >
-                        <h3
-                          className="lg:text-right lightgrey lg:w-[86px] lg:mr-[64px]"
-                          // Adjust width and spacing
+                    {pageTranslations.journey.timeline
+                      // Reverse the array order
+                      .map((item, index) => (
+                        <motion.div
+                          key={`timeline-${language}-${index}`}
+                          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                          transition={{ duration: 1, delay: 0.7 + index * 0.1 }}
+                          className="flex flex-col lg:flex-row albra justify-between w-full lg:w-[500px]"
                         >
-                          {item.year}
-                        </h3>
-                        <div
-                          className="flex flex-col space-y-2"
-                          style={{ width: "300px" }} // Set the content width
-                        >
-                          {item.event1 && (
-                            <h4 className="font-medium text-black">
-                              <span className="inline-block">
-                                {item.event1.split(" ").map((word, idx) =>
-                                  word === "autonome" ? (
-                                    <span key={idx}>
-                                      {word} <br />
-                                    </span>
-                                  ) : (
-                                    <span key={idx}>{word} </span>
-                                  )
-                                )}
-                                <span className="lightgrey whitespace-nowrap">
-                                  {item.grey1}
-                                </span>
-                              </span>
-                            </h4>
-                          )}
-
-                          {item.event2 && (
-                            <h4 className="font-medium text-black">
-                              <span className="inline-block whitespace-nowrap">
-                                {item.event2.split(" ").map((word, idx) =>
-                                  word === "Team:" || word === "Esport:" ? (
-                                    <span key={idx}>
-                                      {word} <br />
-                                    </span>
-                                  ) : (
-                                    <span key={idx}>{word} </span>
-                                  )
-                                )}
-                                <span className="lightgrey">{item.grey2}</span>
-                              </span>
-                            </h4>
-                          )}
-
-                          {item.event3 && (
-                            <h4 className="font-medium text-black">
-                              {item.event3}{" "}
-                              <span className="lightgrey">{item.grey3}</span>
-                            </h4>
-                          )}
-                          {item.travels && (
-                            <div className="font-medium text-black">
-                              {item.travels.map((travel, idx) => (
-                                <div
-                                  key={`travel-${index}-${idx}`}
-                                  style={{ marginBottom: "8px" }}
-                                >
-                                  {travel.place}{" "}
+                          <h3 className="relatibe lg:text-left lightgrey lg:w-[86px] lg:mr-[64px]">
+                            {item.year}
+                          </h3>
+                          <div className="flex flex-col w-full space-y-2">
+                            {item.event1 && (
+                              <h4 className="font-medium text-black">
+                                <span className="block">
+                                  {item.event1}
+                                  <br />
                                   <span className="lightgrey">
-                                    {travel.country}
+                                    {item.grey1}
                                   </span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </motion.div>
-                    ))}
+                                </span>
+                              </h4>
+                            )}
+
+                            {item.event2 && (
+                              <h4 className="font-medium text-black">
+                                <span className="block">
+                                  {item.event2}
+                                  <br />
+                                  <span className="lightgrey">
+                                    {item.grey2}
+                                  </span>
+                                </span>
+                              </h4>
+                            )}
+
+                            {item.event3 && (
+                              <h4 className="font-medium text-black">
+                                <span className="block">
+                                  {item.event3}
+                                  <br />
+                                  <span className="lightgrey">
+                                    {item.grey3}
+                                  </span>
+                                </span>
+                              </h4>
+                            )}
+
+                            {item.travels && (
+                              <div className="font-medium text-black">
+                                {item.travels.map((travel, idx) => (
+                                  <div
+                                    key={`travel-${index}-${idx}`}
+                                    style={{ marginBottom: "8px" }}
+                                  >
+                                    {travel.place}{" "}
+                                    <span className="lightgrey">
+                                      {travel.country}
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </motion.div>
+                      ))}
                   </div>
                 </div>
               </Element>
@@ -250,19 +240,19 @@ export default function About() {
                     initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="my-16 text-center calisto text-3xl text-gray-700 leading-10"
+                    className="my-16 text-center calisto text-3xl text-gray-700 leading-10 "
                   >
                     {pageTranslations.future.title}
                   </motion.h2>
                   <div className="flex flex-col gap-y-6">
-                    <motion.p className="paragraph text-base albra darkgrey">
+                    <motion.p className="paragraph text-base albra darkgrey text-justify">
                       {pageTranslations.future.paragraph}
                     </motion.p>
-                    <motion.p className="paragraph text-base albra darkgrey">
+                    <motion.p className="paragraph text-base albra darkgrey text-justify">
                       {pageTranslations.future.paragraph2}
                     </motion.p>
 
-                    <ul className="paragraph text-base albra darkgrey">
+                    <ul className="paragraph text-base albra darkgrey text-justify">
                       {pageTranslations.future.roles.map((role, index) => (
                         <li className="mb-3" key={`role-${index}`}>
                           <span className="albra2">{role.role}:</span>{" "}
