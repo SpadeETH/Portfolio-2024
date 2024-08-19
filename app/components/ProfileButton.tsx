@@ -19,7 +19,7 @@ const ProfileButton: React.FC = () => {
         className={styles.profileButton}
         initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0, ease: "easeInOut" }}
         whileHover={{ backgroundColor: "#f9f9f9" }}
         whileTap={{ scale: 0.95 }}
       >
