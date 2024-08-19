@@ -20,6 +20,36 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+          id="favicon"
+          rel="icon"
+          type="image/svg+xml"
+          href="/public/images/favicon-light.svg"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const setFavicon = (theme) => {
+                  const favicon = document.getElementById('favicon');
+                  if (theme === 'dark') {
+                    favicon.href = '/public/images/favicon-dark.png';
+                  } else {
+                    favicon.href = '/public/images/favicon-light.svg';
+                  }
+                };
+
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                setFavicon(mediaQuery.matches ? 'dark' : 'light');
+
+                mediaQuery.addEventListener('change', (e) => {
+                  setFavicon(e.matches ? 'dark' : 'light');
+                });
+              })();
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <LanguageProvider>
