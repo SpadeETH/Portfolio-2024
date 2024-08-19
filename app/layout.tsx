@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { LanguageProvider } from "./components/context/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop"; // Assurez-vous que le chemin est correct
 import "./globals.css";
@@ -19,6 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QV9C7DPC80"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QV9C7DPC80');
+          `}
+        </Script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Metadata de base */}
@@ -78,6 +91,7 @@ export default function RootLayout({
         {/* Couleur de thème pour mobile */}
         <meta name="theme-color" content="#ffffff" />
       </head>
+
       <body className={inter.className}>
         <LanguageProvider>
           <ScrollToTop /> {/* Ajout de ScrollToTop ici */}
