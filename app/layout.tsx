@@ -21,35 +21,59 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        {/* Metadata de base */}
+        <title>Arthur Bossuyt - Product Designer</title>
+        <meta
+          name="description"
+          content="Arthur est un Product Designer de 21 ans passionné par la création d'expériences utilisateur innovantes et efficaces. Découvrez son portfolio de projets créatifs."
+        />
+        <meta
+          name="keywords"
+          content="Product Designer, UX Design, UI Design, Design Graphique, Portfolio, Arthur, Arthur Bossuyt, Bossuyt, SpadeFX, Spade"
+        />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Arthur Bossuyt" />
+
+        {/* Favicons */}
         <link
           id="favicon"
           rel="icon"
           type="image/svg+xml"
           href="/public/images/favicon-light.svg"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const setFavicon = (theme) => {
-                  const favicon = document.getElementById('favicon');
-                  if (theme === 'dark') {
-                    favicon.href = '/public/images/favicon-dark.png';
-                  } else {
-                    favicon.href = '/public/images/favicon-light.svg';
-                  }
-                };
-
-                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-                setFavicon(mediaQuery.matches ? 'dark' : 'light');
-
-                mediaQuery.addEventListener('change', (e) => {
-                  setFavicon(e.matches ? 'dark' : 'light');
-                });
-              })();
-            `,
-          }}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/public/images/favicon-light.svg"
         />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Arthur Bossuyt - Product Designer" />
+        <meta
+          property="og:description"
+          content="Arthur est un Product Designer de 21 ans passionné par la création d'expériences utilisateur innovantes et efficaces. Découvrez son portfolio de projets créatifs."
+        />
+        <meta property="og:image" content="/public/images/twitter.png" />
+        <meta property="og:url" content="https://arthur.gg" />
+        <meta
+          property="og:site_name"
+          content="Arthur Bossuyt - Product Designer"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Titre pour Twitter" />
+        <meta
+          name="twitter:description"
+          content="Arthur est un Product Designer de 21 ans passionné par la création d'expériences utilisateur innovantes et efficaces. Découvrez son portfolio de projets créatifs."
+        />
+        <meta name="twitter:image" content="/public/images/twitter.png" />
+        <meta name="twitter:site" content="@SpadeFX" />
+
+        {/* Couleur de thème pour mobile */}
+        <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={inter.className}>
         <LanguageProvider>
