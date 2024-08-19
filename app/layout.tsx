@@ -64,7 +64,10 @@ export default function RootLayout({
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Titre pour Twitter" />
+        <meta
+          name="twitter:title"
+          content="Arthur Bossuyt - Product Designer"
+        />
         <meta
           name="twitter:description"
           content="Arthur est un Product Designer de 21 ans passionné par la création d'expériences utilisateur innovantes et efficaces. Découvrez son portfolio de projets créatifs."
