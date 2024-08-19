@@ -84,7 +84,9 @@ const ProjectCard: React.FC<{ project: Project; buttonText: string }> = ({
             transition={{ duration: 0.3 }}
           >
             <div className={styles.overlayTextWrapper}>
-              <p className={styles.overlayText}>{buttonText}</p>
+              <p className={(styles.overlayText, "text-justify")}>
+                {buttonText}
+              </p>
             </div>
           </motion.div>
         </div>

@@ -138,7 +138,7 @@ export default function Home() {
                       .title
                   }
                 </motion.h3>
-                <motion.p className="paragraph text-base albra darkgrey">
+                <motion.p className="paragraph text-base albra darkgrey text-justify">
                   {pageTranslations.p1.paragraph}
                 </motion.p>
               </motion.div>

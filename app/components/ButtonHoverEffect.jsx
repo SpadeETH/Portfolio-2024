@@ -58,7 +58,7 @@ const ButtonHoverEffect = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <a href="mailto:abossuyt69@gmail.com" className={styles.link}>
+        <a href="mailto:contact@arthur.gg" className={styles.link}>
           Email
         </a>
       </button>

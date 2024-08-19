@@ -121,7 +121,7 @@ const SendshortProject: React.FC = () => {
               </div>
             </div>
             <div className="w-full sub-infocrop flex flex-col-reverse mx-auto items-center">
-              <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
+              <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center text-justify">
                 {pageTranslations.sections.infoCrop.description}
               </div>
             </div>
@@ -157,7 +157,7 @@ const SendshortProject: React.FC = () => {
               </div>
             </div>
             <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
-              <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
+              <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center text-justify">
                 {pageTranslations.sections.infoSub.description}
               </div>
             </div>
@@ -178,7 +178,7 @@ const SendshortProject: React.FC = () => {
         <>
           <div
             key={`${language}-shortline`}
-            className="title text-xl flex flex-row mx-auto lg:text-center lg:w-[400px] my-[64px] lightgrey"
+            className="title text-xl flex flex-row lg:mx-auto lg:text-center lg:w-[400px] my-[64px] lightgrey w-80 text-left"
           >
             {pageTranslations.sections.shortline.text}
           </div>
@@ -199,7 +199,7 @@ const SendshortProject: React.FC = () => {
             <div className="heading w-100">
               {pageTranslations.sections.primaryObjective.heading}
             </div>
-            <div className="pheading w-100 segoe font-normal lightgrey">
+            <div className="pheading w-100 segoe font-normal lightgrey text-justify">
               {pageTranslations.sections.primaryObjective.description}
             </div>
           </div>
@@ -235,7 +235,7 @@ const SendshortProject: React.FC = () => {
               {pageTranslations.sections.uxr.pillars.map((pillar, index) => (
                 <div
                   key={`${language}-pillar-${index}`}
-                  className="flex flex-col items-start w-4/5 lg:w-1/3 lg:px-4"
+                  className="flex flex-col items-start w-5/5 lg:w-1/3 lg:px-4"
                 >
                   <div className="flex items-center mb-4">
                     {index === 0 && (
@@ -247,11 +247,11 @@ const SendshortProject: React.FC = () => {
                     {index === 2 && (
                       <CachedIcon style={{ marginRight: ".5rem" }} />
                     )}
-                    <h3 className="text-base text-gray-800 segoe font-medium">
+                    <h3 className="text-base text-gray-800 segoe font-medium text-justify">
                       {pillar.title}
                     </h3>
                   </div>
-                  <ul className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                  <ul className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6 ">
                     {pillar.description.map((desc, i) => (
                       <li key={i}>{desc}</li>
                     ))}
@@ -282,7 +282,7 @@ const SendshortProject: React.FC = () => {
                 {pageTranslations.sections.researchMethodology.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {pageTranslations.sections.researchMethodology.description}
               </p>
             </div>
@@ -314,7 +314,7 @@ const SendshortProject: React.FC = () => {
                 {pageTranslations.sections.keyInsights.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {pageTranslations.sections.keyInsights.description}
               </p>
             </div>
@@ -330,7 +330,7 @@ const SendshortProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[0].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[0].description}
                 </p>
               </div>
@@ -343,7 +343,7 @@ const SendshortProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[1].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[1].description}
                 </p>
               </div>
@@ -358,7 +358,7 @@ const SendshortProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[2].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[2].description}
                 </p>
               </div>
@@ -371,7 +371,7 @@ const SendshortProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[3].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[3].description}
                 </p>
               </div>
@@ -419,7 +419,7 @@ const SendshortProject: React.FC = () => {
                 {pageTranslations.sections.uxResearch.analyzingDesign.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {
                   pageTranslations.sections.uxResearch.analyzingDesign
                     .description
@@ -452,7 +452,7 @@ const SendshortProject: React.FC = () => {
                 }
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {
                   pageTranslations.sections.uxResearch.analyzeCompetitors
                     .description
@@ -482,7 +482,7 @@ const SendshortProject: React.FC = () => {
                 {pageTranslations.sections.uxDesign.draftSessions.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {pageTranslations.sections.uxDesign.draftSessions.description}
               </p>
             </div>
@@ -509,7 +509,7 @@ const SendshortProject: React.FC = () => {
                 {pageTranslations.sections.uxDesign.solutionDesigning.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {
                   pageTranslations.sections.uxDesign.solutionDesigning
                     .description
@@ -539,7 +539,7 @@ const SendshortProject: React.FC = () => {
                 {pageTranslations.sections.uxDesign.beforeAfter.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {pageTranslations.sections.uxDesign.beforeAfter.description}
               </p>
             </div>
@@ -593,7 +593,7 @@ const SendshortProject: React.FC = () => {
               {pageTranslations.sections.nouveauDepart.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
+            <p className="font-regular segoe text-gray-800 text-justify">
               {pageTranslations.sections.nouveauDepart.description}
             </p>
           </div>
@@ -625,7 +625,7 @@ const SendshortProject: React.FC = () => {
               {pageTranslations.sections.resultatsCle.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
+            <p className="font-regular segoe text-gray-800 text-justify">
               {pageTranslations.sections.resultatsCle.description}
             </p>
           </div>
@@ -649,7 +649,7 @@ const SendshortProject: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-700 p-6 text-left flex-grow  lg:min-h-[168px]">
+                <p className="text-sm text-gray-700 p-6 text-left flex-grow text-justify lg:min-h-[168px] ">
                   {stat.description}
                 </p>
               </div>
@@ -673,7 +673,7 @@ const SendshortProject: React.FC = () => {
               {pageTranslations.sections.succes.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
+            <p className="font-regular segoe text-gray-800 text-justify">
               {pageTranslations.sections.succes.description}
             </p>
           </div>
@@ -698,9 +698,6 @@ const SendshortProject: React.FC = () => {
               {pageTranslations.sections.leconsPerspectives.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
-              {pageTranslations.sections.leconsPerspectives.description}
-            </p>
           </div>
           <div className="steps flex flex-col gap-8">
             <div className="stepsrow1 flex flex-col lg:flex-row gap-8">
@@ -718,7 +715,9 @@ const SendshortProject: React.FC = () => {
                       className="h-[24px] w-[24px] mt-[1px]"
                     />
                     <h1 className="text-lg">{insight.title}</h1>
-                    <p className="text-sm">{insight.description}</p>
+                    <p className="text-sm text-justify">
+                      {insight.description}
+                    </p>
                   </div>
                 )
               )}
@@ -785,7 +784,7 @@ const SendshortProject: React.FC = () => {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 1.225 }}
           >
-            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
+            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center text-justify">
               {pageTranslations.description2}
             </div>
           </motion.div>

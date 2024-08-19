@@ -116,7 +116,7 @@ const BitloomProject: React.FC = () => {
             </h1>
           </div>
           <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
-            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
+            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center text-justify">
               {pageTranslations.sections.trackWallet.description}
             </div>
           </div>
@@ -139,7 +139,7 @@ const BitloomProject: React.FC = () => {
             </h1>
           </div>
           <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
-            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
+            <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center text-justify">
               {pageTranslations.sections.optimizeDefi.description}
             </div>
           </div>
@@ -161,21 +161,18 @@ const BitloomProject: React.FC = () => {
             <div className="heading w-100">
               {pageTranslations.sections.primaryObjective.heading}
             </div>
-            <div className="pheading w-100 segoe font-normal lightgrey">
+            <div className="pheading w-100 segoe font-normal lightgrey text-justify">
               {pageTranslations.sections.primaryObjective.description1}
             </div>
             <div className="pheading w-100 segoe font-normal lightgrey">
               {pageTranslations.sections.primaryObjective.description2}
             </div>
             <hr />
-            <div className="w-100 text-base font-medium lightgrey">
+            <div className="w-100 text-base font-medium lightgrey text-justify">
               {pageTranslations.sections.primaryObjective.descriptionBoldGrey}{" "}
               <span className="darkgrey">
                 {pageTranslations.sections.primaryObjective.descriptionBold}
               </span>
-            </div>
-            <div className="pheading w-100 segoe font-normal lightgrey">
-              {pageTranslations.sections.primaryObjective.description4}
             </div>
           </div>
           <Image src={Coins} alt="Icon" className="lg:w-5/12 lg ml-[0px]" />
@@ -214,7 +211,7 @@ const BitloomProject: React.FC = () => {
                           {pillar.title}
                         </h3>
                       </div>
-                      <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                      <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6 text-justify">
                         {pillar.description}
                       </p>
                       <p className="font-medium segoe text-gray-800">
@@ -242,7 +239,7 @@ const BitloomProject: React.FC = () => {
                           {pillar.title}
                         </h3>
                       </div>
-                      <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                      <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6 text-justify">
                         {pillar.description}
                       </p>
                       <p className="font-medium segoe text-gray-800">
@@ -271,7 +268,7 @@ const BitloomProject: React.FC = () => {
               {pageTranslations.sections.uxresearch.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
+            <p className="font-regular segoe text-gray-800 text-justify">
               {pageTranslations.sections.uxresearch.description}
             </p>
           </div>
@@ -299,7 +296,7 @@ const BitloomProject: React.FC = () => {
             </h2>
             <hr />
             <div className="flex flex-col gap-y-2">
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {pageTranslations.sections.researchMethodology.description1}
               </p>
 
@@ -339,7 +336,7 @@ const BitloomProject: React.FC = () => {
               {pageTranslations.sections.keyInsights.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
+            <p className="font-regular segoe text-gray-800 text-justify">
               {pageTranslations.sections.keyInsights.description}
             </p>
           </div>
@@ -353,7 +350,7 @@ const BitloomProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[0].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[0].description}
                 </p>
               </div>
@@ -365,7 +362,7 @@ const BitloomProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[1].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[1].description}
                 </p>
               </div>
@@ -379,7 +376,7 @@ const BitloomProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[2].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[2].description}
                 </p>
               </div>
@@ -391,7 +388,7 @@ const BitloomProject: React.FC = () => {
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[3].title}
                 </h1>
-                <p className="text-sm">
+                <p className="text-sm text-justify">
                   {pageTranslations.sections.keyInsights.pillars[3].description}
                 </p>
               </div>
@@ -414,7 +411,7 @@ const BitloomProject: React.FC = () => {
               </div>
               <h2 className="lightheading w-100 text-left lightgrey font-normal">
                 {pageTranslations.sections.keyInsights2.heading}
-                <span className="p-2 heading w-100 text-left font-regular">
+                <span className="p-2 heading w-100  text-justify lg:text-left font-regular">
                   {pageTranslations.sections.keyInsights2.subheading}
                 </span>
               </h2>
@@ -439,7 +436,7 @@ const BitloomProject: React.FC = () => {
                 {pageTranslations.sections.uxDesign.draftSessions.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {pageTranslations.sections.uxDesign.draftSessions.description}
               </p>
             </div>
@@ -466,7 +463,7 @@ const BitloomProject: React.FC = () => {
                 {pageTranslations.sections.uxDesign.solutionDesigning.heading}
               </h2>
               <hr />
-              <p className="font-regular segoe text-gray-800">
+              <p className="font-regular segoe text-gray-800 text-justify">
                 {
                   pageTranslations.sections.uxDesign.solutionDesigning
                     .description
@@ -495,7 +492,7 @@ const BitloomProject: React.FC = () => {
               {pageTranslations.sections.leconsPerspectives.heading}
             </h2>
             <hr />
-            <p className="font-regular segoe text-gray-800">
+            <p className="font-regular segoe text-gray-800 text-justify">
               {pageTranslations.sections.leconsPerspectives.description}
             </p>
           </div>
@@ -515,7 +512,9 @@ const BitloomProject: React.FC = () => {
                       className="h-[24px] w-[24px] mt-[1px]"
                     />
                     <h1 className="text-lg">{insight.title}</h1>
-                    <p className="text-sm">{insight.description}</p>
+                    <p className="text-sm text-justify">
+                      {insight.description}
+                    </p>
                   </div>
                 )
               )}

@@ -4,8 +4,8 @@ const translations = {
       header: {
         hover: "Click to view more.",
         job: "Product Designer",
-        text1: "Redefining solutions with passion.",
-        text2: "From Vision to Excellence.",
+        text1: "Transorm ideas.",
+        text2: "Into concrete solutions.",
       },
       p1: {
         title: "Welcome to my portfolio",
@@ -667,7 +667,7 @@ const translations = {
           {
             role: "Design Engineering",
             description:
-              "This is another area I could see myself thriving in. As a product designer, deep coding knowledge isn't always essential—except perhaps for working on design systems or some light coding tasks. However, since I enjoy coding in my free time, a Design Engineering role could be something I'd consider pursuing in the future.",
+              "This is another area I could see myself thriving in. As a product designer, deep coding knowledge isn't always essential except perhaps for working on design systems or some light coding tasks. However, since I enjoy coding in my free time, a Design Engineering role could be something I'd consider pursuing in the future.",
           },
         ],
       },
@@ -710,9 +710,9 @@ const translations = {
     home: {
       header: {
         hover: "Cliquez pour en savoir plus.",
-        job: "UI/UX Designer",
-        text1: "Réinventer les solutions avec passion.",
-        text2: "De la vision à l'excellence.",
+        job: "Product Designer",
+        text1: "Transformer les idées.",
+        text2: "en solutions concrètes.",
       },
       p1: {
         title: "Bienvenue sur mon portfolio",
@@ -1376,12 +1376,12 @@ const translations = {
           {
             role: "Conception de Produits",
             description:
-              "Je suis passionné par la réflexion sur les produits et la manière dont ce que nous créons peut avoir un impact positif sur la vie et les activités des gens. Ce rôle correspond à mes intérêts et compétences.",
+              "Je suis passionné par la création de produits et la manière dont cela peut avoir un impact positif sur la vie et les activités des gens. Ce rôle correspond à mes intérêts et compétences.",
           },
           {
-            role: "Ingénierie du Design",
+            role: "Design Engineer",
             description:
-              "C'est un autre domaine dans lequel je pourrais m'épanouir. En tant que designer de produits, une connaissance approfondie du codage n'est pas toujours essentielle—sauf peut-être pour travailler sur des systèmes de design ou effectuer quelques tâches de codage léger. Cependant, comme j'aime coder pendant mon temps libre, un rôle d'ingénieur en design pourrait être quelque chose que je considérerais pour l'avenir.",
+              "C'est un autre domaine dans lequel je pourrais m'épanouir. En tant que product designer, une connaissance approfondie du code n'est pas toujours essentielle sauf peut-être pour travailler sur des design system ou effectuer quelques tâches de code léger. Cependant, comme j'aime coder pendant mon temps libre, un rôle de design engineer pourrait être quelque chose que je considérerais pour l'avenir.",
           },
         ],
       },

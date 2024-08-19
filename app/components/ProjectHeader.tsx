@@ -77,7 +77,7 @@ const ProjectHeader: React.FC<HeaderProps> = ({
           initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-base segoe text-slate-700"
+          className="text-base segoe text-slate-700 text-justify"
         >
           {description}
         </motion.p>

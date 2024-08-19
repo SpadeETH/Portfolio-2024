@@ -106,7 +106,7 @@ const PageProject: React.FC = () => {
               {pageTranslations.next.title}
             </h2>
 
-            <p>{pageTranslations.next.subtitle}</p>
+            <p className="text-justify">{pageTranslations.next.subtitle}</p>
             <hr />
             <ProjectSwitcher currentProjectTag={currentProjectTag} />
           </div>
