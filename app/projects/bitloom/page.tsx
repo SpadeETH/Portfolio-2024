@@ -1,8 +1,19 @@
 "use client";
+import {
+  AccountBalanceWallet,
+  AutoAwesomeMotion,
+  GppGood,
+  Insights,
+  Layers,
+  Restore,
+  ShapeLine,
+  Toll,
+  TrendingUp,
+  Tune,
+} from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
-
 import LanguageContext from "../../../app/components/context/LanguageContext";
 import translations from "../../../lib/translations";
 
@@ -10,7 +21,6 @@ import { useInView } from "react-intersection-observer";
 import BigLines from "../../biglines";
 import ProjectHeader from "../../components/ProjectHeader";
 
-import PersonIcon from "@mui/icons-material/Person";
 import Coins from "../../../public/images/Bitloom/coins.png";
 import Competitor from "../../../public/images/Bitloom/competitor.png";
 import Design from "../../../public/images/Bitloom/design.png";
@@ -19,13 +29,10 @@ import headerimage from "../../../public/images/Bitloom/header.png";
 import Niche from "../../../public/images/Bitloom/niche.png";
 import Opti from "../../../public/images/Bitloom/opti.png";
 import Track from "../../../public/images/Bitloom/track.png";
-import IconKeyInsightA from "../../../public/images/Icons/KI1.png";
-import IconKeyInsightB from "../../../public/images/Icons/KI2.png";
-import IconKeyInsightC from "../../../public/images/Icons/KI3.png";
-import IconKeyInsightD from "../../../public/images/Icons/KI4.png";
 
+import Footer from "@/app/components/footer";
+import ProjectSwitcher from "@/app/components/ProjectSwitcher";
 import BackToTop from "../../components/Backtotop";
-
 // Define the Element component with animations
 interface ElementProps {
   children: React.ReactNode;
@@ -55,6 +62,24 @@ const Element: React.FC<ElementProps> = ({ children }) => {
 };
 
 const BitloomProject: React.FC = () => {
+  const iconfoissix: { [key: string]: React.ElementType } = {
+    AutoAwesomeMotion: AutoAwesomeMotion,
+    ShapeLine: ShapeLine,
+    GppGood: GppGood,
+    Insights: Insights,
+    Toll: Toll,
+    Restore: Restore,
+    // Add other icons as needed
+  };
+
+  const iconMap: { [key: string]: React.ElementType } = {
+    OrganizationIcon: AccountBalanceWallet,
+    PriceIcon: TrendingUp,
+    DiversityIcon: Layers,
+    SimplificationIcon: Tune,
+    // Add other icons as needed
+  };
+  const currentProjectTag = "bitloom";
   const { language } = useContext(LanguageContext);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -106,7 +131,7 @@ const BitloomProject: React.FC = () => {
       content: (
         <div
           key={`${language}-optimized-defi`}
-          className="w-full infocrop flex flex-col gap-6 mx-auto mt-[64px]"
+          className="w-full infocrop flex flex-col gap-6 mx-auto mt-[128px] mb-[128px]"
         >
           <div className="title-infocrop flex flex-wrap lg:items-center gap-4 lg:justify-center">
             <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
@@ -124,17 +149,7 @@ const BitloomProject: React.FC = () => {
         </div>
       ),
     },
-    {
-      type: "shortline",
-      content: (
-        <div
-          key={`${language}-shortline`}
-          className="title text-xl flex flex-row mx-auto lg:text-center lg:w-[400px] my-[64px] lightgrey"
-        >
-          {pageTranslations.sections.shortline.text}
-        </div>
-      ),
-    },
+
     {
       type: "Primary Objective",
       content: (
@@ -174,62 +189,68 @@ const BitloomProject: React.FC = () => {
           <div className="flex flex-col items-center w-full mx-auto mt-[96px]">
             <div className="titlefeature w-full flex flex-col gap-2 mb-6">
               <div className="subheading">
-                {pageTranslations.sections.uxr.title}
+                {pageTranslations.sections.uxr.feur}
               </div>
               <h2 className="heading w-100 text-left">
-                {pageTranslations.sections.uxr.titre}
+                {pageTranslations.sections.uxr.title}
               </h2>
               <hr />
             </div>
-
-            {/* Première rangée de trois colonnes */}
             <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full">
               {pageTranslations.sections.uxr.pillars
                 .slice(0, 3)
-                .map((pillar, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-start w-full lg:w-1/3 lg:px-4 mb-8 lg:mb-0"
-                  >
-                    <div className="flex items-center mb-4">
-                      <PersonIcon style={{ marginRight: ".5rem" }} />
-                      <h3 className="text-base text-gray-800 segoe font-medium">
-                        {pillar.title}
-                      </h3>
+                .map((pillar, index) => {
+                  const IconComponent = iconfoissix[pillar.icon];
+                  return (
+                    <div
+                      key={index}
+                      className="flex flex-col items-start w-full lg:w-1/3 lg:px-4 mb-8 lg:mb-0"
+                    >
+                      <div className="flex items-center mb-4 h-[48px]">
+                        {IconComponent && (
+                          <IconComponent style={{ marginRight: ".5rem" }} />
+                        )}
+                        <h3 className="text-base text-gray-800 segoe font-medium flex items-center">
+                          {pillar.title}
+                        </h3>
+                      </div>
+                      <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                        {pillar.description}
+                      </p>
+                      <p className="font-medium segoe text-gray-800">
+                        {pillar.objective}
+                      </p>
                     </div>
-                    <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
-                      {pillar.description}
-                    </p>
-                    <p className="font-medium segoe text-gray-800">
-                      {pillar.objective}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
-
-            {/* Deuxième rangée de trois colonnes */}
             <div className="flex flex-col lg:flex-row justify-between gap-[64px] lg:gap-6 w-full mt-8">
               {pageTranslations.sections.uxr.pillars
                 .slice(3, 6)
-                .map((pillar, index) => (
-                  <div
-                    key={index + 3}
-                    className="flex flex-col items-start w-full lg:w-1/3 lg:px-4 mb-8 lg:mb-0"
-                  >
-                    <div className="flex items-center mb-4">
-                      <PersonIcon style={{ marginRight: ".5rem" }} />
-                      <h3 className="text-base text-gray-800 segoe font-medium">
-                        {pillar.title}
-                      </h3>
+                .map((pillar, index) => {
+                  const IconComponent = iconfoissix[pillar.icon];
+                  return (
+                    <div
+                      key={index}
+                      className="flex flex-col items-start w-full lg:w-1/3 lg:px-4 mb-8 lg:mb-0"
+                    >
+                      <div className="flex items-center mb-4 h-[48px]">
+                        {IconComponent && (
+                          <IconComponent style={{ marginRight: ".5rem" }} />
+                        )}
+                        <h3 className="text-base text-gray-800 segoe font-medium flex items-center">
+                          {pillar.title}
+                        </h3>
+                      </div>
+                      <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
+                        {pillar.description}
+                      </p>
+                      <p className="font-medium segoe text-gray-800">
+                        {pillar.objective}
+                      </p>
                     </div>
-                    <p className="w-100 segoe font-normal lightgrey flex flex-col gap-2 mb-6">
-                      {pillar.description}
-                    </p>
-                    <p className="font-medium segoe text-gray-800">
-                      {pillar.objective}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
           </div>
         </>
@@ -325,11 +346,10 @@ const BitloomProject: React.FC = () => {
           <div className="steps flex flex-col gap-8">
             <div className="stepsrow1 flex flex-col lg:flex-row gap-8">
               <div className="step1 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
-                <Image
-                  src={IconKeyInsightA}
-                  alt="Icon"
-                  className="h-[24px] w-[24px] mt-[1px]"
-                />
+                {/* Utilisation de l'icône via iconMap */}
+                {React.createElement(iconMap["OrganizationIcon"], {
+                  className: "h-[24px] w-[24px] mt-[1px]",
+                })}
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[0].title}
                 </h1>
@@ -338,11 +358,10 @@ const BitloomProject: React.FC = () => {
                 </p>
               </div>
               <div className="step2 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
-                <Image
-                  src={IconKeyInsightB}
-                  alt="Icon"
-                  className="h-[24px] w-[24px] mt-[1px]"
-                />
+                {/* Utilisation de l'icône via iconMap */}
+                {React.createElement(iconMap["PriceIcon"], {
+                  className: "h-[24px] w-[24px] mt-[1px]",
+                })}
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[1].title}
                 </h1>
@@ -353,11 +372,10 @@ const BitloomProject: React.FC = () => {
             </div>
             <div className="stepsrow2 flex flex-col lg:flex-row gap-8">
               <div className="step1 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
-                <Image
-                  src={IconKeyInsightC}
-                  alt="Icon"
-                  className="h-[24px] w-[24px] mt-[1px]"
-                />
+                {/* Utilisation de l'icône via iconMap */}
+                {React.createElement(iconMap["DiversityIcon"], {
+                  className: "h-[24px] w-[24px] mt-[1px]",
+                })}
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[2].title}
                 </h1>
@@ -366,11 +384,10 @@ const BitloomProject: React.FC = () => {
                 </p>
               </div>
               <div className="step2 bg-zinc-100 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col">
-                <Image
-                  src={IconKeyInsightD}
-                  alt="Icon"
-                  className="h-[24px] w-[24px] mt-[1px]"
-                />
+                {/* Utilisation de l'icône via iconMap */}
+                {React.createElement(iconMap["SimplificationIcon"], {
+                  className: "h-[24px] w-[24px] mt-[1px]",
+                })}
                 <h1 className="text-lg">
                   {pageTranslations.sections.keyInsights.pillars[3].title}
                 </h1>
@@ -463,6 +480,71 @@ const BitloomProject: React.FC = () => {
         </>
       ),
     },
+    {
+      type: "leconsPerspectives",
+      content: (
+        <div
+          key={`${language}-LeconsPerspectives`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.leconsPerspectives.title}
+            </div>
+            <h2 className="heading w-100 text-left ">
+              {pageTranslations.sections.leconsPerspectives.heading}
+            </h2>
+            <hr />
+            <p className="font-regular segoe text-gray-800">
+              {pageTranslations.sections.leconsPerspectives.description}
+            </p>
+          </div>
+          <div className="steps flex flex-col gap-8">
+            <div className="stepsrow1 flex flex-col lg:flex-row gap-8">
+              {pageTranslations.sections.leconsPerspectives.insights.map(
+                (insight, index) => (
+                  <div
+                    key={`${language}-insight-${index}`}
+                    className="step1 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col"
+                  >
+                    <Image
+                      src={insight.icon}
+                      alt="Icon"
+                      width={24}
+                      height={24}
+                      className="h-[24px] w-[24px] mt-[1px]"
+                    />
+                    <h1 className="text-lg">{insight.title}</h1>
+                    <p className="text-sm">{insight.description}</p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      type: "designGoals",
+      content: (
+        <div
+          key={`${language}-designGoals`}
+          className="flex flex-col items-center w-full mx-auto mt-[96px]"
+        >
+          <div className="titlefeature w-full flex flex-col gap-2 mb-6">
+            <div className="subheading">
+              {pageTranslations.sections.designGoals.title}
+            </div>
+            <h2 className="lightheading w-100 text-left lightgrey font-normal">
+              {pageTranslations.sections.designGoals.heading}
+              <span className="p-2 heading w-100 text-left font-regular">
+                {pageTranslations.sections.designGoals.subheading}
+              </span>
+            </h2>
+          </div>
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -489,7 +571,7 @@ const BitloomProject: React.FC = () => {
             transition={{ duration: 0.6, delay: 1.15 }}
           >
             <h1 className="font-regular aeonik text-4xl text-gray-700">
-              {pageTranslations.title}
+              {pageTranslations.title2}
             </h1>
           </motion.div>
 
@@ -501,7 +583,7 @@ const BitloomProject: React.FC = () => {
             transition={{ duration: 0.6, delay: 1.225 }}
           >
             <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
-              {pageTranslations.description}
+              {pageTranslations.description2}
             </div>
           </motion.div>
 
@@ -528,7 +610,20 @@ const BitloomProject: React.FC = () => {
                 <Element key={`${language}-${index}`}>{el.content}</Element>
               ))}
           </div>
+          <div className="mt-16">
+            <div className="HeroWrapper flex flex-col gap-y-4">
+              <h2 className="w-full calisto text-3xl greytitle leading-10">
+                {pageTranslations.next.title}
+              </h2>
+
+              <p>{pageTranslations.next.subtitle}</p>
+              <hr />
+              <ProjectSwitcher currentProjectTag={currentProjectTag} />
+            </div>
+          </div>
         </div>
+
+        <Footer />
       </div>
       <BackToTop />
     </main>

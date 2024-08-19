@@ -174,8 +174,6 @@ rect {
 }
 .projects {
   padding-top: 64px;
-  padding-bottom: 64px;
-  border-bottom: 1px solid #dcdcdc;
 }
 .bottomtextcontainer {
   padding-top: 64px;
@@ -204,9 +202,7 @@ rect {
   align-items: flex-start;
   row-gap: 48px;
 }
-.footersign {
-  width: 418px;
-}
+
 ul li::marker {
   font-size: 0.75em; /* Adjust size */
   color: rgb(177, 177, 177); /* Adjust color */

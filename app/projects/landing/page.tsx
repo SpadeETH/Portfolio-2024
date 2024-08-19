@@ -5,11 +5,14 @@ import { useInView } from "react-intersection-observer";
 import translations from "../../../lib/translations";
 import BigLines from "../../biglines";
 import BackToTop from "../../components/Backtotop";
+import LanguageContext from "../../components/context/LanguageContext";
+import Footer from "../../components/footer";
 import Landing from "../../components/Landing";
 import ProjectHeader from "../../components/ProjectHeader";
-import LanguageContext from "../../components/context/LanguageContext";
+import ProjectSwitcher from "../../components/ProjectSwitcher";
 
 const PageProject: React.FC = () => {
+  const currentProjectTag = "landing";
   const [headerVisible, setHeaderVisible] = useState(false);
   const { language } = useContext(LanguageContext);
   const pageTranslations =
@@ -22,6 +25,7 @@ const PageProject: React.FC = () => {
       type: "text",
       content: <></>,
     },
+
     // Add other elements here
   ];
 
@@ -96,7 +100,30 @@ const PageProject: React.FC = () => {
               ))}
           </div>
         </div>
+        <div className="mt-16">
+          <div className="HeroWrapper flex flex-col gap-y-4">
+            <h2 className="w-full calisto text-3xl greytitle leading-10">
+              {pageTranslations.next.title}
+            </h2>
+
+            <p>{pageTranslations.next.subtitle}</p>
+            <hr />
+            <ProjectSwitcher currentProjectTag={currentProjectTag} />
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1, delay: 1 }}
+          className="bloctext env"
+          key={`${language}-Footer`} // Use language and index for a stable key
+        >
+          <Footer />
+        </motion.div>
       </div>
+
       <BackToTop />
     </main>
   );

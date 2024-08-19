@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import BottomTextContainer from "../app/components/BottomTextContainer";
 import LanguageContext from "../app/components/context/LanguageContext";
 import Footer from "../app/components/footer";
 import AnimatedShinyText from "../components/magicui/animated-shiny-text";
@@ -31,7 +30,7 @@ export default function Home() {
   return (
     <main>
       <BigLines />
-      <div className="w-100 mt-124 px-180">
+      <div className="flex flex-col mx-auto w-100 mt-124 px-180">
         <div className="hero flex flex-col gap-y-5">
           <motion.div
             key={`logo-${language}`}
@@ -45,36 +44,38 @@ export default function Home() {
           </motion.div>
 
           <div className="title-container" key={`title-container-${language}`}>
-            <Link href="/about" passHref>
-              <motion.h2
-                key={`name-${language}`}
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 1, delay: 0.1 }}
-                className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center relative"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                style={{ width: "200px" }}
-              >
+            <motion.h2
+              key={`name-${language}`}
+              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1, delay: 0.1 }}
+              className="calisto Arthur text-3xl text-black leading-10 flex flex-row items-center relative"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              style={{ width: "200px" }}
+            >
+              <Link href="/about" passHref>
+                {" "}
                 <AnimatedShinyText>Arthur Bossuyt</AnimatedShinyText>
-                <FiArrowRight className="arrowIcon transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200" />
-                {isHovered && (
-                  <motion.span
-                    initial={{ opacity: 0, x: 10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="hover-text absolute left-[210px] ml-2 text-base text-gray-600 top-[11px]"
-                    style={{
-                      whiteSpace: "nowrap",
-                      display: "block",
-                      width: "auto",
-                    }}
-                  >
-                    {pageTranslations.header.hover}
-                  </motion.span>
-                )}
-              </motion.h2>
-            </Link>
+              </Link>
+
+              <FiArrowRight className="arrowIcon transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200" />
+              {isHovered && (
+                <motion.span
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="hover-text absolute left-[210px] ml-2 text-base text-gray-600 top-[11px]"
+                  style={{
+                    whiteSpace: "nowrap",
+                    display: "block",
+                    width: "auto",
+                  }}
+                >
+                  {pageTranslations.header.hover}
+                </motion.span>
+              )}
+            </motion.h2>
 
             <div className={`main-content ${isHovered ? "blur" : ""}`}>
               <motion.h2
@@ -154,7 +155,6 @@ export default function Home() {
               <ProjectHolder />
             </motion.div>
 
-            <BottomTextContainer />
             <Footer />
           </div>
         </div>

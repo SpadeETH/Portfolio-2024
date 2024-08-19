@@ -16,10 +16,13 @@ const Footer = () => {
       initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
       animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
       transition={{ duration: 1 }}
-      className="footer flex flex-col-reverse lg:flex-row"
+      className="footer flex flex-col justify-center lg:flex-row lg:ml-0 lg:mx-0 w-full"
     >
-      <ButtonHoverEffect />
-      <div className="footersign max-w-full flex flex-row justify-end">
+      <div className="flex flex-row justify-center lg:ml-0 mx-auto">
+        <ButtonHoverEffect />
+      </div>
+
+      <div className="footersign w-full lg:max-w-[300px] flex flex-row justify-center lg:justify-end">
         <Image src={sign} alt="Logo Spade" width={205} height={49} />
       </div>
     </motion.div>

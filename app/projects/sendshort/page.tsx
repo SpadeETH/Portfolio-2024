@@ -6,6 +6,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import LanguageContext from "../../../app/components/context/LanguageContext";
 import translations from "../../../lib/translations";
+import ProjectSwitcher from "../../components/ProjectSwitcher";
 
 import { ReactCompareSlider } from "react-compare-slider";
 import { useInView } from "react-intersection-observer";
@@ -74,6 +75,7 @@ const Element: React.FC<ElementProps> = ({ children }) => {
 };
 
 const SendshortProject: React.FC = () => {
+  const currentProjectTag = "sendshort";
   const { language } = useContext(LanguageContext);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -109,11 +111,14 @@ const SendshortProject: React.FC = () => {
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 {pageTranslations.sections.infoCrop.title}
               </h1>
-              <Image
-                src={cropicon}
-                alt="Icon"
-                className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
-              />
+              <div className="invisible lg:visible">
+                {" "}
+                <Image
+                  src={cropicon}
+                  alt="Icon"
+                  className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
+                />
+              </div>
             </div>
             <div className="w-full sub-infocrop flex flex-col-reverse mx-auto items-center">
               <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
@@ -143,11 +148,13 @@ const SendshortProject: React.FC = () => {
               <h1 className="font-regular aeonik text-2xl lg:text-3xl text-gray-700">
                 {pageTranslations.sections.infoSub.title}
               </h1>
-              <Image
-                src={subicon}
-                alt="Icon"
-                className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
-              />
+              <div className="invisible lg:visible">
+                <Image
+                  src={subicon}
+                  alt="Icon"
+                  className="h-[24px] w-[24px]  lg:h-[33px] lg:w-[33px] mt-[1px]"
+                />
+              </div>
             </div>
             <div className="w-full sub-infocrop flex flex-col mx-auto items-center">
               <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
@@ -216,7 +223,7 @@ const SendshortProject: React.FC = () => {
           >
             <div className="titlefeature w-full flex flex-col gap-2 mb-6">
               <div className="subheading">
-                {pageTranslations.sections.uxr.title}
+                {pageTranslations.sections.uxr.head}
               </div>
               <h2 className="heading w-100 text-left">
                 {pageTranslations.sections.uxr.title}
@@ -704,8 +711,10 @@ const SendshortProject: React.FC = () => {
                     className="step1 bg-zinc-50 px-8 py-6 w-full rounded-s-md gap-1 flex flex-col"
                   >
                     <Image
-                      src={IconKeyInsightA}
+                      src={insight.icon}
                       alt="Icon"
+                      width={24}
+                      height={24}
                       className="h-[24px] w-[24px] mt-[1px]"
                     />
                     <h1 className="text-lg">{insight.title}</h1>
@@ -739,14 +748,6 @@ const SendshortProject: React.FC = () => {
         </div>
       ),
     },
-    {
-      type: "Footer",
-      content: (
-        <>
-          <Footer key={`${language}-Footer`} />
-        </>
-      ),
-    },
   ];
 
   return (
@@ -773,7 +774,7 @@ const SendshortProject: React.FC = () => {
             transition={{ duration: 0.6, delay: 1.15 }}
           >
             <h1 className="font-regular aeonik text-4xl text-gray-700">
-              {pageTranslations.title}
+              {pageTranslations.title2}
             </h1>
           </motion.div>
 
@@ -785,7 +786,7 @@ const SendshortProject: React.FC = () => {
             transition={{ duration: 0.6, delay: 1.225 }}
           >
             <div className="text-l lightgrey lg:w-[700px] lg:justify-center lg:text-center">
-              {pageTranslations.description}
+              {pageTranslations.description2}
             </div>
           </motion.div>
 
@@ -805,12 +806,24 @@ const SendshortProject: React.FC = () => {
 
           <div
             key={`${language}-main-content`}
-            className="Main flex flex-col mx-auto gap-y-5 w-full lg:w-[860px] mt-124"
+            className="Main flex flex-col mx-auto gap-y-5 w-full lg:w-[860px]"
           >
             {headerVisible &&
               elements.map((el, index) => (
                 <Element key={`${language}-${index}`}>{el.content}</Element>
               ))}
+          </div>
+          <div className="mt-16">
+            <div className="HeroWrapper flex flex-col gap-y-4">
+              <h2 className="w-full calisto text-3xl greytitle leading-10">
+                {pageTranslations.next.title}
+              </h2>
+
+              <p>{pageTranslations.next.subtitle}</p>
+              <hr />
+              <ProjectSwitcher currentProjectTag={currentProjectTag} />
+              <Footer />
+            </div>
           </div>
         </div>
       </div>

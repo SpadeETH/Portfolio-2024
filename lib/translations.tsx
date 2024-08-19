@@ -35,6 +35,10 @@ const translations = {
       subtitle: "The tool that enhances content creator workflow",
       description:
         "I had the opportunity to participate with Sendshort in the complete redesign of their Product / Website. The goal was to make vertical video creation easier using artificial intelligence.",
+      title2: "Becoming the reference in the French market",
+      description2:
+        "We conducted research to identify user pain points and improve the overall experience of the application. Thanks to a user-centered approach, we were able to design a more intuitive and pleasant interface to use.",
+
       team: [
         { name: "Dylan Williams", role: "(PM)" },
         { name: "Logan Victorien", role: "(Branding)" },
@@ -48,12 +52,12 @@ const translations = {
         infoCrop: {
           title: "Crop videos to vertical format",
           description:
-            "Tag your notes with customizable visual cues to help you take notes and remember them. Tags are customizable by name, color, shape to add more information to suit your needs as a student.",
+            "Easily crop your videos into a vertical format to optimize them for social media platforms. Our intuitive interface ensures precision and simplicity in every cut.",
         },
         infoSub: {
           title: "Let IA Subtitle your videos",
           description:
-            "Tag your notes with customizable visual cues to help you take notes and remember them. Tags are customizable by name, color, shape to add more information to suit your needs as a student.",
+            "Let our AI-powered tool automatically generate accurate subtitles for your videos, enhancing accessibility and engagement. Customize styles and positioning effortlessly.",
         },
         shortline: {
           text: "MVP was good for its first utility, but to scale, we had to reimagine it and make it more attractive.",
@@ -68,7 +72,7 @@ const translations = {
         },
         uxr: {
           title: "Three main discovery pillars for our approach",
-          heading: "apanyan",
+          head: "UX Research",
           pillars: [
             {
               icon: "PersonIcon",
@@ -151,13 +155,13 @@ const translations = {
             title: "UX RESEARCH",
             heading: "Analyzing Actual Design",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "The current design includes unnecessary steps that complicate the user journey, leading to frustration and inefficiency. Additionally, the poor UI and unclear UX contribute to users getting lost, ultimately hindering their ability to complete tasks effectively.",
           },
           analyzeCompetitors: {
             title: "UX RESEARCH",
             heading: "Analyze All Competitors",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "We analyzed competitors to learn from their strengths and weaknesses. This helped us refine our design to offer a more user-friendly experience.",
           },
         },
         uxDesign: {
@@ -165,19 +169,19 @@ const translations = {
             title: "UX DESIGN",
             heading: "Draft Sessions",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "In the draft sessions, we sketched out initial concepts to refine the user journey and address identified issues. This process allowed us to visualize potential solutions before moving into the design phase.",
           },
           solutionDesigning: {
             title: "UX DESIGN",
             heading: "Solution Designing",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "In the solution design phase, we created detailed layouts and interfaces to address the user pain points identified earlier. These designs focused on improving navigation, reducing unnecessary steps, and enhancing the overall user experience.",
           },
           beforeAfter: {
             title: "UX DESIGN",
             heading: "Before / After",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "The 'Before/After' comparison highlights the significant improvements in the interface. The redesign focused on a more intuitive workspace, reducing clutter, and creating a visually engaging experience that guides users effortlessly through the creation process.",
           },
         },
         nouveauDepart: {
@@ -231,13 +235,13 @@ const translations = {
               title: "Iteration and Feedback",
               description:
                 "The importance of iteration in design allowed me to constantly refine the product based on user feedback.",
-              icon: "/images/icons/insightA.png", // Example icon path
+              icon: "/images/icons/rota.png", // Example icon path
             },
             {
               title: "Interdisciplinary Collaboration",
               description:
                 "I learned to navigate effectively between branding, development, and product management teams for a harmonious result.",
-              icon: "/images/icons/insightB.png", // Example icon path
+              icon: "/images/icons/collab.png", // Example icon path
             },
           ],
         },
@@ -249,12 +253,20 @@ const translations = {
             "As a Product Designer, my goal is always to combine aesthetics, function, and simplicity to offer an optimal user experience.",
         },
       },
+      next: {
+        title: "View Another Project",
+        subtitle:
+          "These projects are a glimpse of my work. Additional projects are also available.",
+      },
     },
     bitloom: {
       title: "Bitloom Crypto Tracking App",
       subtitle: "A landing page collection from 2022",
       description:
         "With two friends, we embarked on creating a mobile portfolio app addressing specific issues. This app is still under development, and although the product isn't finished yet, I find it interesting to share.",
+      title2: "An App for Visionaries",
+      description2:
+        "We designed this app to meet our needs and bring our vision to life. Our priority is to create a tool that simplifies complexities and resonates with future users.",
       team: [
         { name: "Theo Villano", role: "(PM)" },
         { name: "Guillaume Chalons", role: "(Branding)" },
@@ -267,12 +279,12 @@ const translations = {
         trackWallet: {
           title: "Track all your wallet in the same place",
           description:
-            "Tag your notes with customizable visual cues to help you take notes and remember them. Tags are customizable by name, color, shape to add more information to suit your needs as a student.",
+            "Consolidate all your portfolios in one place. This app allows you to track the performance of your assets in real-time, providing you with a clear and comprehensive view of your investments.",
         },
         optimizeDefi: {
           title: "Optimized for Decentralized Finance tracking",
           description:
-            "Tag your notes with customizable visual cues to help you take notes and remember them. Tags are customizable by name, color, shape to add more information to suit your needs as a student.",
+            "Optimize the management of your decentralized finances by consolidating your wallets in one place. Create groups to easily track your assets and stay organized, whether it's for your own portfolio or for collaborating with others.",
         },
         shortline: {
           text: "MVP was good for its first utility, but to scale, we had to reimagine it and make it more attractive.",
@@ -292,57 +304,59 @@ const translations = {
         },
         uxr: {
           feur: "Interview Niche users",
-          title: "Trois principaux piliers de découverte pour notre approche",
-          titre: "Interview Niche users",
+          title: "Three Main Discovery Pillars for Our Approach",
           pillars: [
             {
-              icon: "PersonIcon",
-              title: "Global User Experience",
+              icon: "AutoAwesomeMotion", // Correspond à AccountBalanceWallet
+              title: "Multi-Wallet Analysis",
               description:
-                "We need to have a multi-wallet analysis because most people use several wallets for different purposes, whether for security or efficiency.",
-              objective: "Allow users to easily manage multiple wallets.",
-            },
-            {
-              icon: "PersonIcon",
-              title: "Global User Experience",
-              description:
-                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+                "Most users have multiple wallets for different purposes, whether for security or efficiency. We need to incorporate multi-wallet analysis to cater to this need.",
               objective:
-                "Include centralized exchanges for a better overall view.",
+                "Facilitate easy management of multiple wallets for the user.",
             },
             {
-              icon: "PersonIcon",
-              title: "Global User Experience",
+              icon: "ShapeLine", // Correspond à TrendingUp
+              title: "Centralized & Decentralized Integration",
               description:
-                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+                "Many trackers do not consider centralized exchanges. We believe it’s crucial to include these exchanges to provide a more comprehensive overview and enhanced service.",
               objective:
-                "Improve the service by taking centralized exchanges into account.",
+                "Ensure better service by integrating centralized exchanges.",
             },
             {
-              icon: "PersonIcon",
-              title: "Global User Experience",
+              icon: "GppGood", // Correspond à Layers
+              title: "Real-Time Prices",
               description:
-                "We need to have a multi-wallet analysis because most people use several wallets for different purposes, whether for security or efficiency.",
-              objective: "Allow users to easily manage multiple wallets.",
-            },
-            {
-              icon: "PersonIcon",
-              title: "Global User Experience",
-              description:
-                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+                "We want to ensure that token prices are updated in real-time for more accurate tracking, unlike other apps that update prices hourly or daily.",
               objective:
-                "Include centralized exchanges for a better overall view.",
+                "Provide accurate, real-time tracking of token prices.",
             },
             {
-              icon: "PersonIcon",
-              title: "Global User Experience",
+              icon: "Insights", // Correspond à Tune
+              title: "Considering All Cryptocurrencies",
               description:
-                "Most trackers do not take centralized exchanges into account, but we believe it is essential to include them for better service.",
+                "We aim to consider all cryptocurrencies, even those with low market capitalization, by scraping blockchains in real-time, as many of our users invest in low-cap coins.",
               objective:
-                "Improve the service by taking centralized exchanges into account.",
+                "Enable comprehensive tracking, including low-cap cryptocurrencies.",
+            },
+            {
+              icon: "Toll", // Correspond à Assignment
+              title: "Ease of Use",
+              description:
+                "The process of account creation, wallet creation, and organization needs to be fast and efficient. Our tool is designed to provide assistance, not constraints.",
+              objective:
+                "Make the user experience as simple and efficient as possible.",
+            },
+            {
+              icon: "Restore", // Correspond à Cached
+              title: "Back to Basics",
+              description:
+                "While most tracking apps have become increasingly complex, we aim to stay focused on simplicity to deliver a straightforward experience centered around the core purpose.",
+              objective:
+                "Maintain a simple interface focused on essential features.",
             },
           ],
         },
+
         uxresearch: {
           title: "UX RESEARCH",
           heading: "Analyze all competitors",
@@ -360,130 +374,139 @@ const translations = {
           description4: "Here are the summarized results:",
         },
         keyInsights: {
-          title: "INFORMATIONS CLÉS",
-          heading: "Trop d'étapes inutiles et une expérience visuelle médiocre",
+          title: "KEY INSIGHTS",
+          heading: "Building a Strong Foundation and Avoiding the Superfluous",
           description:
-            "L'un des principaux problèmes que nous avons rencontrés était une interface utilisateur médiocre qui compliquait certaines étapes pour les utilisateurs. De plus, nous avons constaté que certaines étapes inutiles pouvaient être supprimées.",
+            "As we developed our application, we prioritized customization and adaptation to the specific needs of users, essential elements in a rapidly evolving field.",
           pillars: [
             {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "OrganizationIcon",
+              title: "Intuitive Portfolio Organization",
               description:
-                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
-              objective:
-                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
+                "From the outset, we designed an intuitive portfolio management interface, allowing users to easily structure and navigate between different assets.",
             },
             {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "PriceIcon",
+              title: "Clear and Precise Price Statistics",
               description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
-              objective:
-                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
+                "We integrated well-organized price information to provide clear and precise data, enabling users to make informed decisions quickly.",
             },
             {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "DiversityIcon",
+              title: "Diverse Support for Wallets and Cryptos",
               description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
-              objective:
-                "Améliorer le service en prenant en compte les échanges centralisés.",
+                "Our application supports a wide variety of wallets and crypto assets, offering users the flexibility needed to manage a diversified portfolio.",
             },
             {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "SimplificationIcon",
+              title: "User-Focused Simplicity",
               description:
-                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
-              objective:
-                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
-            },
-            {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
-              description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
-              objective:
-                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
-            },
-            {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
-              description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
-              objective:
-                "Améliorer le service en prenant en compte les échanges centralisés.",
+                "We ensured that every feature is straightforward and accessible, eliminating unnecessary steps to make the user experience smooth and enjoyable.",
             },
           ],
         },
+
         keyInsights2: {
           title: "KEY INSIGHTS",
           heading:
-            "The main goal of this redesign was to create a place where videomakers can feel comfortable.",
+            "The main goal of this app is to empower users to manage their crypto portfolios effortlessly.",
           subheading:
-            "Every feature should be clear, explained & easy to use for everyone.",
+            "Each feature is designed to be intuitive, informative, and tailored to the needs of both novice and experienced investors.",
         },
+
         uxDesign: {
           draftSessions: {
             title: "UX DESIGN",
             heading: "Draft Sessions",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "Wireframes allowed us to explore various structures to optimize the user experience and address identified issues.",
           },
           solutionDesigning: {
             title: "UX DESIGN",
             heading: "Solution Designing",
             description:
-              "Tags consist of three main interface experiences: tags visual design on the notebook, a popup to add a tag, and writing within an expandable tag/resolving tags.",
+              "Through precise iterations, we refined the interface to ensure smooth and intuitive navigation.",
           },
         },
+        leconsPerspectives: {
+          title: "LESSONS & PERSPECTIVES",
+          heading: "Lessons Learned and Future Perspectives",
+          description: "lorem ipsum dolor sit amet",
+          insights: [
+            {
+              title: "Iteration and Feedback",
+              description:
+                "The importance of iteration in design allowed me to constantly refine the product based on user feedback.",
+              icon: "/images/icons/rota.png", // Example icon path
+            },
+            {
+              title: "Interdisciplinary Collaboration",
+              description:
+                "I learned to navigate effectively between branding, development, and product management teams for a harmonious result.",
+              icon: "/images/icons/collab.png", // Example icon path
+            },
+          ],
+        },
+        designGoals: {
+          title: "DESIGN GOALS",
+          heading:
+            "This project confirmed my commitment to creating products that are not only aesthetically pleasing but also intuitive and performant.",
+          subheading:
+            "As a Product Designer, my goal is always to combine aesthetics, function, and simplicity to offer an optimal user experience.",
+        },
+      },
+      next: {
+        title: "View Another Project",
+        subtitle:
+          "These projects are a glimpse of my work. Additional projects are also available.",
       },
     },
     landing: {
       sendshort: {
-        title: "SendshortAI — Landing Page",
+        title: "SendshortAI — Content Creation SaaS",
         subheading: "SENDSHORT",
         description:
-          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+          "Sendshort is a tool that allows the creation of subtitled short videos from horizontal format videos using artificial intelligence.",
         link: "https://sendshort.ai/",
         image: "/images/Landings/sendshort.png",
       },
       osmoz: {
-        title: "Ösmoz — Landing Page",
+        title: "Ösmoz — Marketing Agency",
         subheading: "ÖSMOZ",
         description:
-          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+          "Osmoz is a digital communication agency offering digital marketing solutions for businesses.",
         link: "https://www.agence-osmoz.com/",
         image: "/images/Landings/osmoz.png",
       },
       spybox: {
-        title: "SpyBox — Landing Page",
+        title: "SpyBox — E-commerce SaaS",
         subheading: "SPYBOX",
         description:
-          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+          "Spybox is a service that provides a wide range of tools for e-commerce businesses.",
         link: "https://www.spybox.io/",
         image: "/images/Landings/spybox.png",
       },
       jonathanecom: {
-        title: "Jonathan Ecom — Landing Page",
+        title: "Jonathan Ecom — E-commerce Training",
         subheading: "JONATHAN ECOM",
         description:
-          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+          "Jonathan Ecom is an online trainer for entrepreneurs looking to start in e-commerce.",
         link: "https://www.jo-ecom.io/",
         image: "/images/Landings/joecom.png",
       },
       cawatoes: {
-        title: "Cawatoès — Landing Page",
+        title: "Cawatoès — Professional Coffee Machine Rental",
         subheading: "CAWATOES",
         description:
-          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+          "Cawatoès is a company that rents professional coffee machines to businesses.",
         link: "https://pro.cawatoes.fr/",
         image: "/images/Landings/cawatoes.png",
       },
       fusion: {
-        title: "Fusion Groupe — Landing Page",
+        title: "Fusion Group — Asset Management",
         subheading: "FUSION",
         description:
-          "One of the main problems we faced is a poor user interface that made people struggle on some steps. On top of that, we noticed that there were some unnecessary steps that could be removed.",
+          "Fusion is a company offering risk asset management services for investors.",
         link: "https://www.fusion-groupe.com/",
         image: "/images/Landings/fusion.png",
       },
@@ -492,7 +515,7 @@ const translations = {
       title: "Landing Page Collection",
       subtitle: "A landing page collection from 2022",
       description:
-        "I had the opportunity to work with Sendshort on the complete redesign of their Product/Website. The goal was to make vertical video creation as easy as possible using artificial intelligence.",
+        "Explore a curated collection of my landing page projects, where each design blends aesthetics with functionality. From concept to execution, see how I've transformed ideas into engaging digital experiences designed to capture attention and convert visitors into customers.",
       team: [
         { name: "Dylan Williams", role: "(Web Developer)" },
         { name: "Logan Victorien", role: "(Motion Designer)" },
@@ -502,28 +525,37 @@ const translations = {
       tools: [{ name: "Figma" }, { name: "Webflow" }],
       timeline: "Q2 2022 - Q4 2023",
       disciplines: [{ name: "Web Design" }, { name: "Web Development" }],
+      next: {
+        title: "View Another Project",
+        subtitle:
+          "These projects are a glimpse of my work. Additional projects are also available.",
+      },
     },
     projectHolder: {
       projects: [
         {
+          tag: "sendshort",
           title: "From MVP to French Market Leader",
           description: "SendshortAI — Website & App Design",
           image: "/images/Projets/miniatures/sendshort.png",
           link: "/projects/sendshort",
         },
         {
+          tag: "bitloom",
           title: "Developing a Crypto Portfolio Tracking Application",
           description: "Bitloom — App Design & Branding",
           image: "/images/Projets/miniatures/bitloom.png",
           link: "/projects/bitloom",
         },
         {
+          tag: "landing",
           title: "Landing Page Collection",
           description: "A collection of recent landing pages",
           image: "/images/Projets/miniatures/landings.png",
           link: "/projects/landing",
         },
         {
+          tag: "gallery",
           title: "Gallery",
           description: "Collection of UI shots",
           image: "/images/Projets/miniatures/other.png",
@@ -654,6 +686,16 @@ const translations = {
         17: "/images/Gallery/17.webp",
         18: "/images/Gallery/18.webp",
       },
+      next: {
+        title: "View Another Project",
+        subtitle:
+          "These projects are a glimpse of my work. Additional projects are also available.",
+      },
+      header: {
+        toptitle: "Gallery",
+        title: "Where UI meets Art",
+        subtitle: "Just a collection of design that i've made with love",
+      },
     },
   },
 
@@ -668,7 +710,7 @@ const translations = {
       p1: {
         title: "Bienvenue sur mon portfolio",
         paragraph:
-          "Designer produit passionné avec deux ans d'expérience, je me suis spécialisé dans la création d'expériences numériques intuitives. Mon parcours, de l'apprentissage en autodidacte à l'université, puis en tant que freelance, m'a permis de développer des compétences diversifiées.",
+          "Product Designer passionné avec deux ans d'expérience, je me suis spécialisé dans la création d'expériences numériques intuitives. Mon parcours, de l'apprentissage en autodidacte à l'université, puis en tant que freelance, m'a permis de développer des compétences diversifiées.",
       },
       pbottom: {
         p1: {
@@ -689,11 +731,15 @@ const translations = {
       profile: "À Propos de moi",
     },
     sendshort: {
-      title: "Design du produit SendShort",
+      title: "Product Design de SendShort",
       subtitle:
         "L'outil qui améliore le flux de travail des créateurs de contenu",
       description:
         "J'ai eu l'opportunité de participer avec Sendshort à la refonte complète de leur produit et de leur site internet. L'objectif était de faciliter la création de vidéos au format vertical en utilisant l'intelligence artificielle.",
+      title2: "Devenir la référence du marché français",
+      description2:
+        "Nous avons mené des recherche afin d'identifier les pain points des utilisateurs et améliorer l'expérience globale de l'application. Grâce à une approche centrée sur l'utilisateur, nous avons pu concevoir une interface plus intuitive et agréable à utiliser.",
+
       team: [
         { name: "Dylan Williams", role: "(Chef de projet)" },
         { name: "Logan Victorien", role: "(Branding)" },
@@ -710,15 +756,15 @@ const translations = {
         infoCrop: {
           title: "Recadrer les vidéos au format vertical",
           description:
-            "Étiquetez vos notes avec des repères visuels personnalisables pour vous aider à les prendre et à vous en souvenir. Les étiquettes sont personnalisables par nom, couleur, forme pour ajouter plus d'informations adaptées à vos besoins en tant qu'étudiant.",
+            "Recadrez facilement vos vidéos au format vertical pour les optimiser pour le format shorts. Grâce à une interface intuitive et simplifiée à chaque découpe.",
         },
         infoSub: {
           title: "Laissez l'IA sous-titrer vos vidéos",
           description:
-            "Étiquetez vos notes avec des repères visuels personnalisables pour vous aider à les prendre et à vous en souvenir. Les étiquettes sont personnalisables par nom, couleur, forme pour ajouter plus d'informations adaptées à vos besoins en tant qu'étudiant.",
+            "Laissez notre outil IA générer automatiquement des sous-titres précis pour vos vidéos, améliorant ainsi l'accessibilité et l'engagement. Personnalisez les styles et la position en toute simplicité.",
         },
         shortline: {
-          text: "Le MVP était bon pour sa première utilité, mais pour évoluer, nous avons dû le réimaginer et le rendre plus attrayant.",
+          text: "Le MVP était bon pour les premières semaines, mais pour évoluer, nous avons dû le réimaginer et le rendre plus attrayant.",
         },
         primaryObjective: {
           title: "Objectif principal",
@@ -729,7 +775,8 @@ const translations = {
           image: "/images/sendshort/postitfr.png",
         },
         uxr: {
-          title: "Trois principaux axes de découverte pour notre approche",
+          head: "Recherche UX",
+          title: "AXES DE DÉCOUVERTE",
           pillars: [
             {
               icon: "PersonIcon",
@@ -744,7 +791,7 @@ const translations = {
             },
             {
               icon: "AssignmentIcon",
-              title: "Attrait visuel",
+              title: "Attrait visuel amélioré",
               description: [
                 "Quels éléments peuvent améliorer l'attrait visuel de l'application ?",
                 "Comment créer une interface cohérente et intuitive ?",
@@ -812,33 +859,33 @@ const translations = {
             title: "RECHERCHE UX",
             heading: "Analyse du design actuel",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "Le design actuel comprenais des étapes inutiles qui compliquaient le parcours utilisateur, entraînant frustration et inefficacité. De plus, l'interface utilisateur médiocre et l'expérience utilisateur confuse contribuent à désorienter les utilisateurs, les empêchant d'accomplir efficacement leurs tâches.",
           },
           analyzeCompetitors: {
             title: "RECHERCHE UX",
             heading: "Analyse de tous les concurrents",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "Nous avons analysé les concurrents pour apprendre de leurs forces et faiblesses. Cela nous a aidés à affiner notre design pour offrir une expérience plus conviviale.",
           },
         },
         uxDesign: {
           draftSessions: {
             title: "DESIGN UX",
-            heading: "Sessions de brouillon",
+            heading: "Wireframing",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "Grâce aux wireframe, nous avons réfléchi aux concepts initiaux pour affiner le parcours utilisateur et résoudre les problèmes identifiés. Ce processus nous a permis de visualiser des solutions potentielles avant de passer à la phase de conception.",
           },
           solutionDesigning: {
             title: "DESIGN UX",
             heading: "Conception de solutions",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "Dans la phase de conception des solutions, nous avons créé des mises en page et des interfaces détaillées pour résoudre les problèmes utilisateurs identifiés précédemment. Ces conceptions visaient à améliorer la navigation, réduire les étapes inutiles et renforcer l'expérience utilisateur globale.",
           },
           beforeAfter: {
             title: "DESIGN UX",
             heading: "Avant / Après",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "La comparaison 'Avant/Après' met en évidence les améliorations significatives de l'interface. La refonte s'est concentrée sur un espace de travail plus intuitif, réduisant l'encombrement et créant une expérience visuelle attrayante qui guide les utilisateurs sans effort tout au long du processus de création.",
           },
         },
         nouveauDepart: {
@@ -892,13 +939,13 @@ const translations = {
               title: "Itération et Feedback",
               description:
                 "L'importance de l'itération dans le design m'a permis de constamment affiner le produit en fonction des retours utilisateurs.",
-              icon: "/images/icons/insightA.png", // Example icon path
+              icon: "/images/icons/rota.png", // Example icon path
             },
             {
               title: "Collaboration Interdisciplinaire",
               description:
                 "J'ai appris à naviguer efficacement entre les équipes de branding, développement, et gestion de produit pour un résultat harmonieux.",
-              icon: "/images/icons/insightB.png", // Example icon path
+              icon: "/images/icons/collab.png", // Example icon path
             },
           ],
         },
@@ -910,12 +957,21 @@ const translations = {
             "En tant que Product Designer, mon objectif est toujours de combiner esthétique, fonction et simplicité pour offrir une expérience utilisateur optimale.",
         },
       },
+      next: {
+        title: "Voir un autre projet",
+        subtitle:
+          "Ces projets sont un aperçu de mon travail. D'autres réalisations sont également disponibles.",
+      },
     },
     bitloom: {
       title: "Application de suivi crypto Bitloom",
       subtitle: "Une collection de pages d'atterrissage de 2022",
       description:
         "Avec deux amis, nous nous sommes lancés dans la création d'une application mobile de portefeuille répondant à des problématiques spécifiques. Cette application est toujours en développement, et bien que le produit ne soit pas encore terminé, je trouve intéressant de le partager.",
+      title2: "Une Application pour les visionnaires",
+      description2:
+        "Nous avons conçu cette application pour répondre à nos besoins et concrétiser notre vision. Notre priorité est de créer un outil qui simplifie les complexités et résonne avec les utilisateurs futurs.",
+
       team: [
         { name: "Theo Villano", role: "(Chef de projet)" },
         { name: "Guillaume Chalons", role: "(Branding)" },
@@ -928,12 +984,12 @@ const translations = {
         trackWallet: {
           title: "Suivez tous vos portefeuilles au même endroit",
           description:
-            "Étiquetez vos notes avec des repères visuels personnalisables pour vous aider à les prendre et à vous en souvenir. Les étiquettes sont personnalisables par nom, couleur, forme pour ajouter plus d'informations adaptées à vos besoins en tant qu'étudiant.",
+            "Réunissez tous vos portefeuilles en un seul endroit. Cette application vous permet de suivre l’évolution de vos actifs en temps réel, vous offrant une vue claire et complète de vos investissements.",
         },
         optimizeDefi: {
           title: "Optimisé pour le suivi des finances décentralisées",
           description:
-            "Étiquetez vos notes avec des repères visuels personnalisables pour vous aider à les prendre et à vous en souvenir. Les étiquettes sont personnalisables par nom, couleur, forme pour ajouter plus d'informations adaptées à vos besoins en tant qu'étudiant.",
+            "Optimisez la gestion de vos finances décentralisées en regroupant vos portefeuilles en un seul endroit. Créez des groupes pour suivre facilement vos actifs et rester organisé, que ce soit pour votre propre portefeuille ou pour collaborer avec d'autres.",
         },
         shortline: {
           text: "Le MVP était bon pour sa première utilité, mais pour évoluer, nous avons dû le réimaginer et le rendre plus attrayant.",
@@ -955,55 +1011,54 @@ const translations = {
         uxr: {
           feur: "Interview Niche users",
           title: "Trois principaux piliers de découverte pour notre approche",
-          titre: "Interview Niche users",
           pillars: [
             {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "AutoAwesomeMotion", // Correspond à AccountBalanceWallet
+              title: "Analyse Multi-Portefeuille",
               description:
-                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
+                "La plupart des utilisateurs ont plusieurs portefeuilles pour différents usages, que ce soit pour des raisons de sécurité ou d'efficacité. Nous devons donc intégrer une analyse multi-portefeuille.",
               objective:
-                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
+                "Faciliter la gestion simultanée de plusieurs portefeuilles pour l'utilisateur.",
             },
             {
-              icon: "AssignmentIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "ShapeLine", // Correspond à TrendingUp
+              title: "Intégration Centralisée et Décentralisée",
               description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+                "Beaucoup de trackers ne prennent pas en compte les échanges centralisés. Nous pensons qu'il est crucial d'inclure ces échanges pour offrir une vue d'ensemble plus complète et un service amélioré.",
               objective:
-                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
+                "Assurer une meilleure gestion en intégrant les échanges centralisés.",
             },
             {
-              icon: "CachedIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "GppGood", // Correspond à Layers
+              title: "Prix en Temps Réel",
               description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+                "Nous voulons nous assurer que les prix de chaque token sont actualisés en temps réel pour un suivi plus précis, contrairement à d'autres applications qui mettent à jour les prix toutes les heures ou quotidiennement.",
               objective:
-                "Améliorer le service en prenant en compte les échanges centralisés.",
+                "Offrir un suivi précis et en temps réel des prix des tokens.",
             },
             {
-              icon: "PersonIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "Insights", // Correspond à Tune
+              title: "Considération de Toutes les Cryptomonnaies",
               description:
-                "Nous devons avoir une analyse multi-portefeuille car la plupart des gens utilisent plusieurs portefeuilles pour différents usages, que ce soit pour la sécurité ou l'efficacité.",
+                "Nous souhaitons prendre en compte toutes les cryptomonnaies, même celles à faible capitalisation, en scrappant les blockchains en temps réel, car c'est ce qui intéresse le plus nos utilisateurs.",
               objective:
-                "Permettre aux utilisateurs de gérer facilement plusieurs portefeuilles.",
+                "Permettre un suivi exhaustif, y compris pour les cryptomonnaies à faible capitalisation.",
             },
             {
-              icon: "AssignmentIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "Toll", // Correspond à Assignment
+              title: "Facilité d'Utilisation",
               description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+                "Le processus de création de compte, de création de portefeuille et d'organisation doit être rapide et efficace. Notre outil est conçu pour offrir de l'aide, pas des contraintes supplémentaires à nos user.",
               objective:
-                "Inclure les échanges centralisés pour une meilleure vue d'ensemble.",
+                "Rendre le processus d'utilisation aussi simple et efficace que possible.",
             },
             {
-              icon: "CachedIcon",
-              title: "Expérience Utilisateur Globale",
+              icon: "Restore", // Correspond à Cached
+              title: "Retour aux Bases",
               description:
-                "La plupart des trackers ne prennent pas en compte les échanges centralisés, mais nous pensons qu'il est essentiel de les inclure pour un meilleur service.",
+                "Alors que la plupart des applications de suivi sont devenues de plus en plus complexes, nous voulons rester concentrés sur l'essentiel pour offrir une expérience simple et centrée sur l'objectif principal.",
               objective:
-                "Améliorer le service en prenant en compte les échanges centralisés.",
+                "Maintenir une interface simple et centrée sur les fonctionnalités essentielles.",
             },
           ],
         },
@@ -1027,101 +1082,137 @@ const translations = {
 
         keyInsights: {
           title: "INFORMATIONS CLÉS",
-          heading: "Trop d'étapes inutiles et une expérience visuelle médiocre",
+          heading: "Construire une base solide et éviter le superflu",
           description:
-            "L'un des principaux problèmes que nous avons rencontrés était une interface utilisateur médiocre qui compliquait certaines étapes pour les utilisateurs. De plus, nous avons constaté que certaines étapes inutiles pouvaient être supprimées.",
+            "Lors de la création de notre application, nous avons priorisé la personnalisation et l'adaptation aux besoins spécifiques des utilisateurs, des éléments essentiels dans un secteur en constante évolution.",
           pillars: [
             {
-              title: "Interface Utilisateur Médiocre",
+              icon: "OrganizationIcon",
+              title: "Organisation intuitive des portefeuilles",
               description:
-                "L'ancienne interface a été faite par des développeurs, elle était correcte, mais il manquait quelque chose pour atteindre le niveau supérieur et devenir plus premium.",
+                "Dès le départ, nous avons conçu une interface de gestion des portefeuilles intuitive, permettant aux utilisateurs de structurer et naviguer facilement entre différents actifs.",
             },
             {
-              title: "Étapes Inutiles",
+              icon: "PriceIcon",
+              title: "Statistiques de prix claires et précises",
               description:
-                "Certaines personnes avaient du mal avec le nombre d'étapes nécessaires pour accomplir des tâches simples, comme lors de l'importation de vidéos.",
+                "Nous avons intégré des informations de prix organisées de manière à offrir des données claires et précises, pour que les utilisateurs puissent prendre des décisions éclairées rapidement.",
             },
             {
-              title: "Fonctionnalités Non Expliquées",
+              icon: "DiversityIcon",
+              title: "Support diversifié pour portefeuilles et cryptos",
               description:
-                "Lors des entretiens, nous avons demandé aux utilisateurs de trouver et d'expliquer toutes les fonctionnalités de SendShort. Certains ont eu du mal à toutes les trouver.",
+                "Notre application prend en charge une grande variété de portefeuilles et d'actifs cryptographiques, offrant aux utilisateurs la flexibilité nécessaire pour gérer un portefeuille diversifié.",
             },
             {
-              title: "Gestion des Fichiers Désorganisée",
+              icon: "SimplificationIcon",
+              title: "Simplicité d'utilisation au cœur du design",
               description:
-                "Nous avons rencontré un autre problème avec deux personnes interviewées qui ont réalisé plus de courts métrages que les autres (+50 shorts). Il n'y a pas de système d'organisation des fichiers.",
+                "Nous avons veillé à ce que chaque fonctionnalité soit directe et accessible, en éliminant les étapes superflues pour rendre l'expérience utilisateur fluide et agréable.",
             },
           ],
         },
+
         keyInsights2: {
-          title: "KEY INSIGHTS",
+          title: "INFORMATIONS CLÉS",
           heading:
-            "The main goal of this redesign was to create a place where videomakers can feel comfortable.",
+            "L'objectif principal de cette application est de permettre aux utilisateurs de gérer leurs portefeuilles crypto en toute simplicité.",
           subheading:
-            "Every feature should be clear, explained & easy to use for everyone.",
+            "Chaque fonctionnalité est conçue pour être intuitive, informative, et adaptée aux besoins des investisseurs, qu'ils soient novices ou expérimentés.",
         },
         uxDesign: {
           draftSessions: {
             title: "DESIGN UX",
             heading: "Sessions de brouillon",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "Les wireframes nous ont permis d'explorer différentes structures pour optimiser l'expérience utilisateur et résoudre les problèmes identifiés.",
           },
           solutionDesigning: {
             title: "DESIGN UX",
             heading: "Conception de solutions",
             description:
-              "Les étiquettes se composent de trois principales expériences d'interface : le design visuel des étiquettes sur le carnet, une fenêtre pop-up pour ajouter une étiquette et l'écriture dans une étiquette extensible/résolution des étiquettes.",
+              "À travers des itérations précises, nous avons affiné l'interface pour garantir une navigation fluide et intuitive.",
           },
         },
+        leconsPerspectives: {
+          title: "LEÇONS PERSPECTIVES",
+          heading: "Leçons apprises et perspective d’avenir",
+          description: "lorem ipsum dolor sit amet",
+          insights: [
+            {
+              title: "Itération et Feedback",
+              description:
+                "L'itération est au cœur du processus de conception. À chaque étape, les retours des utilisateurs ont été essentiels pour affiner et améliorer Bitloom, garantissant ainsi que le produit final répond parfaitement aux besoins de sa cible.",
+              icon: "/images/icons/rota.png", // Example icon path
+            },
+            {
+              title: "Collaboration Interdisciplinaire",
+              description:
+                "Le succès de Bitloom réside dans une collaboration fluide entre les équipes de design, de développement, et de gestion de produit. Cette synergie a permis de créer une application harmonieuse qui allie fonctionnalité et esthétique.",
+              icon: "/images/icons/collab.png", // Example icon path
+            },
+          ],
+        },
+        designGoals: {
+          title: "GOALS DU DESIGN",
+          heading:
+            "Le projet Bitloom a renforcé mon engagement à concevoir des produits non seulement esthétiquement agréables, mais aussi intuitifs et performants.",
+          subheading:
+            "En tant que Designer de Produits, mon objectif est de toujours trouver un équilibre entre l'esthétique, la fonctionnalité, et la simplicité pour offrir une expérience utilisateur optimale, en particulier dans des domaines complexes comme la gestion de portefeuilles crypto.",
+        },
+      },
+      next: {
+        title: "Voir un autre projet",
+        subtitle:
+          "Ces projets sont un aperçu de mon travail. D'autres réalisations sont également disponibles.",
       },
     },
     landing: {
       sendshort: {
-        title: "SendshortAI — Page d'accueil",
+        title: "SendshortAI — SaaS Création de contenu",
         subheading: "SENDSHORT",
         description:
-          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+          "Sendshort est un outil qui permet la création de vidéo au format short sous-titré depuis une vidéo au format horizontal en utilisant l'intelligence artificielle.",
         link: "https://sendshort.ai/",
         image: "/images/Landings/sendshort.png",
       },
       osmoz: {
-        title: "Ösmoz — Page d'accueil",
+        title: "Ösmoz — Agence Marketing",
         subheading: "ÖSMOZ",
         description:
-          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+          "Osmoz est une agence de communication digitale qui propose des solutions de marketing digital pour les entreprises.",
         link: "https://www.agence-osmoz.com/",
         image: "/images/Landings/osmoz.png",
       },
       spybox: {
-        title: "SpyBox — Page d'accueil",
+        title: "SpyBox — SaaS E-commerce",
         subheading: "SPYBOX",
         description:
-          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+          "Spybox est un service qui regroupe un grand nombre d'outils pour les e-commerçants",
         link: "https://www.spybox.io/",
         image: "/images/Landings/spybox.png",
       },
       jonathanecom: {
-        title: "Jonathan Ecom — Page d'accueil",
+        title: "Jonathan Ecom — Formation E-commerce",
         subheading: "JONATHAN ECOM",
         description:
-          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+          "Jonathan Ecom est un formateur en ligne pour les entrepreneurs qui souhaitent se lancer dans le e-commerce.",
         link: "https://www.jo-ecom.io/",
         image: "/images/Landings/joecom.png",
       },
       cawatoes: {
-        title: "Cawatoès — Page d'accueil",
+        title: "Cawatoès — Location de machines à café Professionnelles",
         subheading: "CAWATOES",
         description:
-          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+          "Cawatoès est une entreprise qui loue des machines à café professionnelles pour les entreprises.",
         link: "https://pro.cawatoes.fr/",
         image: "/images/Landings/cawatoes.png",
       },
       fusion: {
-        title: "Fusion Groupe — Page d'accueil",
+        title: "Fusion Groupe — Gestion d'actifs",
         subheading: "FUSION",
         description:
-          "L'un des principaux problèmes que nous avons rencontrés est une interface utilisateur médiocre qui compliquait certaines étapes. De plus, nous avons remarqué qu'il y avait des étapes inutiles qui pouvaient être supprimées.",
+          "Fusion est une entreprise qui propose de la gestion d'actifs à risques pour les investisseurs.",
         link: "https://www.fusion-groupe.com/",
         image: "/images/Landings/fusion.png",
       },
@@ -1130,7 +1221,7 @@ const translations = {
       title: "Collection de pages de destination",
       subtitle: "Une collection de pages de destination de 2022",
       description:
-        "J'ai eu l'opportunité de travailler avec Sendshort sur la refonte complète de leur Produit/Site Web. L'objectif était de faciliter au maximum la création de vidéos verticales en utilisant l'intelligence artificielle.",
+        "Découvrez une sélection de mes projets de landing pages, où chaque design allie esthétique et efficacité. De la conception à la réalisation, explorez comment j'ai transformé des idées en expériences digitales engageantes, conçues pour capter l'attention et convertir les visiteurs en clients.",
       team: [
         { name: "Dylan Williams", role: "(Développeur Web)" },
         { name: "Logan Victorien", role: "(Designer Motion)" },
@@ -1140,16 +1231,23 @@ const translations = {
       tools: [{ name: "Figma" }, { name: "Webflow" }],
       timeline: "T2 2022 - T4 2023",
       disciplines: [{ name: "Design Web" }, { name: "Développement Web" }],
+      next: {
+        title: "Voir un autre projet",
+        subtitle:
+          "Ces projets sont un aperçu de mon travail. D'autres réalisations sont également disponibles.",
+      },
     },
     projectHolder: {
       projects: [
         {
+          tag: "sendshort",
           title: "De MVP à leader du marché français",
           description: "SendshortAI — Conception de site Web et d'application",
           image: "/images/Projets/miniatures/sendshort.png",
           link: "/projects/sendshort",
         },
         {
+          tag: "bitloom",
           title:
             "Développement d'une application de suivi de portefeuille crypto",
           description: "Bitloom — Conception d'application et branding",
@@ -1157,12 +1255,14 @@ const translations = {
           link: "/projects/bitloom",
         },
         {
-          title: "Créer un CRM 0 → 1 (projet personnel)",
-          description: "NexusAI — Conception de site Web et d'application",
+          tag: "landing",
+          title: "Collection de Landing pages",
+          description: "Un collection de landing pages depuis 2022",
           image: "/images/Projets/miniatures/landings.png",
           link: "/projects/landing",
         },
         {
+          tag: "gallery",
           title: "Galerie",
           description: "Collection de captures d'écran d'UI",
           image: "/images/Projets/miniatures/other.png",
@@ -1292,6 +1392,17 @@ const translations = {
         16: "/images/Gallery/16.webp",
         17: "/images/Gallery/17.webp",
         18: "/images/Gallery/18.webp",
+      },
+      next: {
+        title: "Voir un autre projet",
+        subtitle:
+          "Ces projets sont un aperçu de mon travail. D'autres réalisations sont également disponibles.",
+      },
+      header: {
+        toptitle: "Galerie",
+        title: "La où l'UI rencontre l'art",
+        subtitle:
+          "Juste une collection de design que j'ai fait et que j'apprecie",
       },
     },
   },
