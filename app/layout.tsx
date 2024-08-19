@@ -55,7 +55,10 @@ export default function RootLayout({
           property="og:description"
           content="Arthur est un Product Designer de 21 ans passionné par la création d'expériences utilisateur innovantes et efficaces. Découvrez son portfolio de projets créatifs."
         />
-        <meta property="og:image" content="/public/images/twitter.png" />
+        <meta
+          property="og:image"
+          content="https://opengraph.b-cdn.net/production/images/2584ef7c-687c-46a0-9ee3-25fe46c326a4.png?token=IIm2Un3CTTzC-vzDic4CKaMeAQfIqNqfgrBS9JoKNYs&height=628&width=1200&expires=33260088162"
+        />
         <meta property="og:url" content="https://arthur.gg" />
         <meta
           property="og:site_name"
@@ -69,7 +72,10 @@ export default function RootLayout({
           name="twitter:description"
           content="Arthur est un Product Designer de 21 ans passionné par la création d'expériences utilisateur innovantes et efficaces. Découvrez son portfolio de projets créatifs."
         />
-        <meta name="twitter:image" content="/public/images/twitter.png" />
+        <meta
+          name="twitter:image"
+          content="https://opengraph.b-cdn.net/production/images/2584ef7c-687c-46a0-9ee3-25fe46c326a4.png?token=IIm2Un3CTTzC-vzDic4CKaMeAQfIqNqfgrBS9JoKNYs&height=628&width=1200&expires=33260088162"
+        />
         <meta name="twitter:site" content="@SpadeFX" />
 
         {/* Couleur de thème pour mobile */}
