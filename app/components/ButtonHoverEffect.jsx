@@ -69,6 +69,8 @@ const ButtonHoverEffect = () => {
         onMouseLeave={handleMouseLeave}
       >
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/in/arthurbsst/"
           className={styles.link}
         >
@@ -80,7 +82,12 @@ const ButtonHoverEffect = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <a href="https://twitter.com/SpadeFX" className={styles.link}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/SpadeFX"
+          className={styles.link}
+        >
           X
         </a>
       </button>
