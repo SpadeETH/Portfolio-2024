@@ -1225,8 +1225,8 @@ const translations = {
       },
     },
     Landingheader: {
-      title: "Collection de pages de destination",
-      subtitle: "Une collection de pages de destination de 2022",
+      title: "Collection de landing pages",
+      subtitle: "Une collection de landing pages de 2022",
       description:
         "Découvrez une sélection de mes projets de landing pages, où chaque design allie esthétique et efficacité. De la conception à la réalisation, explorez comment j'ai transformé des idées en expériences digitales engageantes, conçues pour capter l'attention et convertir les visiteurs en clients.",
       team: [

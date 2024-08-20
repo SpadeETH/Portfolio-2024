@@ -82,7 +82,7 @@ const ProjectHeader: React.FC<HeaderProps> = ({
           {description}
         </motion.p>
         <hr />
-        <div className="info flex flex-col lg:flex-row space-y-8 lg:space-x-8">
+        <div className="info flex flex-col lg:flex-row space-y-8 space-x-0 lg:space-y-0 lg:space-x-8">
           <div className="team flex flex-col space-y-2">
             <motion.h3
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
@@ -110,7 +110,7 @@ const ProjectHeader: React.FC<HeaderProps> = ({
             </ul>
           </div>
           <hr />
-          <div className="tools flex flex-col space-y-2">
+          <div className="team flex flex-col  mt-0">
             <motion.h3
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
