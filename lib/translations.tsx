@@ -4,7 +4,7 @@ const translations = {
       header: {
         hover: "Click to view more.",
         job: "Product Designer",
-        text1: "Transorm ideas.",
+        text1: "Transform ideas.",
         text2: "Into concrete solutions.",
       },
       p1: {
