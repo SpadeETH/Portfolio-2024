@@ -77,20 +77,7 @@ const ButtonHoverEffect = () => {
           LinkedIn
         </a>
       </button>
-      <button
-        className={styles.button}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/SpadeFX"
-          className={styles.link}
-        >
-          X
-        </a>
-      </button>
+
       <button
         className={styles.button}
         onMouseEnter={handleMouseEnter}
